@@ -1,24 +1,18 @@
 # \# Internship
 
-
-
-Notebooks and exercises for  week1 and each day.
-
+Notebooks and exercises for  week and each day.
 
 
 
 
 
-
-### \### Week 1
+### **### Week 1**
 
 
 
 #### \#### Day 1
 
-
-
-\## Tasks
+**## Tasks**
 
 \- Installed Python and created an isolated virtual environment (.venv).
 
@@ -32,7 +26,7 @@ Notebooks and exercises for  week1 and each day.
 
 
 
-\## What I Learned
+**## What I Learned**
 
 \- How a virtual environment isolates project dependencies from the system Python.
 
@@ -43,4 +37,28 @@ Notebooks and exercises for  week1 and each day.
 
 
 #### \#### Day 2
+
+**## Tasks**
+
+\- Reviewed Python's core data types: int, float, str, bool, list, tuple, dict, and set.
+
+\- Practiced control flow using if/elif/else statements and for loops.
+
+\- Wrote a function with clear parameters and a docstring to normalize a value between 0 and 1.
+
+\- Rewrote a multi-line for loop that filters even numbers as a single list comprehension.
+
+\- Defined a small class (DataRecord) with two attributes and one method.
+
+\- Documented each notebook cell with a Markdown explanation of its purpose.
+
+
+
+**## What I Learned**
+
+\- The difference between mutable types (list, dict, set) and immutable types (tuple, str) and when to use each.
+
+\- How list comprehensions replace multi-line loops with more readable, Pythonic code.
+
+\- The basics of object-oriented programming: how classes bundle attributes and methods together
 
