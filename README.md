@@ -1,46 +1,146 @@
-# \# Internship
+\# 🚀 AI \& Machine Learning Internship
 
 
 
-Notebooks and exercises for each week and day.
+Welcome to my internship repository!
 
 
 
-### \## Weeks
+This repository documents my learning journey throughout the \*\*AI \& Machine Learning Internship Program\*\* at \*\*BinX Tech\*\*. It includes weekly notebooks, hands-on exercises, assignments, and notes completed during the internship.
 
 
 
-#### \### Week 1
+\---
 
 
 
-**#### Day 1**
+\## 📚 Internship Progress
 
 
 
-\## Tasks
+\- ✅ \*\*Week 1\*\* — Python \& Data Science Foundations
 
-\- Installed Python and created an isolated virtual environment (.venv).
+\- ⏳ \*\*Week 2\*\* — Coming Soon
 
-\- Installed numpy, pandas, matplotlib, and jupyter inside the environment.
+\- ⏳ \*\*Week 3\*\* — Coming Soon
 
-\- Wrote code to print the installed version of each library.
+\- ⏳ \*\*Week 4\*\* — Coming Soon
 
-\- Generated requirements.txt to freeze the environment.
+\- ⏳ \*\*Week 5\*\* — Coming Soon
 
-\- Initialized a Git repository and pushed the project to GitHub.
+\- ⏳ \*\*Week 6\*\* — Coming Soon
 
+\- ⏳ \*\*Week 7\*\* — Coming Soon
 
+\- ⏳ \*\*Week 8\*\* — Coming Soon
 
-\## What I Learned
+\- ⏳ \*\*Week 9\*\* — Coming Soon
 
-\- How a virtual environment isolates project dependencies from the system Python.
-
-\- The difference between Markdown and Code cells in Jupyter, and how to run them.
-
-\- How pip freeze captures exact package versions for reproducibility.
+\- ⏳ \*\*Week 10\*\* — Coming Soon
 
 
 
-**#### Day 2**
+\---
+
+
+
+\## 📂 Repository Structure
+
+
+
+&#x20;   Internship/
+
+&#x20;   │
+
+&#x20;   ├── README.md
+
+&#x20;   │
+
+&#x20;   ├── week1/
+
+&#x20;   │   ├── day1/
+
+&#x20;   │   ├── day2/
+
+&#x20;   │   └── README.md
+
+&#x20;   │
+
+&#x20;   ├── week2/
+
+&#x20;   ├── week3/
+
+&#x20;   ├── week4/
+
+&#x20;   ├── week5/
+
+&#x20;   ├── week6/
+
+&#x20;   ├── week7/
+
+&#x20;   ├── week8/
+
+&#x20;   ├── week9/
+
+&#x20;   └── week10/
+
+
+
+\---
+
+
+
+\## 🛠️ Technologies
+
+
+
+\- Python
+
+\- NumPy
+
+\- Pandas
+
+\- Matplotlib
+
+\- Jupyter Notebook
+
+\- Git
+
+\- GitHub
+
+
+
+\---
+
+
+
+\## 📖 About
+
+
+
+Each week's folder contains:
+
+\- 📓 Daily Jupyter Notebooks
+
+\- 💻 Hands-on Exercises
+
+\- 📝 Tasks \& Notes
+
+\- 🎯 Key Learning Outcomes
+
+
+
+Every week includes its own \*\*README\*\* with a summary of the topics covered, completed tasks, and deliverables.
+
+
+
+\---
+
+
+
+\## 📌 Status
+
+
+
+This repository is updated weekly as I progress through the internship.
 
