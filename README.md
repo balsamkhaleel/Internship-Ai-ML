@@ -62,7 +62,7 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 
    │   ├── day2/
        
-   |   ├── day3/
+   │   ├── day3/
 
    │   ├── day4/
 
