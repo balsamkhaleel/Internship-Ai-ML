@@ -1,94 +1,144 @@
-# \* Internship
+# \# 📅 Week 1 — Python \& Data Science Foundations
 
-Notebooks and exercises for  week and each day.
+# 
 
+# BinX Tech — AI \& Machine Learning Internship Program
 
+# 
 
+# \## 📖 Overview
 
+# 
 
-### **\*\* Week1**
+# This folder contains my Week 1 work: setting up a reproducible Python environment, reviewing core Python fundamentals, and building fluency in NumPy for array manipulation.
 
+# 
 
+# \---
 
-#### \* Day1
+# 
 
-**\* Tasks**
+# \## 📚 Days Progress
 
-\- Installed Python and created an isolated virtual environment (.venv).
+# 
 
-\- Installed numpy, pandas, matplotlib, and jupyter inside the environment.
+# \- ✅ \*\*Day 1\*\* — Environment Setup
 
-\- Wrote code to print the installed version of each library.
+# \- ✅ \*\*Day 2\*\* — Python Fundamentals
 
-\- Generated requirements.txt to freeze the environment.
+# \- ✅ \*\*Day 3\*\* — NumPy Array Manipulation
 
-\- Initialized a Git repository and pushed the project to GitHub.
+# \- ⏳ \*\*Day 4\*\* — Coming Soon
 
+# \- ⏳ \*\*Day 5\*\* — Coming Soon
 
+# 
 
-**\* What I Learned**
+# \---
 
-\- How a virtual environment isolates project dependencies from the system Python.
+# 
 
-\- The difference between Markdown and Code cells in Jupyter, and how to run them.
+# \## 📓 Day 1 — Environment Setup
 
-\- How pip freeze captures exact package versions for reproducibility.
+# 
 
+# \### Tasks
 
+# \- Installed Python and created an isolated virtual environment (.venv).
 
-#### \* Day2
+# \- Installed numpy, pandas, matplotlib, and jupyter inside the environment.
 
-**\* Tasks**
+# \- Wrote code to print the installed version of each library.
 
-\- Reviewed Python's core data types: int, float, str, bool, list, tuple, dict, and set.
+# \- Generated requirements.txt to freeze the environment.
 
-\- Practiced control flow using if/elif/else statements and for loops.
+# \- Initialized a Git repository and pushed the project to GitHub.
 
-\- Wrote a function with clear parameters and a docstring to normalize a value between 0 and 1.
+# 
 
-\- Rewrote a multi-line for loop that filters even numbers as a single list comprehension.
+# \---
 
-\- Defined a small class (DataRecord) with two attributes and one method.
+# 
 
-\- Documented each notebook cell with a Markdown explanation of its purpose.
+# \## 📓 Day 2 — Python Fundamentals
 
+# 
 
+# \### Tasks
 
-**\* What I Learned**
+# \- Reviewed Python's core data types: int, float, str, bool, list, tuple, dict, and set.
 
-\- The difference between mutable types (list, dict, set) and immutable types (tuple, str) and when to use each.
+# \- Practiced control flow using if/elif/else statements and for loops.
 
-\- How list comprehensions replace multi-line loops with more readable, Pythonic code.
+# \- Wrote a function with clear parameters and a docstring to normalize a value between 0 and 1.
 
-\- The basics of object-oriented programming: how classes bundle attributes and methods together
+# \- Rewrote a multi-line for loop that filters even numbers as a single list comprehension.
 
-#### 
+# \- Defined a small class (DataRecord) with two attributes and one method.
 
+# \- Documented each notebook cell with a Markdown explanation of its purpose.
 
+# 
 
-#### \* Day 3
+# \---
 
-**\* Tasks**
+# 
 
-\- Created NumPy arrays using multiple methods: array, zeros, ones, arange, linspace, and random.
+# \## 📓 Day 3 — NumPy Array Manipulation
 
-\- Inspected array attributes: shape, dtype, and ndim.
+# 
 
-\- Indexed and sliced 1D and 2D arrays, including row, column, and boolean-mask selection.
+# \### Tasks
 
-\- Applied vectorized operations (multiplication, addition, mean) instead of Python loops.
+# \- Created NumPy arrays using multiple methods: array, zeros, ones, arange, linspace, and random.
 
-\- Practiced broadcasting by adding a 1D array to every row of a 2D array.
+# \- Inspected array attributes: shape, dtype, and ndim.
 
+# \- Indexed and sliced 1D and 2D arrays, including row, column, and boolean-mask selection.
 
+# \- Applied vectorized operations (multiplication, addition, mean) instead of Python loops.
 
-**\* What I Learned**
+# \- Practiced broadcasting by adding a 1D array to every row of a 2D array.
 
-\- Why NumPy underpins the entire AI/ML stack: it stores data in a fixed-size, homogeneous ndarray and runs operations in optimized C code, making it far faster and more compact than Python lists.
+# 
 
-\- How array attributes (shape, dtype, ndim) describe an array's structure.
+# \---
 
-\- How 2D indexing works with the array\[row, column] syntax, and how boolean masking filters values based on a condition.
+# 
 
-\- How broadcasting lets NumPy combine arrays of different but compatible shapes without copying data, and why understanding it prevents shape-mismatch errors.
+# \## 🛠️ Technologies
+
+# 
+
+# Python, NumPy, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
+
+# 
+
+# \## 📂 Repository Structure
+
+# 
+
+# &#x20;   week1/
+
+# &#x20;   ├── day1/
+
+# &#x20;   │   └── train.ipynb
+
+# &#x20;   ├── day2/
+
+# &#x20;   │   └── day2.ipynb
+
+# &#x20;   ├── day3/
+
+# &#x20;   │   └── day3.ipynb
+
+# &#x20;   ├── day4/
+
+# &#x20;   │   └── day4.ipynb
+
+# &#x20;   ├── day5/
+
+# &#x20;   │   └── day5.ipynb
+
+# &#x20;   └── README.md
 
