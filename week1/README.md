@@ -10,6 +10,8 @@
 
  This folder contains my Week 1 work: setting up a reproducible Python environment, reviewing core Python fundamentals, and building fluency in NumPy for array manipulation.
 
+
+
 # 
 
 
@@ -28,6 +30,8 @@
  - ⏳ **Day 4** — Coming Soon
 
  - ⏳ **Day 5** — Coming Soon
+
+
 
 #
 
@@ -49,6 +53,8 @@
  - Generated requirements.txt to freeze the environment.
 
  - Initialized a Git repository and pushed the project to GitHub.
+
+
 
 # 
 
@@ -73,6 +79,8 @@
 
  - Documented each notebook cell with a Markdown explanation of its purpose.
 
+
+
 # 
 
 
@@ -95,17 +103,29 @@
 
  - Practiced broadcasting by adding a 1D array to every row of a 2D array.
 
+
+
 # 
 
 
+# 📓 Day 4 — Pandas: Tabular Data
+
+# Tasks
+- Loaded a CSV dataset into a DataFrame and inspected its shape, columns, and dtypes.
+- Counted missing values per column and handled them with fillna and dropna, with a documented justification.
+- Selected columns and filtered rows by condition using boolean filtering and .loc/.iloc.
+- Removed duplicate rows using drop_duplicates.
+- Used groupby and agg to compute aggregate statistics per category and interpreted the results in a Markdown cell.
 
 
-
+#
  
 #  🛠️ Technologies
 
 
  Python, NumPy, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
+
+
 
 # 
 
