@@ -1,24 +1,21 @@
-# # 📅 Week 1 — Python & Data Science Foundations
+ # 📅 Week 1 — Python & Data Science Foundations
+
+
+ BinX Tech — AI & Machine Learning Internship Program
+
+ #
+
+ # 📖 Overview
+
+
+
+ This folder contains my Week 1 work: setting up a reproducible Python environment, reviewing core Python fundamentals, and building fluency in NumPy for array manipulation.
+
+ 
 
 # 
 
-# BinX Tech — AI & Machine Learning Internship Program
-
-# 
-
-# ## 📖 Overview
-
-# 
-
-# This folder contains my Week 1 work: setting up a reproducible Python environment, reviewing core Python fundamentals, and building fluency in NumPy for array manipulation.
-
-# 
-
-# ---
-
-# 
-
-# ## 📚 Days Progress
+#  📚 Days Progress
 
 # 
 
@@ -34,109 +31,95 @@
 
 # 
 
-# ---
+#  📓 Day 1 — Environment Setup
 
 # 
 
-# ## 📓 Day 1 — Environment Setup
+#  Tasks
+
+ - Installed Python and created an isolated virtual environment (.venv).
+
+ - Installed numpy, pandas, matplotlib, and jupyter inside the environment.
+
+ - Wrote code to print the installed version of each library.
+
+ - Generated requirements.txt to freeze the environment.
+
+ - Initialized a Git repository and pushed the project to GitHub.
 
 # 
 
-# ### Tasks
 
-# - Installed Python and created an isolated virtual environment (.venv).
-
-# - Installed numpy, pandas, matplotlib, and jupyter inside the environment.
-
-# - Wrote code to print the installed version of each library.
-
-# - Generated requirements.txt to freeze the environment.
-
-# - Initialized a Git repository and pushed the project to GitHub.
+#  📓 Day 2 — Python Fundamentals
 
 # 
 
-# ---
+#  Tasks
+
+ - Reviewed Python's core data types: int, float, str, bool, list, tuple, dict, and set.
+
+ - Practiced control flow using if/elif/else statements and for loops.
+
+ - Wrote a function with clear parameters and a docstring to normalize a value between 0 and 1.
+
+ - Rewrote a multi-line for loop that filters even numbers as a single list comprehension.
+
+ - Defined a small class (DataRecord) with two attributes and one method.
+
+ - Documented each notebook cell with a Markdown explanation of its purpose.
 
 # 
 
-# ## 📓 Day 2 — Python Fundamentals
+
+#  📓 Day 3 — NumPy Array Manipulation
 
 # 
 
-# ### Tasks
+#  Tasks
 
-# - Reviewed Python's core data types: int, float, str, bool, list, tuple, dict, and set.
+ - Created NumPy arrays using multiple methods: array, zeros, ones, arange, linspace, and random.
 
-# - Practiced control flow using if/elif/else statements and for loops.
+ - Inspected array attributes: shape, dtype, and ndim.
 
-# - Wrote a function with clear parameters and a docstring to normalize a value between 0 and 1.
+ - Indexed and sliced 1D and 2D arrays, including row, column, and boolean-mask selection.
 
-# - Rewrote a multi-line for loop that filters even numbers as a single list comprehension.
+ - Applied vectorized operations (multiplication, addition, mean) instead of Python loops.
 
-# - Defined a small class (DataRecord) with two attributes and one method.
+ - Practiced broadcasting by adding a 1D array to every row of a 2D array.
 
-# - Documented each notebook cell with a Markdown explanation of its purpose.
+# 
+ 
+#  🛠️ Technologies
 
 # 
 
-# ---
+ Python, NumPy, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
 
 # 
 
-# ## 📓 Day 3 — NumPy Array Manipulation
+#  📂 Repository Structure
 
-# 
+#
 
-# ### Tasks
+    week1/
 
-# - Created NumPy arrays using multiple methods: array, zeros, ones, arange, linspace, and random.
+    ├── day1/
 
-# - Inspected array attributes: shape, dtype, and ndim.
+    │   └── train.ipynb
 
-# - Indexed and sliced 1D and 2D arrays, including row, column, and boolean-mask selection.
+    ├── day2/
 
-# - Applied vectorized operations (multiplication, addition, mean) instead of Python loops.
+    │   └── day2.ipynb
 
-# - Practiced broadcasting by adding a 1D array to every row of a 2D array.
+    ├── day3/
 
-# 
+    │   └── day3.ipynb
 
-# ---
+    ├── day4/
 
-# 
+    │   └── day4.ipynb
 
-# ## 🛠️ Technologies
-
-# 
-
-# Python, NumPy, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
-
-# 
-
-# ## 📂 Repository Structure
-
-# 
-
-#    week1/
-
-#    ├── day1/
-
-#    │   └── train.ipynb
-
-#    ├── day2/
-
-#    │   └── day2.ipynb
-
-#    ├── day3/
-
-#    │   └── day3.ipynb
-
-#    ├── day4/
-
-#    │   └── day4.ipynb
-
-#    ├── day5/
+    ├── day5/
 
 #    │   └── day5.ipynb
 
