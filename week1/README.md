@@ -7,33 +7,28 @@
 
  # 📖 Overview
 
-
-
  This folder contains my Week 1 work: setting up a reproducible Python environment, reviewing core Python fundamentals, and building fluency in NumPy for array manipulation.
 
- 
-
 # 
+
 
 #  📚 Days Progress
+ 
 
-# 
+ - ✅ **Day 1** — Environment Setup
 
-# - ✅ **Day 1** — Environment Setup
+ - ✅ **Day 2** — Python Fundamentals
 
-# - ✅ **Day 2** — Python Fundamentals
+ - ✅ **Day 3** — NumPy Array Manipulation
 
-# - ✅ **Day 3** — NumPy Array Manipulation
+ - ⏳ **Day 4** — Coming Soon
 
-# - ⏳ **Day 4** — Coming Soon
+ - ⏳ **Day 5** — Coming Soon
 
-# - ⏳ **Day 5** — Coming Soon
 
-# 
 
 #  📓 Day 1 — Environment Setup
 
-# 
 
 #  Tasks
 
@@ -52,7 +47,6 @@
 
 #  📓 Day 2 — Python Fundamentals
 
-# 
 
 #  Tasks
 
@@ -73,7 +67,6 @@
 
 #  📓 Day 3 — NumPy Array Manipulation
 
-# 
 
 #  Tasks
 
@@ -121,7 +114,7 @@
 
     ├── day5/
 
-#    │   └── day5.ipynb
+    │   └── day5.ipynb
 
-# &#x20;   └── README.md
+   └── README.md
 
