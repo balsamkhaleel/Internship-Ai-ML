@@ -3,13 +3,15 @@
 
  BinX Tech — AI & Machine Learning Internship Program
 
- #
+ 
+ 
 
  # 📖 Overview
 
  This folder contains my Week 1 work: setting up a reproducible Python environment, reviewing core Python fundamentals, and building fluency in NumPy for array manipulation.
 
 # 
+
 
 
 #  📚 Days Progress
@@ -24,6 +26,9 @@
  - ⏳ **Day 4** — Coming Soon
 
  - ⏳ **Day 5** — Coming Soon
+
+
+
 
 
 
@@ -43,6 +48,8 @@
  - Initialized a Git repository and pushed the project to GitHub.
 
 # 
+
+
 
 
 #  📓 Day 2 — Python Fundamentals
@@ -65,6 +72,8 @@
 # 
 
 
+
+
 #  📓 Day 3 — NumPy Array Manipulation
 
 
@@ -81,18 +90,20 @@
  - Practiced broadcasting by adding a 1D array to every row of a 2D array.
 
 # 
+
+
  
 #  🛠️ Technologies
 
-# 
 
  Python, NumPy, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
 
 # 
 
+
+
 #  📂 Repository Structure
 
-#
 
     week1/
 
@@ -116,5 +127,5 @@
 
     │   └── day5.ipynb
 
-   └── README.md
+    └── README.md
 
