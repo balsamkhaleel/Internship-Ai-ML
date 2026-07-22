@@ -27,7 +27,7 @@
 
  - ✅ **Day 3** — NumPy Array Manipulation
 
- - ⏳ **Day 4** — Coming Soon
+ - ✅ **Day 4** — Pandas: Tabular Data
 
  - ⏳ **Day 5** — Coming Soon
 
@@ -123,7 +123,7 @@
 #  🛠️ Technologies
 
 
- Python, NumPy, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
+ Google Colab ,Python, NumPy, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
 
 
 
