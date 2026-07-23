@@ -2,13 +2,13 @@
 
 
 
-# Summary
+## Summary
 
 Reviewed core Python data types and control flow, then practiced writing cleaner, more Pythonic code through functions, list comprehensions, and a basic class.
 
 
 
-# Key Concepts
+## Key Concepts
 
 - Core data types: int, float, str, bool, list, tuple, dict, set
 
@@ -22,7 +22,7 @@ Reviewed core Python data types and control flow, then practiced writing cleaner
 
 
 
-# Tasks
+## Tasks
 
 - Reviewed Python's core data types: int, float, str, bool, list, tuple, dict, and set.
 
@@ -38,13 +38,13 @@ Reviewed core Python data types and control flow, then practiced writing cleaner
 
 
 
-# Key Takeaway
+## Key Takeaway
 
 Writing Pythonic code (comprehensions, clear functions, basic classes) isn't just style — it's the same pattern used throughout libraries like Scikit-learn and PyTorch.
 
 
 
-# Files
+## Files
 
 - `day2.ipynb` — data types, control flow, functions, and OOP exercises.
 
