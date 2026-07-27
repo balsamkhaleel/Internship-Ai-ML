@@ -1,8 +1,8 @@
-\# Day 2 — Probability \& Distributions
+# Day 2 — Probability \& Distributions
 
 
 
-\## Summary
+## Summary
 
 
 
@@ -10,59 +10,59 @@ Explored the fundamentals of probability and probability distributions, and lear
 
 
 
-\## Key Concepts
+## Key Concepts
 
 
 
-\* Probability basics: favorable outcomes over total possible outcomes
+* Probability basics: favorable outcomes over total possible outcomes
 
-\* Core probability rules: complement, addition, and multiplication
+* Core probability rules: complement, addition, and multiplication
 
-\* Conditional probability: (P(A|B))
+* Conditional probability: (P(A|B))
 
-\* Bayes' theorem: prior, likelihood, and posterior
+* Bayes' theorem: prior, likelihood, and posterior
 
-\* Common probability distributions:
-
-
-
-&#x20; \* Normal (Gaussian) distribution
-
-&#x20; \* Binomial distribution
-
-&#x20; \* Uniform distribution
-
-\* Probability simulation and random sampling
-
-\* Relationship between probability and Machine Learning
+* Common probability distributions:
 
 
 
-\## Tasks
+ * Normal (Gaussian) distribution
+
+ * Binomial distribution
+
+ * Uniform distribution
+
+* Probability simulation and random sampling
+
+* Relationship between probability and Machine Learning
 
 
 
-\* Reviewed the basic concept of probability as a measure of uncertainty between 0 (impossible) and 1 (certain).
-
-\* Applied the complement, addition, and multiplication rules of probability.
-
-\* Explained conditional probability and its importance in predictive modeling.
-
-\* Explored Bayes' theorem and its role in updating beliefs based on new evidence.
-
-\* Recognized and compared normal, binomial, and uniform probability distributions.
-
-\* Simulated 10,000 coin flips using NumPy and verified that the proportion of heads approaches 0.5.
-
-\* Generated random samples from a normal distribution using `np.random.normal()` and visualized the bell-shaped distribution with a histogram.
-
-\* Computed a conditional probability in a worked scenario and verified the result using simulation.
-
-\* Documented the results and explained what each experiment demonstrates using Markdown cells.
+## Tasks
 
 
 
-\## Key Takeaway
+* Reviewed the basic concept of probability as a measure of uncertainty between 0 (impossible) and 1 (certain).
+
+* Applied the complement, addition, and multiplication rules of probability.
+
+* Explained conditional probability and its importance in predictive modeling.
+
+* Explored Bayes' theorem and its role in updating beliefs based on new evidence.
+
+* Recognized and compared normal, binomial, and uniform probability distributions.
+
+* Simulated 10,000 coin flips using NumPy and verified that the proportion of heads approaches 0.5.
+
+* Generated random samples from a normal distribution using `np.random.normal()` and visualized the bell-shaped distribution with a histogram.
+
+* Computed a conditional probability in a worked scenario and verified the result using simulation.
+
+* Documented the results and explained what each experiment demonstrates using Markdown cells.
+
+
+
+## Key Takeaway
 
 
 
@@ -70,7 +70,7 @@ Probability is a fundamental concept in Machine Learning because many ML models 
 
 
 
-\## Files
+## Files
 
 
 
@@ -78,15 +78,15 @@ day2.ipynb — probability and distributions analysis, including coin-flip simul
 
 
 
-\## Tools Used
+## Tools Used
 
 
 
-\* NumPy
+* NumPy
 
-\* Matplotlib
+* Matplotlib
 
-\* Jupyter Notebook
+* Jupyter Notebook
 
 
 
