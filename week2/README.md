@@ -22,11 +22,11 @@ This folder contains my Week 2 work: descriptive statistics and exploratory data
 
 
 
-- ✅ Day 1 — Descriptive Statistics
+- ✅ **Day 1** — Descriptive Statistics
 
 - ✅ **Day 2** —  Probability & Distributions
 
-- ⏳ **Day 3** — Coming Soon
+- ✅ **Day 3** — Linear Algebra for ML
 
 - ⏳ **Day 4** — Coming Soon
 
@@ -68,6 +68,10 @@ Python, NumPy, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
 
 
    ├── day3/
+
+   │   ├── day3.ipynb
+
+   │   └── README.md
 
    ├── day4/
 
