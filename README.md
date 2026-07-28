@@ -20,7 +20,7 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 
 - ✅ **Week 1** — Python \& Data Science Foundations
 
-- ⏳ **Week 2** — Coming Soon
+- ⏳ **Week 2** — Statistics \& Exploratory Data Analysis
 
 - ⏳ **Week 3** — Coming Soon
 
