@@ -28,7 +28,7 @@ This folder contains my Week 2 work: descriptive statistics and exploratory data
 
 - ✅ **Day 3** — Linear Algebra for ML
 
-- ⏳ **Day 4** — Coming Soon
+- ✅ **Day 4** — EDA Part 1: Distributions & Outliers
 
 - ⏳ **Day 5** — Coming Soon
 
