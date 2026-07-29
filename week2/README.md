@@ -75,6 +75,12 @@ Python, NumPy, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
 
    ├── day4/
 
+   │   ├── day4.ipynb
+   
+   │   └── diabetes.csv
+
+   │   └── README.md
+
    ├── day5/
 
    └── README.md
