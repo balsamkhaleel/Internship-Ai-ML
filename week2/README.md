@@ -30,7 +30,7 @@ This folder contains my Week 2 work: descriptive statistics and exploratory data
 
 - ✅ **Day 4** — EDA Part 1: Distributions & Outliers
 
-- ⏳ **Day 5** — Coming Soon
+- ✅ **Day 5** — EDA Part 2: Correlation & Data Storytelling
 
 
 
@@ -82,6 +82,12 @@ Python, NumPy, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
    │   └── README.md
 
    ├── day5/
+
+   │   ├── day5.ipynb
+   
+   │   └── tested.csv
+
+   │   └── README.md
 
    └── README.md
 
