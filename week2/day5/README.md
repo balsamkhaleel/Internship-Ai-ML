@@ -1,6 +1,6 @@
-##Day 5 — EDA Part 2: Correlation \& Data Storytelling
+## Day 5 — EDA Part 2: Correlation \& Data Storytelling
 
-##Summary
+## Summary
 
 
 
@@ -8,29 +8,29 @@ Explored bivariate analysis, correlation, and data storytelling, and learned how
 
 
 
-##Key Concepts
+## Key Concepts
 
--Bivariate analysis: scatter plots and grouped box plots
+*Bivariate analysis: scatter plots and grouped box plots
 
--Correlation as a measure of how strongly two numeric variables move together (-1 to +1)
+*Correlation as a measure of how strongly two numeric variables move together (-1 to +1)
 
--The correlation heatmap for scanning all pairwise relationships at once
+*The correlation heatmap for scanning all pairwise relationships at once
 
--Correlation is not causation
+*Correlation is not causation
 
--The pairplot for scanning every variable relationship in a single grid
+*The pairplot for scanning every variable relationship in a single grid
 
--Data storytelling: turning analysis into a clear narrative
+*Data storytelling: turning analysis into a clear narrative
 
--Assembling a complete EDA notebook: statistics, univariate, outliers, bivariate, correlation
+*Assembling a complete EDA notebook: statistics, univariate, outliers, bivariate, correlation
 
-##Tasks
+## Tasks
 
--Loaded the Titanic test dataset (tested.csv) and reviewed its shape, structure, descriptive statistics, and missing values.
+*Loaded the Titanic test dataset (tested.csv) and reviewed its shape, structure, descriptive statistics, and missing values.
 
--Produced a scatter plot of Age vs Fare and a grouped box plot of Fare by Pclass to examine key variable relationships.
+*Produced a scatter plot of Age vs Fare and a grouped box plot of Fare by Pclass to examine key variable relationships.
 
--Computed the correlation matrix for all numeric columns and visualized it as an annotated heatmap.
+*Computed the correlation matrix for all numeric columns and visualized it as an annotated heatmap.
 
 -Identified the strongest relationships in the data (Pclass↔Fare, Fare↔Survived, SibSp↔Parch) and interpreted what each might mean for a future model.
 
