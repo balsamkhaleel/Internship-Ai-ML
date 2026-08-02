@@ -28,13 +28,13 @@ Explored the fundamentals of supervised learning and learned how the Scikit-lear
 
 - Loaded the weather dataset and reviewed its shape, data types, and missing values.
 
-- Visualized the relationship between `Dew Point Temp\_C` and `Temp\_C` with a scatter plot and confirmed a strong positive correlation (about 0.93).
+- Visualized the relationship between Dew Point Temp\_C and Temp\_C with a scatter plot and confirmed a strong positive correlation (about 0.93).
 
-- Separated the dataset into features `X` (all columns except `Temp\_C`) and target `y` (`Temp\_C`).
+- Separated the dataset into features X (all columns except Temp\_C) and target y (Temp\_C).
 
 - Performed an 80/20 train/test split with a fixed `random\_state` for reproducibility.
 
-- Confirmed the shapes of `X\_train`, `X\_test`, `y\_train`, and `y\_test` were consistent with the 80/20 split.
+- Confirmed the shapes of X\_train, X\_test, y\_train, and y\_test were consistent with the 80/20 split.
 
 - Explained in Markdown why the model must never see the test set during training.
 
