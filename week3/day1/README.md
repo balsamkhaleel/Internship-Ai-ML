@@ -32,7 +32,7 @@ Explored the fundamentals of supervised learning and learned how the Scikit-lear
 
 - Separated the dataset into features X (all columns except Temp\_C) and target y (Temp\_C).
 
-- Performed an 80/20 train/test split with a fixed `random\_state` for reproducibility.
+- Performed an 80/20 train/test split with a fixed random\_state for reproducibility.
 
 - Confirmed the shapes of X\_train, X\_test, y\_train, and y\_test were consistent with the 80/20 split.
 
