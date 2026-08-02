@@ -1,10 +1,10 @@
-\# 📅 Week 3 — Supervised Learning \& Scikit-learn
+# 📅 Week 3 — Supervised Learning \& Scikit-learn
 
 BinX Tech — AI \& Machine Learning Internship Program
 
 
 
-\## 📖 Overview
+## 📖 Overview
 
 This folder contains my Week 3 work: supervised learning fundamentals and the Scikit-learn workflow.  
 
@@ -12,7 +12,7 @@ The focus was on understanding labeled data, distinguishing between regression a
 
 
 
-\## 📚 Days
+## 📚 Days
 
 
 
@@ -36,7 +36,7 @@ The focus was on understanding labeled data, distinguishing between regression a
 
 
 
-\## 🛠️ Technologies
+## 🛠️ Technologies
 
 
 
@@ -44,5 +44,24 @@ Python, Pandas, Scikit-learn, Matplotlib, Jupyter Notebook, Git, GitHub
 
 
 
-\## 📂 Repository Structure
+## 📂 Repository Structure
 
+week3/
+
+├── day1/
+
+│ ├── day1.ipynb
+
+│ └── README.md
+
+│ └── Weather Dataset.csv
+
+├── day2/
+
+├── day3/
+
+├── day4/
+
+├── day5/
+
+└── README.md
