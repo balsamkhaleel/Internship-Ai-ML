@@ -20,7 +20,7 @@ The focus was on understanding labeled data, distinguishing between regression a
 
 
 
-⏳ Day 2 — Coming Soon
+✅ Day 2 — Linear Regression
 
 
 
