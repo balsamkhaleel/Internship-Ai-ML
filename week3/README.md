@@ -58,6 +58,12 @@ week3/
 
 ├── day2/
 
+│ ├── day2.ipynb
+
+│ └── README.md
+
+│ └── housing.csv
+
 ├── day3/
 
 ├── day4/
