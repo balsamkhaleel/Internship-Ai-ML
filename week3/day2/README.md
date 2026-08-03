@@ -1,42 +1,41 @@
-Day 2 — Linear Regression #
-
-Summary ##
+# Day 2 — Linear Regression 
 
 
+## Summary 
 
 Explored linear regression and learned how to train, interpret, and evaluate a regression model. Practiced fitting a LinearRegression model on the California housing dataset, interpreting its coefficients, and evaluating it with MAE, RMSE, and R² against a baseline.
 
 
 
-Key Concepts
+## Key Concepts
 
-Linear regression: fitting the best line (or hyperplane) through the data
+- Linear regression: fitting the best line (or hyperplane) through the data
 
-Training and predicting with Scikit-learn's LinearRegression
+- Training and predicting with Scikit-learn's LinearRegression
 
-Interpreting coefficients and the intercept
+- Interpreting coefficients and the intercept
 
-Regression metrics: MAE, RMSE, R²
+- Regression metrics: MAE, RMSE, R²
 
-Comparing a model against a baseline to confirm it adds value
+- Comparing a model against a baseline to confirm it adds value
 
-Tasks
+## Tasks
 
-Loaded the housing dataset, handled missing values in total\_bedrooms, and one-hot encoded the categorical ocean\_proximity column.
+- Loaded the housing dataset, handled missing values in total\_bedrooms, and one-hot encoded the categorical ocean\_proximity column.
 
-Separated the data into features X and target y (median\_house\_value), then performed an 80/20 train/test split.
+- Separated the data into features X and target y (median\_house\_value), then performed an 80/20 train/test split.
 
-Trained a LinearRegression model and generated predictions on the test set.
+- Trained a LinearRegression model and generated predictions on the test set.
 
-Reported the model's coefficients and identified median\_income as the strongest well-supported predictor, while flagging ocean\_proximity\_ISLAND's large coefficient as based on very little data.
+- Reported the model's coefficients and identified median\_income as the strongest well-supported predictor, while flagging ocean\_proximity\_ISLAND's large coefficient as based on very little data.
 
-Evaluated the model with MAE (\~$50,702), RMSE (\~$70,031), and R² (\~0.626).
+- Evaluated the model with MAE (~$50,702), RMSE (~$70,031), and R² (~0.626).
 
-Compared the model's RMSE against a baseline that predicts the mean house value for every row, and confirmed the model reduces error by roughly 39%.
+- Compared the model's RMSE against a baseline that predicts the mean house value for every row, and confirmed the model reduces error by roughly 39%.
 
-Documented the interpretation of the results in Markdown.
+- Documented the interpretation of the results in Markdown.
 
-Key Takeaway
+## Key Takeaway
 
 
 
@@ -44,7 +43,7 @@ A linear regression model's prediction is just a weighted sum of the features pl
 
 
 
-Files
+## Files
 
 
 
