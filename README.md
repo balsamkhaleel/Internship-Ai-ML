@@ -22,7 +22,7 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 
 - ✅ **Week 2** — Statistics \& Exploratory Data Analysis
 
-- ⏳ **Week 3** — Coming Soon
+- ⏳ **Week 3** — Supervised Learning & Scikit-learn
 
 - ⏳ **Week 4** — Coming Soon
 
