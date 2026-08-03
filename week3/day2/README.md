@@ -23,7 +23,7 @@ Explored linear regression and learned how to train, interpret, and evaluate a r
 
 ## Tasks
 
-- Loaded the housing dataset, handled missing values in `total_bedrooms`, one-hot encoded the categorical `ocean_proximity` column, and standardized the features using `StandardScaler`..
+- Loaded the housing dataset, handled missing values in total_bedrooms, one-hot encoded the categorical ocean_proximity column, and standardized the features using StandardScaler.
 
 - Separated the data into features X and target y (median\_house\_value), then performed an 80/20 train/test split.
 
@@ -31,7 +31,7 @@ Explored linear regression and learned how to train, interpret, and evaluate a r
 
 - Reported the model's coefficients and identified median\_income as the strongest well-supported predictor, while flagging ocean\_proximity\_ISLAND's large coefficient as based on very little data.
 
-- Evaluated the model with MAE (~$50,702), RMSE (~$70,031), and R² (~0.626).
+- Evaluated the model with MAE (~50,702), RMSE (~70,031), and R² (~0.626).
 
 - Compared the model's RMSE against a baseline that predicts the mean house value for every row, and confirmed the model reduces error by roughly 39%.
 
@@ -42,7 +42,7 @@ Explored linear regression and learned how to train, interpret, and evaluate a r
 
 
 
-A Linear Regression model predicts a target as a weighted sum of the features plus an intercept. Standardizing the features with `StandardScaler` makes the coefficients directly comparable. The model clearly beat the baseline, showing it learned useful relationships from the data, although the gap between MAE and RMSE indicates it still struggles with some higher-value homes.
+A Linear Regression model predicts a target as a weighted sum of the features plus an intercept. Standardizing the features with StandardScaler makes the coefficients directly comparable. The model clearly beat the baseline, showing it learned useful relationships from the data, although the gap between MAE and RMSE indicates it still struggles with some higher-value homes.
 
 
 
