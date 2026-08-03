@@ -19,7 +19,7 @@ Explored linear regression and learned how to train, interpret, and evaluate a r
 
 - Comparing a model against a baseline to confirm it adds value
   
-- Feature scaling with `StandardScaler` for coefficient comparability.
+- Feature scaling with StandardScaler for coefficient comparability.
 
 ## Tasks
 
