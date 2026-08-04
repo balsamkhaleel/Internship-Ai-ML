@@ -24,7 +24,7 @@ The focus was on understanding labeled data, distinguishing between regression a
 
 
 
-⏳ Day 3 — Coming Soon
+✅ Day 3 —  Logistic Regression & Classification Metrics
 
 
 
@@ -65,6 +65,12 @@ week3/
 │ └── housing.csv
 
 ├── day3/
+
+│ ├── day3.ipynb
+
+│ └── README.md
+
+│ └── breast-cancer.csv
 
 ├── day4/
 
