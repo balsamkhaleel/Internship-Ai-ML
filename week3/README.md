@@ -28,7 +28,7 @@ The focus was on understanding labeled data, distinguishing between regression a
 
 
 
-⏳ Day 4 — Coming Soon
+✅ Day 4 — Trees, Forests, SVMs & k-NN
 
 
 
@@ -73,6 +73,12 @@ week3/
 │ └── breast-cancer.csv
 
 ├── day4/
+
+│ ├── day4.ipynb
+
+│ └── README.md
+
+│ └── breast-cancer.csv
 
 ├── day5/
 
