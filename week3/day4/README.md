@@ -1,6 +1,6 @@
-Day 4 — Trees, Forests, SVMs \& k-NN
+# Day 4 — Trees, Forests, SVMs \& k-NN
 
-Summary
+## Summary
 
 
 
@@ -8,31 +8,31 @@ Explored decision trees, random forests, SVMs, and k-NN, and learned how to comp
 
 
 
-Key Concepts
+## Key Concepts
 
-Decision trees: rule-based, interpretable, prone to overfitting
+- Decision trees: rule-based, interpretable, prone to overfitting
 
-Random forests: ensembles and feature importances
+- Random forests: ensembles and feature importances
 
-Support Vector Machines and the margin
+- Support Vector Machines and the margin
 
-k-Nearest Neighbors
+- k-Nearest Neighbors
 
-Comparing models fairly on the same split and metric ("no free lunch")
+- Comparing models fairly on the same split and metric ("no free lunch")
 
-Tasks
+## Tasks
 
-Reused the same dataset and 80/20 train/test split from Day 3 to keep the comparison fair.
+- Reused the same dataset and 80/20 train/test split from Day 3 to keep the comparison fair.
 
-Trained a Decision Tree (max\_depth=7), Random Forest (n\_estimators=100), SVM (RBF kernel), and k-NN (n\_neighbors=5) on identical training data.
+- Trained a Decision Tree (max\_depth=7), Random Forest (n\_estimators=100), SVM (RBF kernel), and k-NN (n\_neighbors=5) on identical training data.
 
-Evaluated all four with classification\_report, comparing precision, recall, and F1 per class.
+- Evaluated all four with classification\_report, comparing precision, recall, and F1 per class.
 
-Reported the random forest's top feature importances — area\_worst, concave points\_worst, and concave points\_mean — and interpreted them as matching medical intuition (malignant tumors tend to be larger with more irregular, concave boundaries).
+- Reported the random forest's top feature importances — area\_worst, concave points\_worst, and concave points\_mean — and interpreted them as matching medical intuition (malignant tumors tend to be larger with more irregular, concave boundaries).
 
-Compared all four models' weighted F1-scores in a bar chart and identified Random Forest as the best-performing model, explaining why in Markdown.
+- Compared all four models' weighted F1-scores in a bar chart and identified Random Forest as the best-performing model, explaining why in Markdown.
 
-Key Takeaway
+## Key Takeaway
 
 
 
@@ -40,7 +40,7 @@ No single algorithm wins by default — the "no free lunch" principle held true 
 
 
 
-Files
+## Files
 
 
 
