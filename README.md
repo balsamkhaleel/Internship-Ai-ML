@@ -22,7 +22,7 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 
 - ✅ **Week 2** — Statistics \& Exploratory Data Analysis
 
-- ⏳ **Week 3** — Supervised Learning & Scikit-learn
+- ✅ **Week 3** — Supervised Learning & Scikit-learn
 
 - ⏳ **Week 4** — Coming Soon
 
@@ -74,21 +74,146 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 
    ├── week2/
 
+   │   ├── day1/
+
+   │   ├── day2/
+       
+   │   ├── day3/
+
+   │   ├── day4/
+
+   │   ├── day5/
+   
+   │   └── README.md
+
+   │
+
    ├── week3/
+
+   │   ├── day1/
+
+   │   ├── day2/
+       
+   │   ├── day3/
+
+   │   ├── day4/
+
+   │   ├── day5/
+   
+   │   └── README.md
+
+   │
 
    ├── week4/
 
+   │   ├── day1/
+
+   │   ├── day2/
+       
+   │   ├── day3/
+
+   │   ├── day4/
+
+   │   ├── day5/
+   
+   │   └── README.md
+
+   │
+
    ├── week5/
+
+   │   ├── day1/
+
+   │   ├── day2/
+       
+   │   ├── day3/
+
+   │   ├── day4/
+
+   │   ├── day5/
+   
+   │   └── README.md
+
+   │
 
    ├── week6/
 
+   │   ├── day1/
+
+   │   ├── day2/
+       
+   │   ├── day3/
+
+   │   ├── day4/
+
+   │   ├── day5/
+   
+   │   └── README.md
+
+   │
+
    ├── week7/
+
+   │   ├── day1/
+
+   │   ├── day2/
+       
+   │   ├── day3/
+
+   │   ├── day4/
+
+   │   ├── day5/
+   
+   │   └── README.md
+
+   │
 
    ├── week8/
 
+   │   ├── day1/
+
+   │   ├── day2/
+       
+   │   ├── day3/
+
+   │   ├── day4/
+
+   │   ├── day5/
+   
+   │   └── README.md
+
+   │
+
    ├── week9/
 
+   │   ├── day1/
+
+   │   ├── day2/
+       
+   │   ├── day3/
+
+   │   ├── day4/
+
+   │   ├── day5/
+   
+   │   └── README.md
+
+   │
+
    └── week10/
+   │   ├── day1/
+
+   │   ├── day2/
+       
+   │   ├── day3/
+
+   │   ├── day4/
+
+   │   ├── day5/
+   
+   │   └── README.md
+
+   
 
 
 
@@ -106,13 +231,15 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 
 - Pandas
 
-- Matplotlib
+- Matplotlib \ Seaborn
 
 - Jupyter Notebook
 
 - Git
 
 - GitHub
+
+- Scikit-learn 
 
 
 
