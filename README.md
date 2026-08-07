@@ -49,113 +49,103 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 
 
    Internship/
-
-   │
-
-   ├── README.md
-
-   │
-
-   ├── week1/
-
-   │   ├── day1/
-   |      ├── train.ipynb
-   |      └── README.md
-
-   │   ├── day2/
-   │      ├── day2.ipynb
-   │      └── README.md
-       
-   │   ├── day3/
-   │      ├── day3.ipynb
-   │      └── README.md
-
-   │   ├── day4/
-   │      ├── TabularData.ipynb
-   │      └── README.md
-
-   │   ├── day5/
-   │      ├── titanic.ipynb
-   │      ├── tested.csv
-   │      └── README.md
-   
-   │   └── README.md
-
-   │
-
-   ├── week2/
-
-   │   ├── day1/
-   │      ├── Descriptive Statistics.ipynb
-   │      └── README.md
-   │      └── tested.csv
-
-   │   ├── day2/
-   │      ├── day2.ipynb
-   │      └── README.md
-       
-   │   ├── day3/
-   │      ├── day3.ipynb
-   │      └── README.md
-
-   │   ├── day4/
-   │      ├── day4.ipynb
-   │      └── diabetes.csv
-   │      └── README.md
-
-   │   ├── day5/
-   │      ├── day5.ipynb
-   │      └── tested.csv
-   │      └── README.md
-   
-   │   └── README.md
-
-   │
-
-   ├── week3/
-
-   │   ├── day1/
-   │      ├── day1.ipynb
-   │      └── README.md
-   │      └── Weather Dataset.csv
-
-   │   ├── day2/
-   │      ├── day2.ipynb
-   │      └── README.md
-   │      └── housing.csv
-       
-   │   ├── day3/
-   │      ├── day3.ipynb
-   │      └── README.md
-   │      └── breast-cancer.csv
-
-   │   ├── day4/
-   │      ├── day4.ipynb
-   │      └── README.md
-   │      └── breast-cancer.csv
-
-   │   ├── day5/
-   │      ├── day5.ipynb
-   │      └── README.md
-   │      └── Titanic-Dataset.csv
-   
-   │   └── README.md
-
-   │
-
-   ├── week4/
-
-   ├── week5/
-
-   ├── week6/
-
-   ├── week7/
-
-   ├── week8/
-
-   ├── week9/
-
-   └── week10/
+│
+├── README.md
+│
+├── week1/
+│   │
+│   ├── day1/
+│   │   ├── train.ipynb
+│   │   └── README.md
+│   │
+│   ├── day2/
+│   │   ├── day2.ipynb
+│   │   └── README.md
+│   │
+│   ├── day3/
+│   │   ├── day3.ipynb
+│   │   └── README.md
+│   │
+│   ├── day4/
+│   │   ├── TabularData.ipynb
+│   │   └── README.md
+│   │
+│   ├── day5/
+│   │   ├── titanic.ipynb
+│   │   ├── tested.csv
+│   │   └── README.md
+│   │
+│   └── README.md
+│
+├── week2/
+│   │
+│   ├── day1/
+│   │   ├── Descriptive Statistics.ipynb
+│   │   ├── tested.csv
+│   │   └── README.md
+│   │
+│   ├── day2/
+│   │   ├── day2.ipynb
+│   │   └── README.md
+│   │
+│   ├── day3/
+│   │   ├── day3.ipynb
+│   │   └── README.md
+│   │
+│   ├── day4/
+│   │   ├── day4.ipynb
+│   │   ├── diabetes.csv
+│   │   └── README.md
+│   │
+│   ├── day5/
+│   │   ├── day5.ipynb
+│   │   ├── tested.csv
+│   │   └── README.md
+│   │
+│   └── README.md
+│
+├── week3/
+│   │
+│   ├── day1/
+│   │   ├── day1.ipynb
+│   │   ├── Weather Dataset.csv
+│   │   └── README.md
+│   │
+│   ├── day2/
+│   │   ├── day2.ipynb
+│   │   ├── housing.csv
+│   │   └── README.md
+│   │
+│   ├── day3/
+│   │   ├── day3.ipynb
+│   │   ├── breast-cancer.csv
+│   │   └── README.md
+│   │
+│   ├── day4/
+│   │   ├── day4.ipynb
+│   │   ├── breast-cancer.csv
+│   │   └── README.md
+│   │
+│   ├── day5/
+│   │   ├── day5.ipynb
+│   │   ├── Titanic-Dataset.csv
+│   │   └── README.md
+│   │
+│   └── README.md
+│
+├── week4/
+│
+├── week5/
+│
+├── week6/
+│
+├── week7/
+│
+└── week8/
+│
+├── week9/
+│
+└── week10/
   
    
 
