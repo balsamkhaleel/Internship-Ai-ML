@@ -59,14 +59,25 @@ This repository documents my learning journey throughout the **AI & Machine Lear
    ├── week1/
 
    │   ├── day1/
+   |      ├── train.ipynb
+   |      └── README.md
 
    │   ├── day2/
+   │      ├── day2.ipynb
+   │      └── README.md
        
    │   ├── day3/
+   │      ├── day3.ipynb
+   │      └── README.md
 
    │   ├── day4/
+   │      ├── TabularData.ipynb
+   │      └── README.md
 
    │   ├── day5/
+   │      ├── titanic.ipynb
+   │      ├── tested.csv
+   │      └── README.md
    
    │   └── README.md
 
@@ -75,14 +86,27 @@ This repository documents my learning journey throughout the **AI & Machine Lear
    ├── week2/
 
    │   ├── day1/
+   │      ├── Descriptive Statistics.ipynb
+   │      └── README.md
+   │      └── tested.csv
 
    │   ├── day2/
+   │      ├── day2.ipynb
+   │      └── README.md
        
    │   ├── day3/
+   │      ├── day3.ipynb
+   │      └── README.md
 
    │   ├── day4/
+   │      ├── day4.ipynb
+   │      └── diabetes.csv
+   │      └── README.md
 
    │   ├── day5/
+   │      ├── day5.ipynb
+   │      └── tested.csv
+   │      └── README.md
    
    │   └── README.md
 
@@ -91,14 +115,29 @@ This repository documents my learning journey throughout the **AI & Machine Lear
    ├── week3/
 
    │   ├── day1/
+   │      ├── day1.ipynb
+   │      └── README.md
+   │      └── Weather Dataset.csv
 
    │   ├── day2/
+   │      ├── day2.ipynb
+   │      └── README.md
+   │      └── housing.csv
        
    │   ├── day3/
+   │      ├── day3.ipynb
+   │      └── README.md
+   │      └── breast-cancer.csv
 
    │   ├── day4/
+   │      ├── day4.ipynb
+   │      └── README.md
+   │      └── breast-cancer.csv
 
    │   ├── day5/
+   │      ├── day5.ipynb
+   │      └── README.md
+   │      └── Titanic-Dataset.csv
    
    │   └── README.md
 
@@ -106,113 +145,18 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 
    ├── week4/
 
-   │   ├── day1/
-
-   │   ├── day2/
-       
-   │   ├── day3/
-
-   │   ├── day4/
-
-   │   ├── day5/
-   
-   │   └── README.md
-
-   │
-
    ├── week5/
-
-   │   ├── day1/
-
-   │   ├── day2/
-       
-   │   ├── day3/
-
-   │   ├── day4/
-
-   │   ├── day5/
-   
-   │   └── README.md
-
-   │
 
    ├── week6/
 
-   │   ├── day1/
-
-   │   ├── day2/
-       
-   │   ├── day3/
-
-   │   ├── day4/
-
-   │   ├── day5/
-   
-   │   └── README.md
-
-   │
-
    ├── week7/
-
-   │   ├── day1/
-
-   │   ├── day2/
-       
-   │   ├── day3/
-
-   │   ├── day4/
-
-   │   ├── day5/
-   
-   │   └── README.md
-
-   │
 
    ├── week8/
 
-   │   ├── day1/
-
-   │   ├── day2/
-       
-   │   ├── day3/
-
-   │   ├── day4/
-
-   │   ├── day5/
-   
-   │   └── README.md
-
-   │
-
    ├── week9/
 
-   │   ├── day1/
-
-   │   ├── day2/
-       
-   │   ├── day3/
-
-   │   ├── day4/
-
-   │   ├── day5/
-   
-   │   └── README.md
-
-   │
-
    └── week10/
-   │   ├── day1/
-
-   │   ├── day2/
-       
-   │   ├── day3/
-
-   │   ├── day4/
-
-   │   ├── day5/
-   
-   │   └── README.md
-
+  
    
 
 
