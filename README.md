@@ -48,12 +48,12 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 
 
 
-   Internship/
+```text
+Internship/
 │
 ├── README.md
 │
 ├── week1/
-│   │
 │   ├── day1/
 │   │   ├── train.ipynb
 │   │   └── README.md
@@ -78,7 +78,6 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 │   └── README.md
 │
 ├── week2/
-│   │
 │   ├── day1/
 │   │   ├── Descriptive Statistics.ipynb
 │   │   ├── tested.csv
@@ -105,7 +104,6 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 │   └── README.md
 │
 ├── week3/
-│   │
 │   ├── day1/
 │   │   ├── day1.ipynb
 │   │   ├── Weather Dataset.csv
@@ -134,18 +132,13 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 │   └── README.md
 │
 ├── week4/
-│
 ├── week5/
-│
 ├── week6/
-│
 ├── week7/
-│
-└── week8/
-│
+├── week8/
 ├── week9/
-│
 └── week10/
+```
   
    
 
