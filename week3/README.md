@@ -32,7 +32,7 @@ The focus was on understanding labeled data, distinguishing between regression a
 
 
 
-⏳ Day 5 — Coming Soon
+✅ Day 5 — Supervised-Learning Mini-Project
 
 
 
@@ -81,5 +81,11 @@ week3/
 │ └── breast-cancer.csv
 
 ├── day5/
+
+│ ├── day5.ipynb
+
+│ └── README.md
+
+│ └── Titanic-Dataset.csv
 
 └── README.md
