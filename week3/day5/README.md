@@ -1,6 +1,6 @@
-Day 5 — Supervised-Learning Mini-Project
+# Day 5 — Supervised-Learning Mini-Project
 
-Summary
+## Summary
 
 
 
@@ -8,35 +8,35 @@ Assembled a complete end-to-end supervised-learning pipeline on the Titanic data
 
 
 
-Key Concepts
+## Key Concepts
 
-The full pipeline: EDA → preprocessing → split → model → evaluation
+- The full pipeline: EDA → preprocessing → split → model → evaluation
 
-Basic preprocessing: one-hot encoding, feature scaling
+- Basic preprocessing: one-hot encoding, feature scaling
 
-Avoiding data leakage (fitting the scaler on train only)
+- Avoiding data leakage (fitting the scaler on train only)
 
-Choosing the right model and metric for the task
+- Choosing the right model and metric for the task
 
-Documenting and justifying the final result against a baseline
+- Documenting and justifying the final result against a baseline
 
-Tasks
+## Tasks
 
-Determined the task was classification, since the target (Survived) is a category, not a continuous number.
+- Determined the task was classification, since the target (Survived) is a category, not a continuous number.
 
-Performed brief EDA: reviewed shape, missing values, class balance, survival by sex, and a correlation heatmap.
+- Performed brief EDA: reviewed shape, missing values, class balance, survival by sex, and a correlation heatmap.
 
-Preprocessed the data: filled missing Age with the median, dropped 2 rows missing Embarked, dropped the mostly-empty Cabin column, dropped non-predictive columns (PassengerId, Name, Ticket), and encoded Sex/Embarked.
+- Preprocessed the data: filled missing Age with the median, dropped 2 rows missing Embarked, dropped the mostly-empty Cabin column, dropped non-predictive columns (PassengerId, Name, Ticket), and encoded Sex/Embarked.
 
-Split the data 80/20 and scaled Age/Fare with StandardScaler, fitting only on the training set to avoid data leakage.
+- Split the data 80/20 and scaled Age/Fare with StandardScaler, fitting only on the training set to avoid data leakage.
 
-Established a baseline (predicting the majority class) at 61.2% accuracy.
+- Established a baseline (predicting the majority class) at 61.2% accuracy.
 
-Trained and evaluated Logistic Regression (78.1%), Random Forest (77.5%), and SVM (82.0%) against that baseline.
+- Trained and evaluated Logistic Regression (78.1%), Random Forest (77.5%), and SVM (82.0%) against that baseline.
 
-Selected SVM as the best-performing model and justified the choice in Markdown.
+- Selected SVM as the best-performing model and justified the choice in Markdown.
 
-Key Takeaway
+## Key Takeaway
 
 
 
@@ -44,7 +44,7 @@ A real ML pipeline is more than fitting a model — it's a sequence of deliberat
 
 
 
-Files
+## Files
 
 
 
