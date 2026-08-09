@@ -1,6 +1,6 @@
-Day 1 — Train / Validation / Test Splits
+# Day 1 — Train / Validation / Test Splits
 
-Summary
+## Summary
 
 
 
@@ -8,33 +8,33 @@ Explored why a validation set is needed in addition to a test set, and learned h
 
 
 
-Key Concepts
+## Key Concepts
 
-The problem with tuning against a single test set
+- The problem with tuning against a single test set
 
-The three-way split: train, validation, test — each with one job
+- The three-way split: train, validation, test — each with one job
 
-Creating a three-way split in Scikit-learn with two train\_test\_split calls
+- Creating a three-way split in Scikit-learn with two train\_test\_split calls
 
-Why one validation set can still mislead (motivating cross-validation)
+- Why one validation set can still mislead (motivating cross-validation)
 
-Tasks
+## Tasks
 
-Loaded the breast cancer dataset, mapped diagnosis to numeric, and separated features X and target y.
+- Loaded the breast cancer dataset, mapped diagnosis to numeric, and separated features X and target y.
 
-Created a 60/20/20 train/validation/test split with a fixed random\_state, confirming the resulting shapes (341/114/114 rows).
+- Created a 60/20/20 train/validation/test split with a fixed random\_state, confirming the resulting shapes (341/114/114 rows).
 
-Scaled the features with StandardScaler, fitting only on the training set.
+- Scaled the features with StandardScaler, fitting only on the training set.
 
-Trained a logistic regression model and checked its accuracy on the validation set (\~97.4%).
+- Trained a logistic regression model and checked its accuracy on the validation set (\~97.4%).
 
-Tuned the C hyperparameter across five values by checking validation accuracy only, and selected C = 0.5 as the best-tied, most sensibly regularized choice.
+- Tuned the C hyperparameter across five values by checking validation accuracy only, and selected C = 0.5 as the best-tied, most sensibly regularized choice.
 
-Trained the final model with the chosen C and evaluated it on the test set exactly once, reporting \~98.2% accuracy.
+- Trained the final model with the chosen C and evaluated it on the test set exactly once, reporting \~98.2% accuracy.
 
-Explained in Markdown what would go wrong if the test set had been used for tuning instead of the validation set.
+- Explained in Markdown what would go wrong if the test set had been used for tuning instead of the validation set.
 
-Key Takeaway
+## Key Takeaway
 
 
 
@@ -42,7 +42,7 @@ A single test set stops being an honest estimate of real-world performance the m
 
 
 
-Files
+## Files
 
 
 
