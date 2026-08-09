@@ -10,7 +10,7 @@ This folder contains my Week 4 work: proper model evaluation and validation tech
 
 
 
----
+-
 
 
 
@@ -28,7 +28,7 @@ This folder contains my Week 4 work: proper model evaluation and validation tech
 
 
 
----
+
 
 
 
@@ -38,7 +38,7 @@ Python, Scikit-learn, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
 
 
 
----
+
 
 
 
