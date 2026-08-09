@@ -1,70 +1,68 @@
-\# 📅 Week 4 — Model Evaluation \& Validation
+# 📅 Week 4 — Model Evaluation \& Validation
 
 BinX Tech — AI \& Machine Learning Internship Program
 
 
 
-\## 📖 Overview
+## 📖 Overview
 
 This folder contains my Week 4 work: proper model evaluation and validation techniques needed to get an honest, trustworthy estimate of how a model will perform on new, unseen data.
 
 
 
-\---
+---
 
 
 
-\## 📚 Days
+## 📚 Days
 
-\- ✅ \*\*Day 1 — Train / Validation / Test Splits\*\*
+- ✅ **Day 1 — Train / Validation / Test Splits**
 
-\- ⬜ \*\*Day 2 — Cross-Validation\*\*
+- ⏳ **Day 2 — Comming soon**
 
-\- ⬜ \*\*Day 3 — TBD\*\*
+- ⏳ **Day 3 — Comming soon**
 
-\- ⬜ \*\*Day 4 — TBD\*\*
+- ⏳ **Day 4 — Comming soon**
 
-\- ⬜ \*\*Day 5 — TBD\*\*
-
-
-
-\---
+- ⏳ **Day 5 — Comming soon**
 
 
 
-\## 🛠️ Technologies
+---
+
+
+
+## 🛠️ Technologies
 
 Python, Scikit-learn, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
 
 
 
-\---
+---
 
 
 
-\## 📂 Repository Structure
+## 📂 Repository Structure
 
 
 
-&#x20;   week4/
+   week4/
 
-&#x20;   ├── day1/
+   ├── day1/
 
-&#x20;   │   ├── day1.ipynb
+   │   ├── day1.ipynb
 
-&#x20;   │   └── README.md
+   │   └── README.md
 
-&#x20;   ├── day2/
+   │   └── breast-cancer.csv
 
-&#x20;   │   ├── day2.ipynb
+   ├── day2/
 
-&#x20;   │   └── README.md
+   ├── day3/
 
-&#x20;   ├── day3/
+   ├── day4/
 
-&#x20;   ├── day4/
+   ├── day5/
 
-&#x20;   ├── day5/
-
-&#x20;   └── README.md
+   └── README.md
 
