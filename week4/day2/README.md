@@ -22,7 +22,7 @@ Explored how k-fold cross-validation produces a more reliable performance estima
 
 * Stratified k-fold and why it matters for imbalanced classification
 
-* Using a `Pipeline` to prevent preprocessing leakage during cross-validation
+* Using a Pipeline to prevent preprocessing leakage during cross-validation
 
 
 
@@ -42,7 +42,7 @@ Explored how k-fold cross-validation produces a more reliable performance estima
 
 * Explicitly built a StratifiedKFold and re-ran cross-validation (0.9640 ± 0.0207).
 
-* Confirmed that cross\_val\_score uses stratified folds by default for classifiers when cv is specified as an integer, and explained that the difference in results came from enabling shuffling in the explicit `StratifiedKFold`.
+* Confirmed that cross\_val\_score uses stratified folds by default for classifiers when cv is specified as an integer, and explained that the difference in results came from enabling shuffling in the explicit StratifiedKFold.
 
 * Assembled the single-split, 5-fold CV, and stratified 5-fold results into one comparison table.
 
