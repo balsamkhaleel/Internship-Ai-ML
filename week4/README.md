@@ -18,7 +18,7 @@ This folder contains my Week 4 work: proper model evaluation and validation tech
 
 - ✅ **Day 1 — Train / Validation / Test Splits**
 
-- ⏳ **Day 2 — Comming soon**
+- ✅ **Day 2 — Cross-Validation**
 
 - ⏳ **Day 3 — Comming soon**
 
@@ -57,6 +57,12 @@ Python, Scikit-learn, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
    │   └── breast-cancer.csv
 
    ├── day2/
+
+   │   ├── day2.ipynb
+
+   │   └── README.md
+
+   │   └── breast-cancer.csv
 
    ├── day3/
 
