@@ -66,7 +66,7 @@ Python, Scikit-learn, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
 
    ├── day3/
 
-    │   ├── day3.ipynb
+   │   ├── day3.ipynb
 
    │   └── README.md
 
