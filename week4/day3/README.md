@@ -14,7 +14,7 @@ Explored the bias-variance trade-off and learned how to diagnose a model's fit f
 
 - The bias-variance trade-off
 
--Diagnosing fit from the train-vs-validation (test) gap
+- Diagnosing fit from the train-vs-validation (test) gap
 
 - Regularization: cost-complexity pruning for decision trees 
 
