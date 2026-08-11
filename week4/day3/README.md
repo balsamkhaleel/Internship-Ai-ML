@@ -1,6 +1,6 @@
-Day 3 — Bias-Variance \& Diagnosing Model Fit
+## Day 3 — Bias-Variance \& Diagnosing Model Fit
 
-Summary
+## Summary
 
 
 
@@ -8,33 +8,33 @@ Explored the bias-variance trade-off and learned how to diagnose a model's fit f
 
 
 
-Key Concepts
+## Key Concepts
 
-Underfitting (high bias) vs. overfitting (high variance)
+- Underfitting (high bias) vs. overfitting (high variance)
 
-The bias-variance trade-off
+- The bias-variance trade-off
 
-Diagnosing fit from the train-vs-validation (test) gap
+-Diagnosing fit from the train-vs-validation (test) gap
 
-Regularization: cost-complexity pruning for decision trees (the same idea behind Ridge/Lasso for linear models)
+- Regularization: cost-complexity pruning for decision trees 
 
-Tasks
+## Tasks
 
-Loaded the dataset, checked for missing values (none found), and reviewed the class balance (357 benign vs 212 malignant).
+- Loaded the dataset, checked for missing values (none found), and reviewed the class balance (357 benign vs 212 malignant).
 
-Trained a deliberately overfit decision tree (max\_depth=2000) and confirmed the diagnosis: perfect training accuracy (1.000) but a much lower test accuracy (0.930), a gap of 0.070.
+- Trained a deliberately overfit decision tree (max\_depth=2000) and confirmed the diagnosis: perfect training accuracy (1.000) but a much lower test accuracy (0.930), a gap of 0.070.
 
-Trained a deliberately underfit decision tree (max\_depth=1) and confirmed both scores were low relative to the other models (training 0.930, test 0.877).
+- Trained a deliberately underfit decision tree (max\_depth=1) and confirmed both scores were low relative to the other models (training 0.930, test 0.877).
 
-Trained a well-fit decision tree (max\_depth=2) for comparison, with the smallest gap of the three (0.033).
+- Trained a well-fit decision tree (max\_depth=2) for comparison, with the smallest gap of the three (0.033).
 
-Assembled all three models' scores into one comparison table and chart.
+- Assembled all three models' scores into one comparison table and chart.
 
-Applied cost-complexity pruning (ccp\_alpha=0.01) to the overfit tree and showed the gap shrink from 0.070 to 0.046.
+- Applied cost-complexity pruning (ccp\_alpha=0.01) to the overfit tree and showed the gap shrink from 0.070 to 0.046.
 
-Documented each diagnosis and fix with the score evidence in Markdown.
+- Documented each diagnosis and fix with the score evidence in Markdown.
 
-Key Takeaway
+## Key Takeaway
 
 
 
@@ -42,7 +42,7 @@ The train-vs-test gap is the single most useful diagnostic in model tuning: a sm
 
 
 
-Files
+## Files
 
 
 
