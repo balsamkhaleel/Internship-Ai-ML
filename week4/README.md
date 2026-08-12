@@ -22,7 +22,7 @@ This folder contains my Week 4 work: proper model evaluation and validation tech
 
 - ✅ **Day 3 — Bias-Variance \& Diagnosing Model Fit**
 
-- ⏳ **Day 4 — Comming soon**
+- ✅ **Day 4 — Feature Engineering & Hyperparameter Tuning**
 
 - ⏳ **Day 5 — Comming soon**
 
@@ -73,6 +73,12 @@ Python, Scikit-learn, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
    │   └── breast-cancer.csv
 
    ├── day4/
+
+    │   ├── day4.ipynb
+
+   │   └── README.md
+
+   │   └── Titanic-Dataset.csv
 
    ├── day5/
 
