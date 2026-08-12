@@ -20,7 +20,7 @@ Explored feature engineering and systematic hyperparameter tuning using `GridSea
 
 - Hyperparameters vs. learned model parameters
 
-- `GridSearchCV` and cross-validation
+- GridSearchCV and cross-validation
 
 - best\_params\_ and best\_score\_
 
