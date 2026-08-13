@@ -71,12 +71,12 @@ Random Forest configuration was already relatively strong for this dataset.
 
 ## Key Takeaway
 
-A Pipeline combined with a `ColumnTransformer` provides a structured and
+A Pipeline combined with a ColumnTransformer provides a structured and
 leak-free machine learning workflow. Preprocessing steps such as imputation,
 scaling, and encoding are fitted only on the appropriate training data and
 are automatically handled correctly inside each cross-validation fold.
 
-Using `GridSearchCV` to tune the complete pipeline makes model selection more
+Using GridSearchCV to tune the complete pipeline makes model selection more
 reliable because preprocessing and model training are performed together
 during cross-validation.
 
@@ -94,6 +94,6 @@ projects and future capstone work.
 ## Files
 
 - day5.ipynb — Complete Day 5 notebook containing the engineered Title
-  feature, leak-free `Pipeline`, `ColumnTransformer`, missing-value
-  imputation, and `GridSearchCV`-tuned `RandomForestClassifier` on the
+  feature, leak-free Pipeline, ColumnTransformer, missing-value
+  imputation, and GridSearchCV-tuned RandomForestClassifier on the
   Titanic dataset.
