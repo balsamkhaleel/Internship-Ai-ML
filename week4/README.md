@@ -24,7 +24,7 @@ This folder contains my Week 4 work: proper model evaluation and validation tech
 
 - ✅ **Day 4 — Feature Engineering & Hyperparameter Tuning**
 
-- ⏳ **Day 5 — Comming soon**
+- ✅ **Day 5 — Scikit-learn Pipelines & Tuned Mini-Project**
 
 
 
@@ -81,6 +81,12 @@ Python, Scikit-learn, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
    │   └── Titanic-Dataset.csv
 
    ├── day5/
+
+   │   ├── day5.ipynb
+
+   │   └── README.md
+
+   │   └── Titanic-Dataset.csv
 
    └── README.md
 
