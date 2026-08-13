@@ -74,7 +74,7 @@ Python, Scikit-learn, Pandas, Matplotlib, Jupyter Notebook, Git, GitHub
 
    ├── day4/
 
-    │   ├── day4.ipynb
+   │   ├── day4.ipynb
 
    │   └── README.md
 
