@@ -1,8 +1,8 @@
-\# Day 1 — Unsupervised Learning \& K-Means
+# Day 1 — Unsupervised Learning \& K-Means
 
 
 
-\## Summary
+## Summary
 
 
 
@@ -10,71 +10,71 @@ Learned the fundamentals of unsupervised learning and clustering by applying K-M
 
 
 
-\## Key Concepts
+## Key Concepts
 
 
 
-\* Supervised vs. unsupervised learning
+* Supervised vs. unsupervised learning
 
-\* What clustering does and how it discovers natural groups
+* What clustering does and how it discovers natural groups
 
-\* K-Means clustering and the centroid-assignment process
+* K-Means clustering and the centroid-assignment process
 
-\* Choosing the number of clusters using the Elbow Method
+* Choosing the number of clusters using the Elbow Method
 
-\* Evaluating cluster quality using the Silhouette Score
+* Evaluating cluster quality using the Silhouette Score
 
-\* Why feature scaling is important for distance-based algorithms
+* Why feature scaling is important for distance-based algorithms
 
-\* Interpreting cluster characteristics
+* Interpreting cluster characteristics
 
-\* Visualizing clusters and centroids
-
-
-
-\## Tasks
+* Visualizing clusters and centroids
 
 
 
-\* Loaded and inspected the Mall Customers dataset.
-
-\* Explored the dataset structure, data types, and descriptive statistics.
-
-\* Selected `Age`, `Annual Income (k$)`, and `Spending Score (1-100)` as clustering features.
-
-\* Removed `CustomerID` because it is only an identifier.
-
-\* Excluded `Gender` because the lab focuses on numerical features only.
-
-\* Applied `StandardScaler` to standardize the selected features.
-
-\* Ran K-Means for values of k from 1 to 10.
-
-\* Calculated inertia values and visualized the Elbow Method.
-
-\* Selected k=4 based on the Elbow Method.
-
-\* Calculated the Silhouette Score for k=4.
-
-\* Trained the final K-Means model using four clusters.
-
-\* Added the resulting cluster labels to the dataset.
-
-\* Calculated the average characteristics of each cluster.
-
-\* Visualized the customer clusters using Annual Income and Spending Score.
-
-\* Visualized the final cluster centroids.
-
-\* Interpreted the characteristics of each customer segment.
+## Tasks
 
 
 
-\## Results
+* Loaded and inspected the Mall Customers dataset.
+
+* Explored the dataset structure, data types, and descriptive statistics.
+
+* Selected Age, Annual Income (k$), and Spending Score (1-100) as clustering features.
+
+* Removed CustomerID because it is only an identifier.
+
+* Excluded Gender because the lab focuses on numerical features only.
+
+* Applied StandardScaler to standardize the selected features.
+
+* Ran K-Means for values of k from 1 to 10.
+
+* Calculated inertia values and visualized the Elbow Method.
+
+* Selected k=4 based on the Elbow Method.
+
+* Calculated the Silhouette Score for k=4.
+
+* Trained the final K-Means model using four clusters.
+
+* Added the resulting cluster labels to the dataset.
+
+* Calculated the average characteristics of each cluster.
+
+* Visualized the customer clusters using Annual Income and Spending Score.
+
+* Visualized the final cluster centroids.
+
+* Interpreted the characteristics of each customer segment.
 
 
 
-\### Elbow Method
+## Results
+
+
+
+### Elbow Method
 
 
 
@@ -86,27 +86,11 @@ Based on the Elbow Method, four clusters were selected for the final model.
 
 
 
-\### Silhouette Score
 
 
 
-The Silhouette Score for the selected k=4 was:
 
-
-
-|     k | Silhouette Score |
-
-| ----: | ---------------: |
-
-| \*\*4\*\* |        \*\*0.404\*\* |
-
-
-
-The score indicates reasonably separated and meaningful clusters for the selected configuration.
-
-
-
-\### Final Cluster Profiles
+### Final Cluster Profiles
 
 
 
@@ -116,25 +100,25 @@ The score indicates reasonably separated and meaningful clusters for the selecte
 
 | 0       |     53.98 |              47.71 |          39.97 |
 
-| 1       |     32.88 |              86.10 |      \*\*81.53\*\* |
+| 1       |     32.88 |              86.10 |      81.53 |
 
-| 2       | \*\*25.44\*\* |              40.00 |          60.30 |
+| 2       | 25.44 |              40.00 |          60.30 |
 
-| 3       |     39.37 |          \*\*86.50\*\* |      \*\*19.58\*\* |
-
-
-
-\### Cluster Interpretation
+| 3       |     39.37 |          86.50 |      19.58 |
 
 
 
-\* \*\*Cluster 0:\*\* Older customers with moderate income and moderate spending.
+### Cluster Interpretation
 
-\* \*\*Cluster 1:\*\* Relatively young customers with high income and high spending, representing a high-value customer segment.
 
-\* \*\*Cluster 2:\*\* Young customers with relatively low income but moderate-to-high spending.
 
-\* \*\*Cluster 3:\*\* Customers with high income but low spending.
+* **Cluster 0:** Older customers with moderate income and moderate spending.
+
+* **Cluster 1:** Relatively young customers with high income and high spending, representing a high-value customer segment.
+
+* **Cluster 2:** Young customers with relatively low income but moderate-to-high spending.
+
+* **Cluster 3:** Customers with high income but low spending.
 
 
 
@@ -142,7 +126,7 @@ An interesting finding is that Clusters 1 and 3 have very similar high average i
 
 
 
-\## Key Takeaway
+## Key Takeaway
 
 
 
@@ -154,21 +138,16 @@ The final model with k=4 revealed four distinct customer segments with different
 
 
 
-The overall workflow was:
 
 
 
-\*\*Data Exploration → Feature Selection → StandardScaler → Elbow Method → Silhouette Score → K-Means → Visualization → Cluster Interpretation\*\*
+## Files
 
 
 
-\## Files
+* day1.ipynb — Complete Day 1 notebook containing data exploration, feature scaling, Elbow Method, Silhouette Score, final K-Means clustering, visualization, and cluster interpretation.
 
-
-
-\* `day1.ipynb` — Complete Day 1 notebook containing data exploration, feature scaling, Elbow Method, Silhouette Score, final K-Means clustering, visualization, and cluster interpretation.
-
-\* `Mall\_Customers.csv` — Dataset used for the clustering analysis.
+* Mall\_Customers.csv — Dataset used for the clustering analysis.
 
 
 
