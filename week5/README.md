@@ -14,7 +14,7 @@ This folder contains my Week 5 work: unsupervised learning techniques for discov
 
 
 
-\## 📚 Days
+## 📚 Days
 
 
 
@@ -65,7 +65,7 @@ week5/
 ├── day2/
 
 
-├── day3\
+├── day3/
 
 
 ├── day4/
