@@ -486,7 +486,7 @@ Since cardiovascular disease detection is a classification problem where missing
 
 
 
-Instead of relying only on the default probability threshold of `0.50`, multiple thresholds were evaluated:
+Instead of relying only on the default probability threshold of 0.50, multiple thresholds were evaluated:
 
 
 
@@ -766,7 +766,7 @@ Cardiac-Patient-Monitoring-System/
 
 └── README.md
 
-
+```
 
 ---
 
