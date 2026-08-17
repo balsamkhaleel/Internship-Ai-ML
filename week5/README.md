@@ -1,4 +1,4 @@
-\# 📅 Week 5 — Unsupervised Learning
+# 📅 Week 5 — Unsupervised Learning
 
 
 
@@ -6,7 +6,7 @@ BinX Tech — AI \& Machine Learning Internship Program
 
 
 
-\## 📖 Overview
+## 📖 Overview
 
 
 
@@ -18,19 +18,19 @@ This folder contains my Week 5 work: unsupervised learning techniques for discov
 
 
 
-\* ✅ \*\*Day 1 — Unsupervised Learning \& K-Means\*\*
+* ✅ **Day 1 — Unsupervised Learning \& K-Means**
 
-\* ⬜ \*\*Day 2 — TBD\*\*
+* ⏳ **Day 2 — coming soon**
 
-\* ⬜ \*\*Day 3 — TBD\*\*
+* ⏳ **Day 3 — coming soon**
 
-\* ⬜ \*\*Day 4 — TBD\*\*
+* ⏳ **Day 4 — coming soon**
 
-\* ⬜ \*\*Day 5 — TBD\*\*
+* ⏳ **Day 5 — coming soon**
 
 
 
-\## 🛠️ Technologies
+## 🛠️ Technologies
 
 
 
@@ -38,7 +38,7 @@ Python, Scikit-learn, Pandas, NumPy, Matplotlib, Jupyter Notebook, Git, GitHub
 
 
 
-\## 📂 Repository Structure
+## 📂 Repository Structure
 
 
 
@@ -58,56 +58,20 @@ week5/
 
 
 
-│ └── Mall\_Customers.csv
+│ └── Mall_Customers.csv
 
 
 
 ├── day2/
 
 
-
-│ ├── day2.ipynb
-
-
-
-│ └── README.md
-
-
-
-├── day3/
-
-
-
-│ ├── day3.ipynb
-
-
-
-│ └── README.md
-
+├── day3\
 
 
 ├── day4/
 
 
-
-│ ├── day4.ipynb
-
-
-
-│ └── README.md
-
-
-
 ├── day5/
-
-
-
-│ ├── day5.ipynb
-
-
-
-│ └── README.md
-
 
 
 └── README.md
