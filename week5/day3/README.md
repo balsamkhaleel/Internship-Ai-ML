@@ -44,15 +44,15 @@ Learned the fundamentals of dimensionality reduction by applying Principal Compo
 
 - Explored the dataset shape, data types, missing values, and duplicate rows.
 
-- Identified and removed the `id` column because it is only an identifier.
+- Identified and removed the id column because it is only an identifier.
 
-- Removed the empty `Unnamed: 32` column.
+- Removed the empty Unnamed: 32 column.
 
-- Separated `diagnosis` as the target variable.
+- Separated diagnosis as the target variable.
 
 - Selected the 30 numerical measurements as PCA features.
 
-- Applied `StandardScaler` to standardize all numerical features.
+- Applied StandardScaler to standardize all numerical features.
 
 - Fitted PCA without limiting the number of components to analyze the explained variance.
 
