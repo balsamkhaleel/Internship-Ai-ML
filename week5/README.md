@@ -20,13 +20,13 @@ This folder contains my Week 5 work: unsupervised learning techniques for discov
 
 * ✅ **Day 1 — Unsupervised Learning \& K-Means**
 
-* ⏳ **Day 2 — coming soon**
+* ✅ **Day 2 —  DBSCAN & Hierarchical Clustering**
 
-* ⏳ **Day 3 — coming soon**
+* ✅ **Day 3 — Dimensionality Reduction with PCA**
 
-* ⏳ **Day 4 — coming soon**
+* ✅ **Day 4 —t-SNE & Anomaly Detection**
 
-* ⏳ **Day 5 — coming soon**
+* ✅ **Day 5 — coming soon**
 
 
 
@@ -65,10 +65,46 @@ week5/
 ├── day2/
 
 
+│ ├── day2.ipynb
+
+
+
+│ ├── README.md
+
+
+
+│ └── Mall_Customers.csv
+
+
 ├── day3/
 
 
+│ ├── day3.ipynb
+
+
+
+│ ├── README.md
+
+
+
+│ └── data.csv
+
+
 ├── day4/
+
+
+│ ├── day4.ipynb
+
+
+
+│ ├── README.md
+
+
+
+│ └── data.csv
+
+
+
 
 
 ├── day5/
