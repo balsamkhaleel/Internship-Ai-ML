@@ -24,9 +24,9 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 
 - ✅ **Week 3** — Supervised Learning & Scikit-learn
 
-- ⏳ **Week 4** — Coming Soon
+- ✅ **Week 4** — Model Evaluation & Validation
 
-- ⏳ **Week 5** — Coming Soon
+- ✅ **Week 5** — Unsupervised Learning
 
 - ⏳ **Week 6** — Coming Soon
 
