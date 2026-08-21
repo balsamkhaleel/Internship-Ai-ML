@@ -4,11 +4,9 @@
 
 The **Cardiac Patient Monitoring System** is a machine learning project that analyzes cardiovascular health data to identify patterns associated with cardiovascular disease.
 
-The project follows a complete supervised machine learning workflow, including **data cleaning, exploratory data analysis, statistical analysis, model comparison, cross-validation, hyperparameter tuning, threshold optimization, and model evaluation**.
+The project combines **data cleaning, exploratory data analysis, statistical analysis, supervised learning, hyperparameter tuning, threshold optimization, and unsupervised learning** to gain insights into patient characteristics and build classification models for cardiovascular disease detection.
 
-The main objective is to build and evaluate machine learning models that can classify whether a patient is likely to have cardiovascular disease based on demographic, clinical, and lifestyle features.
-
-> **Note:** This project is developed for educational and analytical purposes and is not intended to replace professional medical diagnosis.
+The main objective is to develop a reliable machine learning workflow that can classify whether a patient is likely to have cardiovascular disease based on demographic, clinical, and lifestyle features.
 
 ---
 
@@ -18,12 +16,11 @@ The main objective is to build and evaluate machine learning models that can cla
 * Perform exploratory data analysis (EDA).
 * Analyze relationships between patient characteristics and cardiovascular disease.
 * Build and compare multiple supervised learning models.
-* Apply stratified cross-validation.
-* Perform hyperparameter tuning using GridSearchCV.
+* Apply cross-validation and hyperparameter tuning.
 * Optimize the classification threshold to improve disease detection.
 * Evaluate the final model using multiple classification metrics.
 * Analyze feature importance.
-* Select a suitable model for cardiovascular disease classification.
+* Apply unsupervised learning to identify patient groups and hidden patterns.
 
 ---
 
@@ -58,7 +55,7 @@ The project uses a cardiovascular disease dataset containing **70,000 patient re
 
 ## 🧹 Data Cleaning
 
-Several data-quality checks and cleaning operations were performed before model training.
+Several data-quality checks and cleaning operations were performed before modeling.
 
 ### Blood Pressure
 
@@ -71,7 +68,7 @@ The following ranges were used:
 
 ### Age
 
-The original `age` feature was stored in days.
+The original age feature was stored in days.
 
 It was converted into years using:
 
@@ -79,7 +76,7 @@ It was converted into years using:
 age_years = age / 365.25
 ```
 
-The original `age` column was then removed because `age_years` provides the same information in a more interpretable format.
+The original `age` column was then removed.
 
 ### Height
 
@@ -98,16 +95,12 @@ After cleaning:
 * No missing values
 * No duplicate rows
 * No duplicate patient IDs
-* Invalid blood pressure values removed
-* Implausible height and weight values removed
-
-The cleaned dataset was then used for exploratory analysis and machine learning.
 
 ---
 
 ## 🔎 Exploratory Data Analysis
 
-The EDA stage was performed to understand the distribution of patient characteristics and investigate their relationships with cardiovascular disease.
+The EDA stage explored the distribution of patient characteristics and their relationship with cardiovascular disease.
 
 The analysis included:
 
@@ -127,59 +120,42 @@ The analysis included:
 
 ### Key Findings
 
-Several features showed noticeable differences between patients with and without cardiovascular disease.
+Some of the strongest differences between the cardiovascular disease classes were observed in:
 
-### Age
+**Age**
 
-Patients with cardiovascular disease had a higher average age than patients without cardiovascular disease.
+Patients with cardiovascular disease had a higher average age.
 
-* No disease: approximately **51.69 years**
-* Disease: approximately **54.93 years**
-
-### Weight
+**Weight**
 
 * No disease: approximately **71.58 kg**
 * Disease: approximately **76.72 kg**
 
-Patients with cardiovascular disease had a higher average weight.
-
-### Systolic Blood Pressure
+**Systolic Blood Pressure**
 
 * No disease: approximately **119.56 mmHg**
 * Disease: approximately **133.82 mmHg**
 
-Systolic blood pressure showed one of the largest differences between the two target classes.
-
-### Diastolic Blood Pressure
+**Diastolic Blood Pressure**
 
 * No disease: approximately **78.17 mmHg**
 * Disease: approximately **84.66 mmHg**
 
-Patients with cardiovascular disease also showed a higher average diastolic blood pressure.
+**Cholesterol**
 
-### Cholesterol
+The proportion of patients with cardiovascular disease increased substantially as cholesterol level increased.
 
-The proportion of patients with cardiovascular disease increased as cholesterol level increased.
-
-### Glucose
-
-Higher glucose categories showed a higher proportion of cardiovascular disease compared with the normal glucose category.
-
-### Physical Activity
+**Physical Activity**
 
 Inactive patients showed a higher proportion of cardiovascular disease compared with active patients.
-
-### Smoking and Alcohol
-
-The differences in cardiovascular disease proportions between smokers and non-smokers, as well as between alcohol consumers and non-consumers, were relatively small in this dataset.
 
 ---
 
 ## 📈 Correlation Analysis
 
-Correlation analysis was performed on the main numerical features to examine their linear relationships with the target variable.
+Correlation analysis was performed on the main numerical features.
 
-The strongest positive correlations with `cardio` were:
+The strongest positive correlations with the target were:
 
 | Feature     | Correlation with `cardio` |
 | ----------- | ------------------------: |
@@ -189,9 +165,7 @@ The strongest positive correlations with `cardio` were:
 | `weight`    |                     0.180 |
 | `height`    |                    -0.012 |
 
-The strongest relationship between the numerical features was observed between systolic and diastolic blood pressure, with a correlation of approximately **0.698**.
-
-Overall, blood pressure showed the strongest linear relationship with cardiovascular disease among the analyzed numerical features.
+The strongest relationship was observed between systolic and diastolic blood pressure, with a correlation of approximately **0.698**.
 
 ---
 
@@ -204,23 +178,12 @@ The project evaluated four classification algorithms:
 3. **Decision Tree**
 4. **K-Nearest Neighbors (KNN)**
 
-These models were selected to compare different machine learning approaches, including:
-
-* A linear model
-* A tree-based model
-* An ensemble model
-* A distance-based model
-
-### Train/Test Split
-
 The dataset was divided using a stratified train/test split:
 
 * **80% Training**
 * **20% Testing**
 
-Stratification was used to preserve the distribution of the target classes in both sets.
-
-The `id` column was removed before model training because it is an identifier and does not provide meaningful predictive information.
+Stratification was used to preserve the target class distribution.
 
 ---
 
@@ -236,50 +199,50 @@ StratifiedKFold(
 )
 ```
 
-Stratification ensures that each fold maintains a similar proportion of patients with and without cardiovascular disease.
-
-Cross-validation provides a more reliable estimate of model performance and reduces dependence on a single validation split.
+This provides a more reliable estimate of model performance while maintaining the class distribution across folds.
 
 ---
 
 ## ⚙️ Hyperparameter Tuning
 
-`GridSearchCV` was used to search for better hyperparameter configurations for the supervised models.
+`GridSearchCV` was used to optimize the main supervised models.
 
 ### Logistic Regression
 
-The following parameters were evaluated:
+Parameters such as:
 
 * `C`
 * `class_weight`
 
+were evaluated.
+
 ### Random Forest
 
-The following parameters were optimized:
+Parameters including:
 
 * `n_estimators`
 * `max_depth`
 * `min_samples_split`
 
+were optimized.
+
 ### Decision Tree
 
-The following parameters were evaluated:
+Parameters including:
 
 * `max_depth`
 * `min_samples_split`
 * `min_samples_leaf`
 
-The optimization process used **F1-score** as the scoring metric during cross-validation.
+were evaluated.
 
 ---
 
 ## 🎯 Threshold Optimization
 
-For cardiovascular disease detection, **Recall** is particularly important because missing a positive case can be more concerning than incorrectly classifying a negative case as positive.
+Since cardiovascular disease detection is a classification problem where missing a positive patient can be important, **Recall** was given particular attention.
 
-By default, binary classification commonly uses a probability threshold of **0.50**.
-
-Instead of relying only on this default threshold, several thresholds were evaluated:
+Instead of relying only on the default probability threshold of `0.50`, multiple thresholds were evaluated:
 
 ```text
 0.30
@@ -293,23 +256,7 @@ Instead of relying only on this default threshold, several thresholds were evalu
 
 A threshold of **0.35** was selected based on the Precision-Recall trade-off.
 
-Lowering the threshold makes the model more likely to classify a patient as positive, which increases the number of detected positive cases and improves Recall, while also increasing the number of false positives.
-
----
-
-## 🌲 Final Random Forest Model
-
-After hyperparameter tuning and threshold optimization, **Random Forest** was selected as the final model.
-
-The final model used the best hyperparameters identified through `GridSearchCV`.
-
-The final classification threshold was set to:
-
-```text
-0.35
-```
-
-### Final Results
+### Final Random Forest Results
 
 | Metric    |      Score |
 | --------- | ---------: |
@@ -318,43 +265,75 @@ The final classification threshold was set to:
 | Recall    | **82.87%** |
 | F1-Score  | **73.65%** |
 
-The final model achieved a Recall of **82.87%**, meaning that it correctly identified a large proportion of the patients belonging to the cardiovascular disease class.
+The increased Recall allows the model to identify a larger proportion of patients with cardiovascular disease.
 
-The threshold adjustment prioritized Recall while maintaining a reasonable balance with Precision.
+> **Note:** This project is intended for educational and analytical purposes and is not a clinical diagnostic system.
 
 ---
 
 ## 📊 Model Evaluation
 
-The final model was evaluated using several metrics:
+The final model was evaluated using:
 
-* **Accuracy**
-* **Precision**
-* **Recall**
-* **F1-Score**
-* **Confusion Matrix**
-* **Classification Report**
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* Confusion Matrix
+* Classification Report
 
-### Confusion Matrix
+A confusion matrix was also generated to examine the distribution of:
 
-The confusion matrix was used to examine:
-
-* **True Negatives (TN):** Correctly predicted patients without cardiovascular disease.
-* **False Positives (FP):** Patients without cardiovascular disease incorrectly classified as positive.
-* **False Negatives (FN):** Patients with cardiovascular disease incorrectly classified as negative.
-* **True Positives (TP):** Correctly identified cardiovascular disease cases.
-
-This evaluation provides a more detailed view of the model's classification behavior than accuracy alone.
+* True Negatives
+* False Positives
+* False Negatives
+* True Positives
 
 ---
 
-## 🔍 Feature Importance
+## 🌲 Feature Importance
 
-Feature importance was extracted from the final Random Forest model.
+Feature importance was extracted from the final Random Forest model to understand which patient characteristics contributed most to the predictions.
 
-This analysis helps identify which features contributed most to the model's predictions.
+This provides an additional interpretation of the trained model and helps identify the features that were most useful for cardiovascular disease classification.
 
-Feature importance provides an additional level of model interpretation and helps understand which patient characteristics were most useful for classification.
+---
+
+## 🔵 Unsupervised Learning
+
+Unsupervised learning was used to explore the natural structure of the patient population without using the `cardio` target during clustering.
+
+Two clustering approaches were explored:
+
+### K-Means
+
+K-Means clustering was applied after standardizing the clustering features.
+
+The number of clusters was evaluated using:
+
+* **Elbow Method**
+* **Silhouette Score**
+
+The final configuration used:
+
+```python
+n_clusters = 7
+```
+
+Cluster profiles were then analyzed using the average characteristics of each group.
+
+### DBSCAN
+
+DBSCAN was also explored as a density-based clustering method.
+
+The parameters were selected based on a k-distance plot:
+
+```text
+eps = 2.5
+min_samples = 10
+```
+
+DBSCAN was used to identify dense patient groups and potential noise observations.
 
 ---
 
@@ -381,19 +360,18 @@ Feature importance provides an additional level of model interpretation and help
 
 * Data Cleaning
 * Exploratory Data Analysis
-* Statistical Analysis
 * Correlation Analysis
+* Feature Engineering
 * Train/Test Split
-* Stratified Cross-Validation
+* Cross-Validation
 * Logistic Regression
 * Decision Tree
 * KNN
 * Random Forest
-* GridSearchCV
-* Hyperparameter Tuning
-* Classification Threshold Optimization
-* Confusion Matrix
-* Feature Importance
+* Grid Search
+* Threshold Optimization
+* K-Means Clustering
+* DBSCAN
 * Model Evaluation
 
 ---
@@ -405,26 +383,71 @@ Cardiac-Patient-Monitoring-System/
 │
 ├── cardio.csv
 ├── Cardiac_Patient_Monitoring_System.ipynb
-└── README.md
+├── README.md
+└── images/
+    ├── cardio_distribution.png
+    ├── age_distribution.png
+    ├── correlation_matrix.png
+    ├── confusion_matrix.png
+    └── feature_importance.png
+```
+
+---
+
+## 🚀 Workflow
+
+```text
+Raw Dataset
+     ↓
+Data Understanding
+     ↓
+Data Quality Analysis
+     ↓
+Data Cleaning
+     ↓
+Exploratory Data Analysis
+     ↓
+Correlation Analysis
+     ↓
+Train / Test Split
+     ↓
+Cross-Validation
+     ↓
+Baseline Model
+     ↓
+Supervised Learning
+     ↓
+Hyperparameter Tuning
+     ↓
+Threshold Optimization
+     ↓
+Final Model Evaluation
+     ↓
+Feature Importance
+     ↓
+Unsupervised Learning
+     ↓
+K-Means + DBSCAN
+     ↓
+Final Insights
 ```
 
 ---
 
 ## 📝 Conclusion
 
-The project demonstrates a complete supervised machine learning workflow for cardiovascular disease classification, starting from data quality analysis and preprocessing and progressing through exploratory data analysis, model comparison, cross-validation, hyperparameter tuning, and final model evaluation.
+The project demonstrates a complete machine learning workflow for cardiovascular disease analysis.
 
-Four classification algorithms were evaluated: **Logistic Regression, Decision Tree, KNN, and Random Forest**.
+The supervised learning experiments showed that **Random Forest** provided a useful solution for cardiovascular disease detection. By adjusting the classification threshold from the default value to **0.35**, the model achieved a **Recall of 82.87%**, allowing it to identify a larger proportion of positive cases.
 
-Based on the experiments, **Random Forest** was selected as the final model. Because cardiovascular disease detection places particular importance on identifying positive cases, the classification threshold was adjusted from **0.50 to 0.35** to improve Recall.
+The unsupervised learning experiments provided complementary insights into the underlying structure of the patient population through **K-Means and DBSCAN clustering**.
 
-The final model achieved:
+Overall, the project combines predictive modeling with exploratory and unsupervised analysis to provide a broader understanding of cardiovascular disease patterns within the dataset.
 
-* **70.66% Accuracy**
-* **66.29% Precision**
-* **82.87% Recall**
-* **73.65% F1-Score**
+---
 
-The results demonstrate the potential of machine learning to identify patterns associated with cardiovascular disease in the analyzed dataset.
+## ⚠️ Disclaimer
 
-However, the model should be considered an **educational machine learning model rather than a clinical diagnostic system**, and further validation on independent and clinically representative datasets would be required before any real-world medical application.
+This project is developed for **educational and machine learning purposes only**.
+
+The model should **not be used as a medical diagnostic tool** or as a replacement for professional medical evaluation.
