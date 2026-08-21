@@ -32,24 +32,24 @@ The project uses a cardiovascular disease dataset containing **70,000 patient re
 
 | Feature       | Description                |
 | ------------- | -------------------------- |
-| `id`          | Patient identifier         |
-| `age`         | Age in days                |
-| `gender`      | Gender encoded as 1 or 2   |
-| `height`      | Height in centimeters      |
-| `weight`      | Weight in kilograms        |
-| `ap_hi`       | Systolic blood pressure    |
-| `ap_lo`       | Diastolic blood pressure   |
-| `cholesterol` | Cholesterol level          |
-| `gluc`        | Glucose level              |
-| `smoke`       | Smoking status             |
-| `alco`        | Alcohol consumption status |
-| `active`      | Physical activity status   |
-| `cardio`      | Target variable            |
+|  id           | Patient identifier         |
+|  age          | Age in days                |
+|  gender       | Gender encoded as 1 or 2   |
+|  height       | Height in centimeters      |
+|  weight       | Weight in kilograms        |
+|  ap_hi        | Systolic blood pressure    |
+|  ap_lo        | Diastolic blood pressure   |
+|  cholesterol  | Cholesterol level          |
+|  gluc         | Glucose level              |
+|  smoke        | Smoking status             |
+|  alco         | Alcohol consumption status |
+|  active       | Physical activity status   |
+|  cardio       | Target variable            |
 
 ### Target Variable
 
-* `0` → No cardiovascular disease
-* `1` → Cardiovascular disease
+* 0 → No cardiovascular disease
+* 1 → Cardiovascular disease
 
 ---
 
@@ -76,7 +76,7 @@ It was converted into years using:
 age_years = age / 365.25
 ```
 
-The original `age` column was then removed.
+The original age column was then removed.
 
 ### Height
 
@@ -157,13 +157,13 @@ Correlation analysis was performed on the main numerical features.
 
 The strongest positive correlations with the target were:
 
-| Feature     | Correlation with `cardio` |
+| Feature     | Correlation with  cardio  |
 | ----------- | ------------------------: |
-| `ap_hi`     |                     0.425 |
-| `ap_lo`     |                     0.335 |
-| `age_years` |                     0.240 |
-| `weight`    |                     0.180 |
-| `height`    |                    -0.012 |
+|  ap_hi      |                     0.425 |
+|  ap_lo      |                     0.335 |
+|  age_years  |                     0.240 |
+|  weight     |                     0.180 |
+|  height     |                    -0.012 |
 
 The strongest relationship was observed between systolic and diastolic blood pressure, with a correlation of approximately **0.698**.
 
@@ -205,14 +205,14 @@ This provides a more reliable estimate of model performance while maintaining th
 
 ## ⚙️ Hyperparameter Tuning
 
-`GridSearchCV` was used to optimize the main supervised models.
+GridSearchCV was used to optimize the main supervised models.
 
 ### Logistic Regression
 
 Parameters such as:
 
-* `C`
-* `class_weight`
+* C
+* class_weight
 
 were evaluated.
 
@@ -220,9 +220,9 @@ were evaluated.
 
 Parameters including:
 
-* `n_estimators`
-* `max_depth`
-* `min_samples_split`
+* n_estimators
+* max_depth
+* min_samples_split
 
 were optimized.
 
@@ -230,9 +230,9 @@ were optimized.
 
 Parameters including:
 
-* `max_depth`
-* `min_samples_split`
-* `min_samples_leaf`
+* max_depth
+* min_samples_split
+* min_samples_leaf
 
 were evaluated.
 
@@ -301,7 +301,7 @@ This provides an additional interpretation of the trained model and helps identi
 
 ## 🔵 Unsupervised Learning
 
-Unsupervised learning was used to explore the natural structure of the patient population without using the `cardio` target during clustering.
+Unsupervised learning was used to explore the natural structure of the patient population without using the cardio target during clustering.
 
 Two clustering approaches were explored:
 
@@ -383,13 +383,8 @@ Cardiac-Patient-Monitoring-System/
 │
 ├── cardio.csv
 ├── Cardiac_Patient_Monitoring_System.ipynb
-├── README.md
-└── images/
-    ├── cardio_distribution.png
-    ├── age_distribution.png
-    ├── correlation_matrix.png
-    ├── confusion_matrix.png
-    └── feature_importance.png
+└── README.md
+
 ```
 
 ---
@@ -444,10 +439,4 @@ The unsupervised learning experiments provided complementary insights into the u
 
 Overall, the project combines predictive modeling with exploratory and unsupervised analysis to provide a broader understanding of cardiovascular disease patterns within the dataset.
 
----
 
-## ⚠️ Disclaimer
-
-This project is developed for **educational and machine learning purposes only**.
-
-The model should **not be used as a medical diagnostic tool** or as a replacement for professional medical evaluation.
