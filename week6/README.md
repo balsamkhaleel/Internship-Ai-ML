@@ -1,8 +1,8 @@
-\# 📅 Week 6 — Deep Learning Fundamentals
+# 📅 Week 6 — Deep Learning Fundamentals
 
 
 
-\## 📖 Overview
+## 📖 Overview
 
 
 
@@ -18,23 +18,23 @@ The work is applied to the Cardiovascular Disease dataset, starting with data pr
 
 
 
-\## 📚 Days
+## 📚 Days
 
 
 
-\- ✅ \*\*Day 1 — Sprint 1 Planning \& Baseline Model\*\*
+- ✅ **Day 1 — Sprint 1 Planning \& Baseline Model**
 
-\- ⬜ \*\*Day 2 — Neural Network Architecture \& Training\*\*
+- ⏳ **Day 2 — coming soon**
 
-\- ⬜ \*\*Day 3 — Neural Network Evaluation \& Improvement\*\*
+- ⏳ **Day 3 — coming soon**
 
-\- ⬜ \*\*Day 4 — coming soon\*\*
+- ⏳ **Day 4 — coming soon**
 
-\- ⬜ \*\*Day 5 — coming soon\*\*
+- ⏳ **Day 5 — coming soon**
 
 
 
-\## 🛠️ Technologies
+## 🛠️ Technologies
 
 
 
@@ -42,7 +42,7 @@ Python, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook, Git,
 
 
 
-\## 📂 Repository Structure
+## 📂 Repository Structure
 
 
 
