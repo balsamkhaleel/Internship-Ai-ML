@@ -379,7 +379,7 @@ DBSCAN was used to identify dense patient groups and potential noise observation
 ## 📁 Project Structure
 
 ```text
-Cardiac-Patient-Monitoring-System/
+Project/
 │
 ├── cardio.csv
 │
