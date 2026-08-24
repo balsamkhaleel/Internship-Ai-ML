@@ -30,21 +30,21 @@ The project uses a cardiovascular disease dataset containing **70,000 patient re
 
 ### Features
 
-| Feature       | Description                |
-| ------------- | -------------------------- |
-|  id           | Patient identifier         |
-|  age          | Age in days                |
-|  gender       | Gender encoded as 1 or 2   |
-|  height       | Height in centimeters      |
-|  weight       | Weight in kilograms        |
-|  ap_hi        | Systolic blood pressure    |
-|  ap_lo        | Diastolic blood pressure   |
-|  cholesterol  | Cholesterol level          |
-|  gluc         | Glucose level              |
-|  smoke        | Smoking status             |
-|  alco         | Alcohol consumption status |
-|  active       | Physical activity status   |
-|  cardio       | Target variable            |
+| Feature     | Description                |
+| ----------- | -------------------------- |
+| id          | Patient identifier         |
+| age         | Age in days                |
+| gender      | Gender encoded as 1 or 2   |
+| height      | Height in centimeters      |
+| weight      | Weight in kilograms        |
+| ap_hi       | Systolic blood pressure    |
+| ap_lo       | Diastolic blood pressure   |
+| cholesterol | Cholesterol level          |
+| gluc        | Glucose level              |
+| smoke       | Smoking status             |
+| alco        | Alcohol consumption status |
+| active      | Physical activity status   |
+| cardio      | Target variable            |
 
 ### Target Variable
 
@@ -73,7 +73,7 @@ The original age feature was stored in days.
 It was converted into years using:
 
 ```python
-age_years = age / 365.25
+age_years = age / 365.25 
 ```
 
 The original age column was then removed.
@@ -157,13 +157,13 @@ Correlation analysis was performed on the main numerical features.
 
 The strongest positive correlations with the target were:
 
-| Feature     | Correlation with  cardio  |
-| ----------- | ------------------------: |
-|  ap_hi      |                     0.425 |
-|  ap_lo      |                     0.335 |
-|  age_years  |                     0.240 |
-|  weight     |                     0.180 |
-|  height     |                    -0.012 |
+| Feature   | Correlation with  cardio |
+| --------- | -----------------------: |
+| ap_hi     |                    0.425 |
+| ap_lo     |                    0.335 |
+| age_years |                    0.240 |
+| weight    |                    0.180 |
+| height    |                   -0.012 |
 
 The strongest relationship was observed between systolic and diastolic blood pressure, with a correlation of approximately **0.698**.
 
@@ -192,11 +192,11 @@ Stratification was used to preserve the target class distribution.
 A **5-fold Stratified Cross-Validation** strategy was used during model evaluation and hyperparameter tuning.
 
 ```python
-StratifiedKFold(
-    n_splits=5,
-    shuffle=True,
-    random_state=42
-)
+StratifiedKFold( 
+    n_splits=5, 
+    shuffle=True, 
+    random_state=42 
+) 
 ```
 
 This provides a more reliable estimate of model performance while maintaining the class distribution across folds.
@@ -245,13 +245,13 @@ Since cardiovascular disease detection is a classification problem where missing
 Instead of relying only on the default probability threshold of `0.50`, multiple thresholds were evaluated:
 
 ```text
-0.30
-0.35
-0.40
-0.45
-0.50
-0.55
-0.60
+0.30 
+0.35 
+0.40 
+0.45 
+0.50 
+0.55 
+0.60 
 ```
 
 A threshold of **0.35** was selected based on the Precision-Recall trade-off.
@@ -317,7 +317,7 @@ The number of clusters was evaluated using:
 The final configuration used:
 
 ```python
-n_clusters = 7
+n_clusters = 7 
 ```
 
 Cluster profiles were then analyzed using the average characteristics of each group.
@@ -329,8 +329,8 @@ DBSCAN was also explored as a density-based clustering method.
 The parameters were selected based on a k-distance plot:
 
 ```text
-eps = 2.5
-min_samples = 10
+eps = 2.5 
+min_samples = 10 
 ```
 
 DBSCAN was used to identify dense patient groups and potential noise observations.
@@ -382,49 +382,60 @@ DBSCAN was used to identify dense patient groups and potential noise observation
 Cardiac-Patient-Monitoring-System/
 │
 ├── cardio.csv
-├── Cardiac_Patient_Monitoring_System.ipynb
+│
+├── Data_Preparation/
+│   └── cardio_cleaned
+│
+├── EDA_02
+│
+├── Baseline_Model_03
+│
+├── Supervised_Learning_04
+│
+├── Unsupervised_learning_05
+│
 └── README.md
-
 ```
+
+### 📂 File Organization
+
+| File                       | Description                                                                                                       |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `Data_Preparation`         | Data loading, data quality checks, data cleaning, preprocessing, and preparation of the dataset.                  |
+| `cardio_cleaned`           | Cleaned cardiovascular dataset used in the following analysis and modeling stages.                                |
+| `EDA_02`                   | Exploratory Data Analysis, visualization, statistical analysis, and correlation analysis.                         |
+| `Baseline_Model_03`        | Development and evaluation of baseline machine learning models.                                                   |
+| `Supervised_Learning_04`   | Supervised learning, cross-validation, hyperparameter tuning, threshold optimization, and final model evaluation. |
+| `Unsupervised_learning_05` | Unsupervised learning using K-Means and DBSCAN to explore patient groups and hidden patterns.                     |
 
 ---
 
 ## 🚀 Workflow
 
 ```text
-Raw Dataset
-     ↓
-Data Understanding
-     ↓
-Data Quality Analysis
-     ↓
-Data Cleaning
-     ↓
-Exploratory Data Analysis
-     ↓
-Correlation Analysis
-     ↓
-Train / Test Split
-     ↓
-Cross-Validation
-     ↓
-Baseline Model
-     ↓
-Supervised Learning
-     ↓
-Hyperparameter Tuning
-     ↓
-Threshold Optimization
-     ↓
-Final Model Evaluation
-     ↓
-Feature Importance
-     ↓
-Unsupervised Learning
-     ↓
-K-Means + DBSCAN
-     ↓
-Final Insights
+Raw Dataset 
+     ↓ 
+Data Preparation 
+     ↓ 
+Exploratory Data Analysis 
+     ↓ 
+Baseline Model 
+     ↓ 
+Supervised Learning 
+     ↓ 
+Hyperparameter Tuning 
+     ↓ 
+Threshold Optimization 
+     ↓ 
+Final Model Evaluation 
+     ↓ 
+Feature Importance 
+     ↓ 
+Unsupervised Learning 
+     ↓ 
+K-Means + DBSCAN 
+     ↓ 
+Final Insights 
 ```
 
 ---
@@ -438,5 +449,3 @@ The supervised learning experiments showed that **Random Forest** provided a use
 The unsupervised learning experiments provided complementary insights into the underlying structure of the patient population through **K-Means and DBSCAN clustering**.
 
 Overall, the project combines predictive modeling with exploratory and unsupervised analysis to provide a broader understanding of cardiovascular disease patterns within the dataset.
-
-
