@@ -24,7 +24,7 @@ The work is applied to the Cardiovascular Disease dataset, starting with data pr
 
 - ✅ **Day 1 — Sprint 1 Planning \& Baseline Model**
 
-- ⏳ **Day 2 — coming soon**
+- ✅ **Day 2 — Activations, Forward Propagation & Loss**
 
 - ⏳ **Day 3 — coming soon**
 
