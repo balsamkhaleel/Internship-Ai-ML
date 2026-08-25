@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 \# Day 3 — Backpropagation, Gradient Descent \& Optimizers
+=======
+# Day 3 — Backpropagation, Gradient Descent \& Optimizers
+
+Overview
+>>>>>>> 92eb668cdf50f4edc50b4995466abda0c4efa21b
 
 
 
@@ -10,7 +16,47 @@ Explored the fundamental training process of neural networks using the cleaned c
 
 
 
+<<<<<<< HEAD
 The notebook focused on understanding how a neural network learns through forward propagation, loss calculation, backpropagation, gradient descent, and weight updates.
+=======
+## Learning Objectives
+
+- Understand the neural network training loop.
+
+- Explain Gradient Descent and Learning Rate.
+
+- Understand Backpropagation and the Chain Rule.
+
+- Identify common optimizers such as Adam and SGD.
+
+- Understand epochs and batches.
+
+- Compare different learning rates using loss curves.
+
+## Practical Work
+
+- Prepared the cardio\_cleaned dataset for neural network training.
+
+- Built a small feed-forward neural network for binary classification.
+
+- Trained the model using the Adam optimizer.
+
+- Compared three learning rates:
+
+   - 0.1
+
+   - 0.001
+
+   - 0.00001
+
+- Visualized training and validation loss curves.
+
+- Evaluated the final model using Accuracy, Precision, Recall, F1 Score, and Confusion Matrix.
+
+## Key Concepts
+
+### Training Loop
+>>>>>>> 92eb668cdf50f4edc50b4995466abda0c4efa21b
 
 
 
@@ -99,12 +145,16 @@ Forward Pass → Loss → Backpropagation → Weight Update
 ```
 
 
+<<<<<<< HEAD
 
 This process is repeated across batches and epochs to minimize the loss.
 
 
 
 \### Gradient Descent
+=======
+### Gradient Descent
+>>>>>>> 92eb668cdf50f4edc50b4995466abda0c4efa21b
 
 
 
@@ -112,11 +162,15 @@ Gradient Descent updates the model weights in the direction that reduces the los
 
 
 
+<<<<<<< HEAD
 The gradient indicates how the loss changes with respect to each model parameter.
 
 
 
 \### Learning Rate
+=======
+### Learning Rate
+>>>>>>> 92eb668cdf50f4edc50b4995466abda0c4efa21b
 
 
 
@@ -124,6 +178,7 @@ The Learning Rate controls the size of each weight update and affects training s
 
 
 
+<<<<<<< HEAD
 Three learning rates were tested:
 
 
@@ -145,6 +200,9 @@ The learning rate `0.001` provided the most stable behavior among the tested val
 
 
 \### Backpropagation
+=======
+### Backpropagation
+>>>>>>> 92eb668cdf50f4edc50b4995466abda0c4efa21b
 
 
 
@@ -152,7 +210,11 @@ Backpropagation calculates the gradients of the loss with respect to the model's
 
 
 
+<<<<<<< HEAD
 TensorFlow's `GradientTape` was used to demonstrate this process.
+=======
+### Optimizers
+>>>>>>> 92eb668cdf50f4edc50b4995466abda0c4efa21b
 
 
 
@@ -160,7 +222,11 @@ The calculated gradient shapes corresponded to all trainable parameters in the n
 
 
 
+<<<<<<< HEAD
 \### Optimizers
+=======
+## Key Takeaways
+>>>>>>> 92eb668cdf50f4edc50b4995466abda0c4efa21b
 
 
 
@@ -168,6 +234,7 @@ Adam and SGD were compared during training.
 
 
 
+<<<<<<< HEAD
 Adam showed a gradual decrease in validation loss, while SGD showed smaller improvement followed by relatively stable behavior with minor fluctuations.
 
 
@@ -337,4 +404,23 @@ The results show that the model achieved balanced performance across multiple ev
 \* Google Colab
 
 
+=======
+## Tools
+
+ Python
+
+- NumPy
+
+- Pandas
+
+- TensorFlow
+
+- Scikit-learn
+
+- Matplotlib
+
+- Google Colab
+
+- Git \& GitHub
+>>>>>>> 92eb668cdf50f4edc50b4995466abda0c4efa21b
 
