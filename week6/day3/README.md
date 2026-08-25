@@ -1,4 +1,4 @@
-Day 3 — Backpropagation, Gradient Descent \& Optimizers
+# Day 3 — Backpropagation, Gradient Descent \& Optimizers
 
 Overview
 
@@ -12,43 +12,43 @@ The notebook focused on understanding how a neural network learns through forwar
 
 
 
-Learning Objectives
+## Learning Objectives
 
-Understand the neural network training loop.
+- Understand the neural network training loop.
 
-Explain Gradient Descent and Learning Rate.
+- Explain Gradient Descent and Learning Rate.
 
-Understand Backpropagation and the Chain Rule.
+- Understand Backpropagation and the Chain Rule.
 
-Identify common optimizers such as Adam and SGD.
+- Identify common optimizers such as Adam and SGD.
 
-Understand epochs and batches.
+- Understand epochs and batches.
 
-Compare different learning rates using loss curves.
+- Compare different learning rates using loss curves.
 
-Practical Work
+## Practical Work
 
-Prepared the cardio\_cleaned dataset for neural network training.
+- Prepared the cardio\_cleaned dataset for neural network training.
 
-Built a small feed-forward neural network for binary classification.
+- Built a small feed-forward neural network for binary classification.
 
-Trained the model using the Adam optimizer.
+- Trained the model using the Adam optimizer.
 
-Compared three learning rates:
+- Compared three learning rates:
 
-0.1
+   - 0.1
 
-0.001
+   - 0.001
 
-0.00001
+   - 0.00001
 
-Visualized training and validation loss curves.
+- Visualized training and validation loss curves.
 
-Evaluated the final model using Accuracy, Precision, Recall, F1 Score, and Confusion Matrix.
+- Evaluated the final model using Accuracy, Precision, Recall, F1 Score, and Confusion Matrix.
 
-Key Concepts
+## Key Concepts
 
-Training Loop
+### Training Loop
 
 
 
@@ -56,7 +56,7 @@ Forward Pass → Loss → Backpropagation → Weight Update
 
 
 
-Gradient Descent
+### Gradient Descent
 
 
 
@@ -64,7 +64,7 @@ Gradient Descent updates the model weights in the direction that reduces the los
 
 
 
-Learning Rate
+### Learning Rate
 
 
 
@@ -72,7 +72,7 @@ The Learning Rate controls the size of each weight update and affects training s
 
 
 
-Backpropagation
+## Backpropagation
 
 
 
@@ -80,7 +80,7 @@ Backpropagation calculates the gradients of the loss with respect to the model's
 
 
 
-Optimizers
+### Optimizers
 
 
 
@@ -88,7 +88,7 @@ Adam was used as the main optimizer, while SGD was discussed as a basic alternat
 
 
 
-Key Takeaways
+## Key Takeaways
 
 Gradient Descent minimizes the loss by updating model weights.
 
@@ -100,21 +100,21 @@ Adam provides adaptive weight updates and is a strong default optimizer.
 
 Learning Rate selection affects training speed and stability.
 
-Tools
+## Tools
 
-Python
+ Python
 
-NumPy
+- NumPy
 
-Pandas
+- Pandas
 
-TensorFlow
+- TensorFlow
 
-Scikit-learn
+- Scikit-learn
 
-Matplotlib
+- Matplotlib
 
-Google Colab
+- Google Colab
 
-Git \& GitHub
+- Git \& GitHub
 
