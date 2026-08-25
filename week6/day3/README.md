@@ -72,7 +72,7 @@ The Learning Rate controls the size of each weight update and affects training s
 
 
 
-## Backpropagation
+### Backpropagation
 
 
 
