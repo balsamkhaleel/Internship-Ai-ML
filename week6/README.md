@@ -26,7 +26,7 @@ The work is applied to the Cardiovascular Disease dataset, starting with data pr
 
 - ✅ **Day 2 — Activations, Forward Propagation & Loss**
 
-- ✅ **Day 3 — coming soon**
+- ✅ **Day 3 — Backpropagation, Gradient Descent & Optimizers**
 
 - ✅ **Day 4 — Building & Training a Neural Network with Keras**
 
