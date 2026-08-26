@@ -68,9 +68,9 @@ The following steps were performed before training:
 
 \- Separated features (`X`) from the target (`y`).
 
-\- Removed `id` and `cardio` from the input features.
+- Removed `id` and `cardio` from the input features.
 
-\- Split the dataset into:
+- Split the dataset into:
 
 &#x20; - 70% Training
 
@@ -78,13 +78,13 @@ The following steps were performed before training:
 
 &#x20; - 15% Test
 
-\- Applied `StandardScaler` to standardize the input features.
+- Applied `StandardScaler` to standardize the input features.
 
-\- The scaler was fitted only on the training data to prevent data leakage.
+- The scaler was fitted only on the training data to prevent data leakage.
 
 
 
-\## Baseline Model
+## Baseline Model
 
 
 
@@ -92,11 +92,11 @@ The baseline neural network consists of:
 
 
 
-\- Dense layer — 64 neurons, ReLU
+- Dense layer — 64 neurons, ReLU
 
-\- Dense layer — 32 neurons, ReLU
+- Dense layer — 32 neurons, ReLU
 
-\- Dense layer — 1 neuron, Sigmoid
+- Dense layer — 1 neuron, Sigmoid
 
 
 
@@ -104,11 +104,11 @@ The model was compiled using:
 
 
 
-\- \*\*Optimizer:\*\* Adam
+- **Optimizer:** Adam
 
-\- \*\*Loss:\*\* Binary Crossentropy
+- **Loss:** Binary Crossentropy
 
-\- \*\*Metric:\*\* Accuracy
+- **Metric:** Accuracy
 
 
 
@@ -116,7 +116,7 @@ Early Stopping was used to stop training when validation loss stopped improving.
 
 
 
-\## Improved Model
+## Improved Model
 
 
 
@@ -124,9 +124,9 @@ The baseline model was improved by adding:
 
 
 
-\- Batch Normalization
+- Batch Normalization
 
-\- Dropout with a rate of 0.3
+- Dropout with a rate of 0.3
 
 
 
@@ -134,7 +134,7 @@ These techniques were used to improve training stability and reduce overfitting.
 
 
 
-\## Results
+## Results
 
 
 
@@ -148,15 +148,14 @@ These techniques were used to improve training stability and reduce overfitting.
 
 
 
-The improved model achieved a small improvement in test accuracy of approximately \*\*0.43 percentage points\*\* and a lower test loss.
+The improved model achieved a small improvement in test accuracy of approximately **0.43 percentage points** and a lower test loss.
 
 
 
-\### Classification Performance
+### Classification Performance
 
 
-
-The improved model also showed a slight improvement in the F1-score for class `1`:
+The improved model also showed a slight improvement in the F1-score for class 1:
 
 
 
@@ -169,38 +168,37 @@ The improved model also showed a slight improvement in the F1-score for class `1
 | Improved | 0.73 |
 
 
-
-\## Key Findings
-
-
-
-\- The baseline model showed limited improvement during training.
-
-\- Training and validation curves did not show strong signs of overfitting.
-
-\- Batch Normalization and Dropout produced a more stable training pattern.
-
-\- The improved model slightly outperformed the baseline model on the test set.
-
-\- The overall improvement was limited, indicating that additional model optimization may be needed for a significant performance increase.
+## Key Findings
 
 
 
-\## Tools \& Technologies
+- The baseline model showed limited improvement during training.
+
+- Training and validation curves did not show strong signs of overfitting.
+
+- Batch Normalization and Dropout produced a more stable training pattern.
+
+- The improved model slightly outperformed the baseline model on the test set.
+
+- The overall improvement was limited, indicating that additional model optimization may be needed for a significant performance increase.
 
 
 
-\- Python
+## Tools \& Technologies
 
-\- TensorFlow / Keras
 
-\- Scikit-learn
 
-\- Pandas
+- Python
 
-\- NumPy
+- TensorFlow / Keras
 
-\- Matplotlib
+- Scikit-learn
 
-\- Google Colab / Jupyter Notebook
+- Pandas
+
+- NumPy
+
+- Matplotlib
+
+- Google Colab / Jupyter Notebook
 
