@@ -1,8 +1,8 @@
-\# Day 4 — Building \& Training a Neural Network with Keras
+# Day 4 — Building \& Training a Neural Network with Keras
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -14,29 +14,29 @@ The main focus was understanding the complete neural network training workflow, 
 
 
 
-\## Objectives
+## Objectives
 
 
 
-\- Build a neural network using the Keras Sequential API.
+- Build a neural network using the Keras Sequential API.
 
-\- Use Dense layers with appropriate activation functions.
+- Use Dense layers with appropriate activation functions.
 
-\- Compile and train a binary classification model.
+- Compile and train a binary classification model.
 
-\- Analyze training and validation loss and accuracy.
+- Analyze training and validation loss and accuracy.
 
-\- Diagnose overfitting and model learning behavior.
+- Diagnose overfitting and model learning behavior.
 
-\- Apply Batch Normalization and Dropout.
+- Apply Batch Normalization and Dropout.
 
-\- Evaluate the models on unseen test data.
+- Evaluate the models on unseen test data.
 
-\- Compare the baseline and improved models.
+- Compare the baseline and improved models.
 
 
 
-\## Dataset
+## Dataset
 
 
 
@@ -44,21 +44,21 @@ The experiment uses the cleaned cardiovascular disease dataset.
 
 
 
-\- \*\*Samples:\*\* 68,742
+- **Samples:** 68,742
 
-\- \*\*Features:\*\* 11
+- **Features:** 11
 
-\- \*\*Target:\*\* `cardio`
+- **Target:** cardio
 
-\- \*\*Task:\*\* Binary Classification
-
-
-
-The `id` column was removed because it is an identifier and does not provide useful predictive information.
+- **Task:** Binary Classification
 
 
 
-\## Data Preparation
+The id column was removed because it is an identifier and does not provide useful predictive information.
+
+
+
+## Data Preparation
 
 
 
@@ -66,19 +66,19 @@ The following steps were performed before training:
 
 
 
-\- Separated features (`X`) from the target (`y`).
+- Separated features (X) from the target (y).
 
-- Removed `id` and `cardio` from the input features.
+- Removed id and cardio from the input features.
 
 - Split the dataset into:
 
-&#x20; - 70% Training
+ - 70% Training
 
-&#x20; - 15% Validation
+ - 15% Validation
 
-&#x20; - 15% Test
+ - 15% Test
 
-- Applied `StandardScaler` to standardize the input features.
+- Applied StandardScaler to standardize the input features.
 
 - The scaler was fitted only on the training data to prevent data leakage.
 
