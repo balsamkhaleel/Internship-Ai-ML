@@ -407,8 +407,91 @@ Project/
 | `Baseline_Model_03`        | Development and evaluation of baseline machine learning models.                                                   |
 | `Supervised_Learning_04`   | Supervised learning, cross-validation, hyperparameter tuning, threshold optimization, and final model evaluation. |
 | `Unsupervised_learning_05` | Unsupervised learning using K-Means and DBSCAN to explore patient groups and hidden patterns.                     |
-
+| `Deep_Learning_06`         |Neural network development, training, hyperparameter tuning, Early Stopping, and final deep learning evaluation.   |
 ---
+
+
+## 🧠 Deep Learning
+
+The project also includes a **Deep Learning** approach using the TensorFlow/Keras Sequential API to classify cardiovascular disease.
+
+The neural network was trained using the cleaned cardiovascular dataset after removing the `id` column and applying feature scaling with `StandardScaler`.
+
+### Neural Network Architecture
+
+The initial neural network consisted of:
+
+* Input layer matching the number of selected features.
+* Dense layer with **32 neurons** using ReLU activation.
+* Dense layer with **16 neurons** using ReLU activation.
+* Output layer with **1 neuron** using Sigmoid activation.
+
+The model used:
+
+```text
+Optimizer: Adam
+Loss Function: Binary Crossentropy
+Initial Learning Rate: 0.001
+Batch Size: 32
+Epochs: 30
+```
+
+### Hyperparameter Tuning
+
+A systematic **one-variable-at-a-time** approach was used to tune the neural network.
+
+The following hyperparameters were evaluated:
+
+* Learning Rate
+* Network Architecture
+* Dropout Rate
+* Batch Size
+
+**Validation F1-Score** was used as the primary metric for comparing the different configurations.
+
+### Early Stopping
+
+**Early Stopping** was applied during the tuning experiments to prevent unnecessary training and reduce the risk of overfitting.
+
+The best model weights were restored based on the validation loss.
+
+```text
+monitor = val_loss
+patience = 5
+restore_best_weights = True
+```
+
+### Selected Configuration
+
+The best configuration obtained from the tuning experiments was:
+
+| **Hyperparameter** | **Selected Value** |
+| ------------------ | ------------------ |
+| Learning Rate      | **0.0005**         |
+| Architecture       | **(32, 16)**       |
+| Dropout Rate       | **0.0**            |
+| Batch Size         | **32**             |
+| Early Stopping     | **Enabled**        |
+
+The best configurations were selected based primarily on **Validation F1-Score**.
+
+### Deep Learning Evaluation
+
+The final neural network was evaluated using:
+
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* Confusion Matrix
+* Training and validation curves
+
+The neural network achieved reasonable classification performance, with validation F1-score results around **0.72**.
+
+The experiments showed that adding Dropout or increasing network complexity did not necessarily improve the validation performance. This indicates that deep learning is not always superior to traditional machine learning for tabular datasets, and model performance depends on the characteristics and predictive power of the available features.
+
+
+
 
 ## 🚀 Workflow
 
@@ -447,5 +530,9 @@ The project demonstrates a complete machine learning workflow for cardiovascular
 The supervised learning experiments showed that **Random Forest** provided a useful solution for cardiovascular disease detection. By adjusting the classification threshold from the default value to **0.35**, the model achieved a **Recall of 82.87%**, allowing it to identify a larger proportion of positive cases.
 
 The unsupervised learning experiments provided complementary insights into the underlying structure of the patient population through **K-Means and DBSCAN clustering**.
+
+The project also included a **Deep Learning** approach using the TensorFlow/Keras Sequential API. A neural network was developed and systematically tuned using Learning Rate, Network Architecture, Dropout Rate, and Batch Size. **Validation F1-score** was used as the primary metric for selecting the best configuration, with Early Stopping applied to prevent unnecessary training and restore the best model weights.
+
+The selected neural network configuration used a **learning rate of 0.0005**, an **architecture of (32, 16)**, **0.0 dropout**, and a **batch size of 32**. The deep learning experiments achieved validation F1-score results around 0.72 and demonstrated that increasing model complexity or adding dropout did not necessarily improve performance on this tabular dataset.
 
 Overall, the project combines predictive modeling with exploratory and unsupervised analysis to provide a broader understanding of cardiovascular disease patterns within the dataset.
