@@ -337,79 +337,6 @@ DBSCAN was used to identify dense patient groups and potential noise observation
 
 ---
 
-## 🛠️ Technologies & Libraries
-
-### Programming Language
-
-* Python
-
-### Data Analysis
-
-* Pandas
-* NumPy
-
-### Visualization
-
-* Matplotlib
-
-### Machine Learning
-
-* Scikit-learn
-
-### Main Techniques
-
-* Data Cleaning
-* Exploratory Data Analysis
-* Correlation Analysis
-* Feature Engineering
-* Train/Test Split
-* Cross-Validation
-* Logistic Regression
-* Decision Tree
-* KNN
-* Random Forest
-* Grid Search
-* Threshold Optimization
-* K-Means Clustering
-* DBSCAN
-* Model Evaluation
-
----
-
-## 📁 Project Structure
-
-```text
-Project/
-│
-├── cardio.csv
-│
-├── Data_Preparation/
-│   └── cardio_cleaned
-│
-├── EDA_02
-│
-├── Baseline_Model_03
-│
-├── Supervised_Learning_04
-│
-├── Unsupervised_learning_05
-│
-└── README.md
-```
-
-### 📂 File Organization
-
-| File                       | Description                                                                                                       |
-| -------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `Data_Preparation`         | Data loading, data quality checks, data cleaning, preprocessing, and preparation of the dataset.                  |
-| `cardio_cleaned`           | Cleaned cardiovascular dataset used in the following analysis and modeling stages.                                |
-| `EDA_02`                   | Exploratory Data Analysis, visualization, statistical analysis, and correlation analysis.                         |
-| `Baseline_Model_03`        | Development and evaluation of baseline machine learning models.                                                   |
-| `Supervised_Learning_04`   | Supervised learning, cross-validation, hyperparameter tuning, threshold optimization, and final model evaluation. |
-| `Unsupervised_learning_05` | Unsupervised learning using K-Means and DBSCAN to explore patient groups and hidden patterns.                     |
-| `Deep_Learning_06`         |Neural network development, training, hyperparameter tuning, Early Stopping, and final deep learning evaluation.   |
----
-
 
 ## 🧠 Deep Learning
 
@@ -489,6 +416,85 @@ The final neural network was evaluated using:
 The neural network achieved reasonable classification performance, with validation F1-score results around **0.72**.
 
 The experiments showed that adding Dropout or increasing network complexity did not necessarily improve the validation performance. This indicates that deep learning is not always superior to traditional machine learning for tabular datasets, and model performance depends on the characteristics and predictive power of the available features.
+
+---
+
+## 🛠️ Technologies & Libraries
+
+### Programming Language
+
+* Python
+
+### Data Analysis
+
+* Pandas
+* NumPy
+
+### Visualization
+
+* Matplotlib
+
+### Machine Learning
+
+* Scikit-learn
+
+### Main Techniques
+
+* Data Cleaning
+* Exploratory Data Analysis
+* Correlation Analysis
+* Feature Engineering
+* Train/Test Split
+* Cross-Validation
+* Logistic Regression
+* Decision Tree
+* KNN
+* Random Forest
+* Grid Search
+* Threshold Optimization
+* K-Means Clustering
+* DBSCAN
+* Model Evaluation
+
+---
+
+## 📁 Project Structure
+
+```text
+Project/
+│
+├── cardio.csv
+│
+├── Data_Preparation/
+│   └── cardio_cleaned
+│
+├── EDA_02
+│
+├── Baseline_Model_03
+│
+├── Supervised_Learning_04
+│
+├── Unsupervised_learning_05
+│
+├── Deep_Learning_06
+|
+└── README.md
+```
+
+### 📂 File Organization
+
+| File                       | Description                                                                                                       |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `Data_Preparation`         | Data loading, data quality checks, data cleaning, preprocessing, and preparation of the dataset.                  |
+| `cardio_cleaned`           | Cleaned cardiovascular dataset used in the following analysis and modeling stages.                                |
+| `EDA_02`                   | Exploratory Data Analysis, visualization, statistical analysis, and correlation analysis.                         |
+| `Baseline_Model_03`        | Development and evaluation of baseline machine learning models.                                                   |
+| `Supervised_Learning_04`   | Supervised learning, cross-validation, hyperparameter tuning, threshold optimization, and final model evaluation. |
+| `Unsupervised_learning_05` | Unsupervised learning using K-Means and DBSCAN to explore patient groups and hidden patterns.                     |
+| `Deep_Learning_06`         |Neural network development, training, hyperparameter tuning, Early Stopping, and final deep learning evaluation.   |
+
+---
+
 
 
 
