@@ -1,248 +1,211 @@
-# \# Day 5 — Tuning, Evaluation \& Sprint Review
+# Day 5 — Tuning, Evaluation \& Sprint Review
 
-# 
 
-# \[svg](https://github.com/balsamkhaleel/Internship-Ai-ML/tree/main/week6/day5#day-5--tuning-evaluation--sprint-review)
+## Overview
 
-# 
 
-# \## Overview
+ Systematically tuned and evaluated a neural network for cardiovascular disease classification using the TensorFlow/Keras Sequential API.
 
-# 
 
-# 
 
-# 
+ The main focus was hyperparameter tuning, Early Stopping, Model Checkpointing, model evaluation, and preparing the Sprint 1 review evidence.
 
-# Systematically tuned and evaluated a neural network for cardiovascular disease classification using the TensorFlow/Keras Sequential API.
+## Objectives
 
-# 
 
-# The main focus was hyperparameter tuning, Early Stopping, Model Checkpointing, model evaluation, and preparing the Sprint 1 review evidence.
 
-# 
+* Tune a neural network one variable at a time.
 
-# \## Objectives
+* Evaluate learning rate, architecture, dropout, and batch size.
 
-# 
+* Use Validation F1-score as the primary tuning metric.
 
-# 
+* Apply Early Stopping and ModelCheckpoint.
 
-# \* Tune a neural network one variable at a time.
+* Analyze training and validation curves.
 
-# \* Evaluate learning rate, architecture, dropout, and batch size.
+* Evaluate the final model on unseen test data.
 
-# \* Use Validation F1-score as the primary tuning metric.
+* Prepare evidence for Sprint Review and Retrospective.
 
-# \* Apply Early Stopping and ModelCheckpoint.
+ 
 
-# \* Analyze training and validation curves.
+## Dataset
 
-# \* Evaluate the final model on unseen test data.
+ The experiment uses the cleaned cardiovascular disease dataset.
 
-# \* Prepare evidence for Sprint Review and Retrospective.
 
-# 
+* **Samples:** 68,741
 
-# \## Dataset
+ * **Features:** 11
 
-# 
+ * **Target:** cardio
 
-# 
+ * **Task:** Binary Classification
 
-# The experiment uses the cleaned cardiovascular disease dataset.
+ 
 
-# 
+ The id column was removed because it is only an identifier.
 
-# \* \*\*Samples:\*\* 68,741
 
-# \* \*\*Features:\*\* 11
 
-# \* \*\*Target:\*\* `cardio`
+## Data Preparation
 
-# \* \*\*Task:\*\* Binary Classification
+ The dataset was split using stratified sampling into:
 
-# 
 
-# The `id` column was removed because it is only an identifier.
+* 64% Training
 
-# 
+* 16% Validation
 
-# \## Data Preparation
+* 20% Test
 
-# 
+ 
 
-# 
+StandardScaler was fitted only on the training data and then applied to the validation and test sets to prevent data leakage.
 
-# 
 
-# The dataset was split using stratified sampling into:
 
-# 
+## Hyperparameter Tuning
 
-# \* 64% Training
+ A one-variable-at-a-time strategy was used to evaluate:
 
-# \* 16% Validation
+* Learning Rate
 
-# \* 20% Test
+* Network Architecture
 
-# 
+* Dropout Rate
 
-# `StandardScaler` was fitted only on the training data and then applied to the validation and test sets to prevent data leakage.
+* Batch Size
 
-# 
 
-# \## Hyperparameter Tuning
 
-# 
+ Validation F1-score was used as the primary metric for selecting the best configuration.
 
-# 
+ 
 
-# A one-variable-at-a-time strategy was used to evaluate:
+### Best Configuration
 
-# 
+ 
 
-# \* Learning Rate
+ | Hyperparameter |   Best Value |
 
-# \* Network Architecture
+ | -------------- | -----------: |
 
-# \* Dropout Rate
+ | Learning Rate  |  **0.0005**  |
 
-# \* Batch Size
+ | Architecture   | **(32, 16)** |
 
-# 
+ | Dropout        |  **0.0**     |
 
-# Validation F1-score was used as the primary metric for selecting the best configuration.
+ | Batch Size     |  **32**      |
 
-# 
+ 
 
-# \### Best Configuration
+ The best validation F1-score observed during tuning was approximately \*\*0.7248\*\*.
 
-# 
 
-# | Hyperparameter |   Best Value |
+## Callbacks
 
-# | -------------- | -----------: |
 
-# | Learning Rate  |   \*\*0.0005\*\* |
+**EarlyStopping** was used to stop training when validation loss stopped improving and restore the best model weights.
 
-# | Architecture   | \*\*(32, 16)\*\* |
 
-# | Dropout        |      \*\*0.0\*\* |
 
-# | Batch Size     |       \*\*32\*\* |
+**ModelCheckpoint** was used to save the best-performing model during final training.
 
-# 
+ 
+## Results
 
-# The best validation F1-score observed during tuning was approximately \*\*0.7248\*\*.
+ 
 
-# 
+ 
 
-# \## Callbacks
+ 
 
-# 
+ The final neural network was evaluated using:
 
-# 
+ 
 
-# \*\*EarlyStopping\*\* was used to stop training when validation loss stopped improving and restore the best model weights.
+* Accuracy
 
-# 
+* Precision
 
-# \*\*ModelCheckpoint\*\* was used to save the best-performing model during final training.
+* Recall
 
-# 
+* F1-Score
 
-# \## Results
+* Confusion Matrix
 
-# 
+ 
 
-# 
+ Training and validation loss and accuracy curves were also analyzed to understand model learning behavior.
 
-# 
+ 
 
-# The final neural network was evaluated using:
+## Key Findings
 
-# 
+ 
 
-# \* Accuracy
+ 
 
-# \* Precision
+ 
 
-# \* Recall
+* A learning rate of **0.0005** achieved the highest validation F1-score among the tested learning rates.
 
-# \* F1-Score
+* The **(32, 16)** architecture achieved the best validation F1-score.
 
-# \* Confusion Matrix
+* Dropout did not improve the validation performance for the tested configurations.
 
-# 
+* Batch size **32** achieved the highest validation F1-score among the tested batch sizes.
 
-# Training and validation loss and accuracy curves were also analyzed to understand model learning behavior.
+* EarlyStopping helped prevent unnecessary training.
 
-# 
+* ModelCheckpoint preserved the best-performing final model.
 
-# \## Key Findings
+ 
 
-# 
+## Sprint Review \& Retrospective
 
-# 
+ 
 
-# 
+ 
 
-# \* A learning rate of \*\*0.0005\*\* achieved the highest validation F1-score among the tested learning rates.
+ 
 
-# \* The \*\*(32, 16)\*\* architecture achieved the best validation F1-score.
+ The Sprint 1 results were documented using training curves, metric tables, model configuration, and final evaluation results.
 
-# \* Dropout did not improve the validation performance for the tested configurations.
+ 
 
-# \* Batch size \*\*32\*\* achieved the highest validation F1-score among the tested batch sizes.
+ The tuning process and model evaluation were reviewed as part of the Sprint Review and Retrospective.
 
-# \* EarlyStopping helped prevent unnecessary training.
+ 
 
-# \* ModelCheckpoint preserved the best-performing final model.
+## Tools \& Technologies
 
-# 
+ 
 
-# \## Sprint Review \& Retrospective
+ 
 
-# 
+ 
 
-# 
+* Python
 
-# 
+* TensorFlow / Keras
 
-# The Sprint 1 results were documented using training curves, metric tables, model configuration, and final evaluation results.
+* Scikit-learn
 
-# 
+* Pandas
 
-# The tuning process and model evaluation were reviewed as part of the Sprint Review and Retrospective.
+* NumPy
 
-# 
+* Matplotlib
 
-# \## Tools \& Technologies
+* Seaborn
 
-# 
+* Git \& GitHub
 
-# 
-
-# 
-
-# \* Python
-
-# \* TensorFlow / Keras
-
-# \* Scikit-learn
-
-# \* Pandas
-
-# \* NumPy
-
-# \* Matplotlib
-
-# \* Seaborn
-
-# \* Git \& GitHub
-
-# \* Google Colab / Jupyter Notebook
+* Google Colab / Jupyter Notebook
 
 
 
