@@ -30,7 +30,7 @@ The work is applied to the Cardiovascular Disease dataset, starting with data pr
 
 - ✅ **Day 4 — Building & Training a Neural Network with Keras**
 
-- ⏳ **Day 5 — coming soon**
+- ✅ **Day 5 — Tuning, Evaluation & Sprint Review**
 
 
 
@@ -70,7 +70,7 @@ week6/
 
 
 
-│ └── cardio\_cleaned.csv
+│ └── cardio_cleaned.csv
 
 
 
@@ -78,7 +78,35 @@ week6/
 
 
 
+│ ├── day2.ipynb
+
+
+
+│ ├── README.md
+
+
+
+│ └── cardio_cleaned.csv
+
+
+
+
+
+
 ├── day3/
+
+
+
+│ ├── day3.ipynb
+
+
+
+│ ├── README.md
+
+
+
+│ └── cardio_cleaned.csv
+
 
 
 
@@ -86,7 +114,39 @@ week6/
 
 
 
+│ ├── day2.ipynb
+
+
+
+│ ├── README.md
+
+
+
+│ └── cardio_cleaned.csv
+
+
+
+
 ├── day5/
+
+│ ├── 01\_Data\_Preparation.ipynb
+
+
+
+│ ├── 02\_EDA.ipynb
+
+
+
+│ ├── day5.ipynb
+
+
+
+│ ├── README.md
+
+
+
+│ └── cardio_cleaned.csv
+
 
 
 
