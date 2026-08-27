@@ -90,7 +90,7 @@ StandardScaler was fitted only on the training data and then applied to the vali
 
  | Hyperparameter |   Best Value |
 
- | -------------- | -----------: |
+ | -------------- | -----------|
 
  | Learning Rate  |  **0.0005**  |
 
