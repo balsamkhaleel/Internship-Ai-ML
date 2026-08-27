@@ -89,15 +89,10 @@ StandardScaler was fitted only on the training data and then applied to the vali
  
 
  | Hyperparameter |   Best Value |
-
- | -------------- | -----------|
-
+ | -------------- | -------------|
  | Learning Rate  |  **0.0005**  |
-
  | Architecture   | **(32, 16)** |
-
  | Dropout        |  **0.0**     |
-
  | Batch Size     |  **32**      |
 
  
