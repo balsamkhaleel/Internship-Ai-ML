@@ -28,7 +28,7 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 
 - ✅ **Week 5** — Unsupervised Learning
 
-- ⏳ **Week 6** — Coming Soon
+- ✅ **Week 6** — Deep Learning Fundamentals
 
 - ⏳ **Week 7** — Coming Soon
 
@@ -132,8 +132,97 @@ Internship/
 │   └── README.md
 │
 ├── week4/
+│   ├── day1/
+│   │   ├── day1.ipynb
+│   │   ├── breast-cancer.csv
+│   │   └── README.md
+│   │
+│   ├── day2/
+│   │   ├── day2.ipynb
+│   │   ├── breast-cancer.csv
+│   │   └── README.md
+│   │
+│   ├── day3/
+│   │   ├── day3.ipynb
+│   │   ├── breast-cancer.csv
+│   │   └── README.md
+│   │
+│   ├── day4/
+│   │   ├── day4.ipynb
+│   │   ├── Titanic-Dataset.csv
+│   │   └── README.md
+│   │
+│   ├── day5/
+│   │   ├── day5.ipynb
+│   │   ├── Titanic-Dataset.csv
+│   │   └── README.md
+│   │
+│   └── README.md
+|
 ├── week5/
+│   ├── day1/
+│   │   ├── day1.ipynb
+│   │   ├── Mall_Customers.csv
+│   │   └── README.md
+│   │
+│   ├── day2/
+│   │   ├── day2.ipynb
+│   │   ├── Mall_Customers.csv
+│   │   └── README.md
+│   │
+│   ├── day3/
+│   │   ├── day3.ipynb
+│   │   ├── data.csv
+│   │   └── README.md
+│   │
+│   ├── day4/
+│   │   ├── day4.ipynb
+│   │   ├── data.csv
+│   │   └── README.md
+│   │
+│   ├── day5/
+│   │   ├── Data_preparation_01.ipynb
+│   │   ├── cardio.csv
+│   │   ├── EDA_02.ipynb
+│   │   ├── Unsupervised_learning_03.ipynb
+│   │   ├── cardio_cleaned.csv
+│   │   └── README.md
+│   │
+│   └── README.md
+|
 ├── week6/
+│   ├── day1/
+│   │   ├── Baseline_Model_03.ipynb
+│   │   ├── Data_preparation_01.ipynb
+│   │   ├── EDA_02.ipynb
+│   │   ├── cardio_cleaned.csv
+│   │   ├── cardio.csv
+│   │   └── README.md
+│   │
+│   ├── day2/
+│   │   ├── day2.ipynb
+│   │   ├── cardio_cleaned.csv
+│   │   └── README.md
+│   │
+│   ├── day3/
+│   │   ├── day3.ipynb
+│   │   ├── cardio_cleaned.csv
+│   │   └── README.md
+│   │
+│   ├── day4/
+│   │   ├── day4.ipynb
+│   │   ├──  cardio_cleaned.csv
+│   │   └── README.md
+│   │
+│   ├── day5/
+│   │   ├── Data_preparation_01.ipynb
+│   │   ├── EDA_02.ipynb
+│   │   ├── day5.ipynb
+│   │   ├── cardio_cleaned.csv
+│   │   └── README.md
+│   │
+│   └── README.md
+|
 ├── week7/
 ├── week8/
 ├── week9/
