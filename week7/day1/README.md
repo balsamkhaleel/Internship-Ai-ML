@@ -1,8 +1,8 @@
-\# Day 1 — Sprint 2 Planning \& Convolutional Neural Networks
+# Day 1 — Sprint 2 Planning \& Convolutional Neural Networks
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -10,15 +10,15 @@ Introduced Sprint 2 planning and the fundamental concepts of Convolutional Neura
 
 
 
-A hands-on convolution experiment was performed using a small sample of the \*\*Melanoma Skin Cancer Dataset — Benign vs Malignant\*\*.
+A hands-on convolution experiment was performed using a small sample of the **Melanoma Skin Cancer Dataset — Benign vs Malignant**.
 
 
 
-\## Sprint 2 Planning
+## Sprint 2 Planning
 
 
 
-\### Sprint 2 Goal
+### Sprint 2 Goal
 
 
 
@@ -26,7 +26,7 @@ The goal of Sprint 2 is to further develop the project's machine learning and de
 
 
 
-\### Sprint 2 Backlog
+### Sprint 2 Backlog
 
 
 
@@ -48,7 +48,7 @@ The goal of Sprint 2 is to further develop the project's machine learning and de
 
 
 
-\### Sprint 1 Retrospective Improvement
+### Sprint 1 Retrospective Improvement
 
 
 
@@ -60,7 +60,7 @@ In Sprint 2, model errors and prediction behavior will be analyzed to identify a
 
 
 
-\### Core Model
+### Core Model
 
 
 
@@ -72,19 +72,19 @@ The Sprint 2 work will build on the Dense Neural Network developed and tuned dur
 
 
 
-\---
+---
 
 
 
-\## CNN Hands-On
+## CNN Hands-On
 
 
 
-\### Dataset
+### Dataset
 
 
 
-The hands-on experiment uses the \*\*Melanoma Skin Cancer Dataset — Benign vs Malignant\*\*.
+The hands-on experiment uses the **Melanoma Skin Cancer Dataset — Benign vs Malignant**.
 
 
 
@@ -92,9 +92,9 @@ The dataset contains two image classes:
 
 
 
-\* \*\*Benign\*\*
+* **Benign**
 
-\* \*\*Malignant\*\*
+* **Malignant**
 
 
 
@@ -102,9 +102,9 @@ For the convolution experiment, a small balanced sample of \*\*10 images\*\* was
 
 
 
-\* 5 Benign images
+* 5 Benign images
 
-\* 5 Malignant images
+* 5 Malignant images
 
 
 
@@ -112,7 +112,7 @@ The sample was used for demonstration and visualization rather than model traini
 
 
 
-\## Why Dense Networks Fail on Images
+## Why Dense Networks Fail on Images
 
 
 
@@ -156,7 +156,7 @@ CNNs solve this problem by using small filters that operate locally and reuse th
 
 
 
-\## Image Inspection
+## Image Inspection
 
 
 
@@ -200,7 +200,7 @@ $$
 
 
 
-\## Convolution Filter
+## Convolution Filter
 
 
 
@@ -210,11 +210,11 @@ A hand-defined 3 × 3 edge-detection filter was used:
 
 ```text
 
-\[-1  0  1]
+[-1  0  1]
 
-\[-1  0  1]
+[-1  0  1]
 
-\[-1  0  1]
+[-1  0  1]
 
 ```
 
@@ -224,7 +224,7 @@ This filter is designed to highlight vertical edges by detecting changes in pixe
 
 
 
-\## Convolution and Feature Map
+## Convolution and Feature Map
 
 
 
@@ -236,7 +236,7 @@ The filter slides across the image and performs a weighted sum of local pixel va
 
 
 
-The result is a \*\*feature map\*\* that highlights areas where the detected pattern occurs.
+The result is a **feature map** that highlights areas where the detected pattern occurs.
 
 
 
@@ -256,7 +256,7 @@ because `SAME` padding was used with a stride of 1.
 
 
 
-\## Parameter Sharing
+## Parameter Sharing
 
 
 
@@ -288,7 +288,7 @@ Parameter sharing significantly reduces the number of parameters and allows the 
 
 
 
-\## Translation Invariance
+## Translation Invariance
 
 
 
@@ -300,7 +300,7 @@ For example, an edge or texture can be recognized whether it appears on the left
 
 
 
-\## Feature Hierarchy
+## Feature Hierarchy
 
 
 
@@ -312,19 +312,19 @@ CNNs learn visual features progressively through different layers.
 
 Edges
 
-&#x20; ↓
+ ↓
 
 Textures
 
-&#x20; ↓
+ ↓
 
 Shapes
 
-&#x20; ↓
+ ↓
 
 Complex Features
 
-&#x20; ↓
+ ↓
 
 Objects / Structures
 
@@ -336,7 +336,7 @@ Early layers learn simple patterns such as edges and lines. Middle layers combin
 
 
 
-\## Conclusion
+## Conclusion
 
 
 
