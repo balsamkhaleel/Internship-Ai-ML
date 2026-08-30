@@ -26,7 +26,7 @@ The work also continues the development of the Cardiovascular Disease project fr
 
 
 
-\## 📚 Days
+## 📚 Days
 
 
 
