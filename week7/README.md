@@ -35,7 +35,7 @@ The work also continues the development of the Cardiovascular Disease project fr
 
 * ✅ **Day 1 — Sprint 2 Planning \& Convolutional Neural Networks**
 
-* ⏳ **Day 2 — comming soon**
+* ✅ **Day 2 —  Building CNNs & Transfer Learning**
 
 * ⏳ **Day 3 — comming soon**
 
@@ -74,7 +74,7 @@ week7/
 
 
 
-│ ├── README.md
+│ └── README.md
 
 
 
@@ -86,15 +86,12 @@ week7/
 
 
 
-│ ├──
+│ ├──day2.ipynb
 
 
 
-│ ├── README.md
+│└── README.md
 
-
-
-│ └──
 
 
 
@@ -106,11 +103,9 @@ week7/
 
 
 
-│ ├── README.md
+│ └── README.md
 
 
-
-│ └──
 
 
 
