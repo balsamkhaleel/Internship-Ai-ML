@@ -1,16 +1,12 @@
-\# 📅 Week 7 — CNNs, RNNs \& TRANSFORMERS — SPRINT 2
+# 📅 Week 7 — CNNs, RNNs \& TRANSFORMERS — SPRINT 2
 
 
 
-\[svg](https://github.com/balsamkhaleel/Internship-Ai-ML/tree/main/week7#-week-7--sprint-2--convolutional-neural-networks)
 
 
 
-\## 📖 Overview
+## 📖 Overview
 
-
-
-\[svg](https://github.com/balsamkhaleel/Internship-Ai-ML/tree/main/week7#-overview)
 
 
 
@@ -30,31 +26,28 @@ The work also continues the development of the Cardiovascular Disease project fr
 
 
 
-\## 📚 Days
+## 📚 Days
 
 
 
-\[svg](https://github.com/balsamkhaleel/Internship-Ai-ML/tree/main/week7#-days)
 
 
 
-\* ✅ \*\*Day 1 — Sprint 2 Planning \& Convolutional Neural Networks\*\*
+* ✅ **Day 1 — Sprint 2 Planning \& Convolutional Neural Networks**
 
-\* ⬜ \*\*Day 2 —\*\*
+* ⏳ **Day 2 — comming soon**
 
-\* ⬜ \*\*Day 3 —\*\*
+* ⏳ **Day 3 — comming soon**
 
-\* ⬜ \*\*Day 4 —\*\*
+* ⏳ **Day 4 — comming soon**
 
-\* ⬜ \*\*Day 5 —\*\*
-
-
-
-\## 🛠️ Technologies
+* ⏳ **Day 5 — comming soon**
 
 
 
-\[svg](https://github.com/balsamkhaleel/Internship-Ai-ML/tree/main/week7#%EF%B8%8F-technologies)
+## 🛠️ Technologies
+
+
 
 
 
@@ -62,11 +55,10 @@ Python, TensorFlow, Keras, NumPy, Matplotlib, PIL, Google Colab, Git, GitHub
 
 
 
-\## 📂 Repository Structure
+## 📂 Repository Structure
 
 
 
-\[svg](https://github.com/balsamkhaleel/Internship-Ai-ML/tree/main/week7#-repository-structure)
 
 
 
@@ -86,7 +78,7 @@ week7/
 
 
 
-│ └──
+
 
 
 
@@ -130,11 +122,11 @@ week7/
 
 
 
-│ ├── README.md
+│ └──README.md
 
 
 
-│ └──
+
 
 
 
@@ -146,11 +138,11 @@ week7/
 
 
 
-│ ├── README.md
+│  └── README.md
 
 
 
-│ └──
+
 
 
 

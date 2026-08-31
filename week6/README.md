@@ -22,15 +22,11 @@ The work is applied to the Cardiovascular Disease dataset, starting with data pr
 
 
 
-- ✅ **Day 1 — Sprint 1 Planning \& Baseline Model**
-
-- ✅ **Day 2 — Activations, Forward Propagation & Loss**
-
-- ✅ **Day 3 — Backpropagation, Gradient Descent & Optimizers**
-
-- ✅ **Day 4 — Building & Training a Neural Network with Keras**
-
-- ✅ **Day 5 — Tuning, Evaluation & Sprint Review**
+* ✅ **Day 1 — Sprint 1 Planning \& Baseline Model**
+* ✅ **Day 2 — Activations, Forward Propagation \& Loss**
+* ✅ **Day 3 — Backpropagation, Gradient Descent \& Optimizers**
+* ✅ **Day 4 — Building \& Training a Neural Network with Keras**
+* ✅ **Day 5 — Tuning, Evaluation \& Sprint Review**
 
 
 
@@ -70,7 +66,7 @@ week6/
 
 
 
-│ └── cardio_cleaned.csv
+│ └── cardio\_cleaned.csv
 
 
 
@@ -86,7 +82,8 @@ week6/
 
 
 
-│ └── cardio_cleaned.csv
+│ └── cardio\_cleaned.csv
+
 
 
 
@@ -105,7 +102,8 @@ week6/
 
 
 
-│ └── cardio_cleaned.csv
+│ └── cardio\_cleaned.csv
+
 
 
 
@@ -122,7 +120,8 @@ week6/
 
 
 
-│ └── cardio_cleaned.csv
+│ └── cardio\_cleaned.csv
+
 
 
 
@@ -145,7 +144,8 @@ week6/
 
 
 
-│ └── cardio_cleaned.csv
+│ └── cardio\_cleaned.csv
+
 
 
 
