@@ -37,7 +37,7 @@ The work also continues the development of the Cardiovascular Disease project fr
 
 * ✅ **Day 2 —  Building CNNs & Transfer Learning**
 
-* ⏳ **Day 3 — comming soon**
+* ✅ **Day 3 — RNNs & LSTMs for Sequential Data**
 
 * ⏳ **Day 4 — comming soon**
 
@@ -99,7 +99,7 @@ week7/
 
 
 
-│ ├──
+│ ├──day3.ipynb
 
 
 
