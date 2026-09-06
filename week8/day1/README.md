@@ -1,434 +1,216 @@
-\# Day 1 — Sprint 3 Planning \& NLP Preprocessing
+# Day 1 — Sprint 3 Planning & NLP Preprocessing
 
+---
 
+# 1. Sprint 3 Planning
 
-\---
+**🚀 Sprint 3 Planning**
 
-
-
-\# 1. Sprint 3 Planning
-
-
-
-\*\*🚀 Sprint 3 Planning\*\*
-
-
-
-\*\*🎯 Sprint Goal\*\*
-
-
+**🎯 Sprint Goal**
 
 The goal of Sprint 3 is to integrate the final machine learning model into a complete and reliable prediction pipeline, conduct comprehensive evaluation and error analysis, test the reliability of the system, and prepare the project for deployment in Sprint 4.
 
+The **Tuned Neural Network** was selected as the final model based primarily on achieving the highest **F1-score**.
 
+---
 
-The \*\*Tuned Neural Network\*\* was selected as the final model based primarily on achieving the highest \*\*F1-score\*\*.
+**📋 Sprint 3 Backlog**
 
+* Finalize and document the final model.
+* Integrate preprocessing, feature engineering, scaling, and the trained model.
+* Perform comprehensive model evaluation.
+* Focus on **F1-score, Precision, and Recall**.
+* Create Confusion Matrix, ROC Curve, and Precision-Recall Curve.
+* Analyze False Positives and False Negatives.
+* Evaluate Decision Threshold optimization.
+* Test pipeline reliability and robustness.
+* Save the final model and preprocessing components.
+* Prepare the project for deployment in Sprint 4.
 
+---
 
-\---
+**🏆 Final Model**
 
+**Tuned Neural Network with Threshold Optimization**
 
+Selected because it achieved the highest **F1-score**, providing a balance between Precision and Recall.
 
-\*\*📋 Sprint 3 Backlog\*\*
+---
 
+**🔄 Carrying Forward Improvements from Sprint 2**
 
+* Focus on **F1-score**.
+* Use **Threshold Optimization**.
+* Avoid relying on Accuracy alone.
+* Apply preprocessing consistently.
+* Improve reproducibility and project organization.
+* Prepare all components for deployment.
 
-\* Finalize and document the final model.
+---
 
-\* Integrate preprocessing, feature engineering, scaling, and the trained model.
+**🛣️ Sprint 3 Roadmap**
 
-\* Perform comprehensive model evaluation.
+**Model Integration → Evaluation → Error Analysis → Reliability Testing → Finalization → Deployment Preparation**
 
-\* Focus on \*\*F1-score, Precision, and Recall\*\*.
+---
 
-\* Create Confusion Matrix, ROC Curve, and Precision-Recall Curve.
+# 2. NLP Preprocessing
 
-\* Analyze False Positives and False Negatives.
+## 🎯 Learning Objectives
 
-\* Evaluate Decision Threshold optimization.
+* Apply text preprocessing.
+* Perform tokenization and cleaning.
+* Remove stop words.
+* Preserve negations.
+* Apply lemmatization.
+* Compare stemming and lemmatization.
 
-\* Test pipeline reliability and robustness.
+## 📊 Dataset
 
-\* Save the final model and preprocessing components.
-
-\* Prepare the project for deployment in Sprint 4.
-
-
-
-\---
-
-
-
-\*\*🏆 Final Model\*\*
-
-
-
-\*\*Tuned Neural Network with Threshold Optimization\*\*
-
-
-
-Selected because it achieved the highest \*\*F1-score\*\*, providing a balance between Precision and Recall.
-
-
-
-\---
-
-
-
-\*\*🔄 Carrying Forward Improvements from Sprint 2\*\*
-
-
-
-\* Focus on \*\*F1-score\*\*.
-
-\* Use \*\*Threshold Optimization\*\*.
-
-\* Avoid relying on Accuracy alone.
-
-\* Apply preprocessing consistently.
-
-\* Improve reproducibility and project organization.
-
-\* Prepare all components for deployment.
-
-
-
-\---
-
-
-
-\*\*🛣️ Sprint 3 Roadmap\*\*
-
-
-
-\*\*Model Integration → Evaluation → Error Analysis → Reliability Testing → Finalization → Deployment Preparation\*\*
-
-
-
-\---
-
-
-
-\# 2. NLP Preprocessing
-
-
-
-\## 🎯 Learning Objectives
-
-
-
-\* Apply text preprocessing.
-
-\* Perform tokenization and cleaning.
-
-\* Remove stop words.
-
-\* Preserve negations.
-
-\* Apply lemmatization.
-
-\* Compare stemming and lemmatization.
-
-
-
-\## 📊 Dataset
-
-
-
-The \*\*IMDb Movie Reviews Dataset\*\* contains 50,000 balanced reviews.
-
-
+The **IMDb Movie Reviews Dataset** contains 50,000 balanced reviews.
 
 | Sentiment |  Count |
-
 | --------- | -----: |
-
 | Positive  | 25,000 |
-
 | Negative  | 25,000 |
-
-
 
 No missing values were found.
 
-
-
-\## 📚 Libraries
-
-
+## 📚 Libraries
 
 ```python
-
 import pandas as pd
-
 import re
-
 import string
-
 import nltk
 
-
-
-from nltk.tokenize import word\_tokenize
-
+from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-
 from nltk.stem import WordNetLemmatizer, PorterStemmer
-
 ```
 
-
-
 ```python
-
 nltk.download('punkt')
-
-nltk.download('punkt\_tab')
-
+nltk.download('punkt_tab')
 nltk.download('stopwords')
-
 nltk.download('wordnet')
-
 nltk.download('omw-1.4')
-
 ```
 
-
-
-\## 📥 Load Dataset
-
-
+## 📥 Load Dataset
 
 ```python
-
-df = pd.read\_csv("IMDB Dataset.csv")
-
-
+df = pd.read_csv("IMDB Dataset.csv")
 
 print(df.shape)
-
 df.head()
-
 ```
 
+**Output:** `(50000, 2)`
 
-
-\*\*Output:\*\* `(50000, 2)`
-
-
-
-\## 🔤 Tokenization \& Cleaning
-
-
+## 🔤 Tokenization & Cleaning
 
 ```python
-
-text = df\['review'].iloc\[0]
-
-
+text = df['review'].iloc[0]
 
 text = text.lower()
+text = re.sub(r'<.*?>', ' ', text)
 
-text = re.sub(r'<.\*?>', ' ', text)
+tokens = word_tokenize(text)
 
-
-
-tokens = word\_tokenize(text)
-
-
-
-tokens = \[
-
-&#x20;   word for word in tokens
-
-&#x20;   if word not in string.punctuation
-
-&#x20;   and not word.isdigit()
-
+tokens = [
+    word for word in tokens
+    if word not in string.punctuation
+    and not word.isdigit()
 ]
-
 ```
 
-
-
-\## 🚫 Stop-word Removal \& Negation Preservation
-
-
+## 🚫 Stop-word Removal & Negation Preservation
 
 ```python
+stop_words = set(stopwords.words('english'))
+important_negations = {"not", "no", "never"}
 
-stop\_words = set(stopwords.words('english'))
-
-important\_negations = {"not", "no", "never"}
-
-
-
-tokens = \[
-
-&#x20;   word for word in tokens
-
-&#x20;   if word not in stop\_words
-
-&#x20;   or word in important\_negations
-
+tokens = [
+    word for word in tokens
+    if word not in stop_words
+    or word in important_negations
 ]
-
 ```
 
-
-
-\## 🧠 Lemmatization
-
-
+## 🧠 Lemmatization
 
 ```python
-
 lemmatizer = WordNetLemmatizer()
 
-
-
-tokens = \[
-
-&#x20;   lemmatizer.lemmatize(word)
-
-&#x20;   for word in tokens
-
+tokens = [
+    lemmatizer.lemmatize(word)
+    for word in tokens
 ]
-
 ```
-
-
 
 Lemmatization was selected because it produces more meaningful base forms than stemming.
 
-
-
-\## 🔄 Complete Pipeline
-
-
+## 🔄 Complete Pipeline
 
 ```python
+def preprocess_text(text):
 
-def preprocess\_text(text):
+    text = text.lower()
+    text = re.sub(r'<.*?>', ' ', text)
 
+    tokens = word_tokenize(text)
 
+    tokens = [
+        word for word in tokens
+        if word not in string.punctuation
+        and not word.isdigit()
+    ]
 
-&#x20;   text = text.lower()
+    negations = {"not", "no", "never"}
 
-&#x20;   text = re.sub(r'<.\*?>', ' ', text)
+    tokens = [
+        word for word in tokens
+        if word not in stop_words
+        or word in negations
+    ]
 
-
-
-&#x20;   tokens = word\_tokenize(text)
-
-
-
-&#x20;   tokens = \[
-
-&#x20;       word for word in tokens
-
-&#x20;       if word not in string.punctuation
-
-&#x20;       and not word.isdigit()
-
-&#x20;   ]
-
-
-
-&#x20;   negations = {"not", "no", "never"}
-
-
-
-&#x20;   tokens = \[
-
-&#x20;       word for word in tokens
-
-&#x20;       if word not in stop\_words
-
-&#x20;       or word in negations
-
-&#x20;   ]
-
-
-
-&#x20;   return \[
-
-&#x20;       lemmatizer.lemmatize(word)
-
-&#x20;       for word in tokens
-
-&#x20;   ]
-
+    return [
+        lemmatizer.lemmatize(word)
+        for word in tokens
+    ]
 ```
 
-
-
-\## 📈 Before vs After
-
-
+## 📈 Before vs After
 
 | Metric         | Result |
-
 | -------------- | -----: |
-
 | Tokens before  |    380 |
-
 | Tokens after   |    178 |
-
 | Tokens removed |    202 |
-
 | Reduction      | 53.16% |
 
-
-
-\## ❗ Negation Verification
-
-
+## ❗ Negation Verification
 
 ```python
-
 test = "I did not like this movie at all. I never recommend it."
 
-
-
-print(preprocess\_text(test))
-
+print(preprocess_text(test))
 ```
 
-
-
-\*\*Output:\*\*
-
-
+**Output:**
 
 ```text
-
-\['not', 'like', 'movie', 'never', 'recommend']
-
+['not', 'like', 'movie', 'never', 'recommend']
 ```
-
-
 
 Negations were successfully preserved.
 
+## 📝 Summary
 
+**Pipeline:**
 
-\## 📝 Summary
-
-
-
-\*\*Pipeline:\*\*
-
-
-
-\*\*Lowercasing → HTML Removal → Tokenization → Punctuation/Number Removal → Stop-word Removal → Negation Preservation → Lemmatization\*\*
-
-
+**Lowercasing → HTML Removal → Tokenization → Punctuation/Number Removal → Stop-word Removal → Negation Preservation → Lemmatization**
 
 > Contractions such as `you'll` may require additional handling in a production pipeline.
-
-
-
-
 
