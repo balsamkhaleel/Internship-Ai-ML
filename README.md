@@ -30,7 +30,7 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 
 - ✅ **Week 6** — Deep Learning Fundamentals
 
-- ⏳ **Week 7** — Coming Soon
+- ✅ **Week 7** —CNNs, RNNs & TRANSFORMERS — SPRINT 2
 
 - ⏳ **Week 8** — Coming Soon
 
