@@ -2,17 +2,9 @@
 
 ## Overview
 
-Day 3 focused on preparing image data for computer vision and deep learning models using OpenCV and TensorFlow/Keras.
+Day 3 focused on image preprocessing techniques used in computer vision and deep learning.
 
-The practical work was performed using the **Flowers Multiclass Image Classification** dataset, which contains five flower classes:
-
-* Daisy
-* Dandelion
-* Roses
-* Sunflowers
-* Tulips
-
-The notebook covered the complete preprocessing workflow, from reading and inspecting raw images to preparing them for transfer learning with MobileNetV2.
+The session covered how raw images are prepared before being passed to a machine learning or deep learning model. The practical work included image resizing, color conversion, normalization, data augmentation, and preprocessing for transfer learning models.
 
 ---
 
@@ -20,21 +12,19 @@ The notebook covered the complete preprocessing workflow, from reading and inspe
 
 By the end of this session, I was able to:
 
-* Read and inspect images using OpenCV.
-* Resize images to a fixed input size.
-* Understand the difference between BGR and RGB.
+* Preprocess images using OpenCV.
+* Resize images to a fixed size.
+* Understand the difference between BGR and RGB color formats.
 * Normalize pixel values.
-* Build a reusable image preprocessing function.
-* Apply image augmentation.
-* Visualize augmented images.
-* Apply model-specific preprocessing for transfer learning.
-* Prepare images for a pretrained MobileNetV2 model.
+* Build a reusable image preprocessing pipeline.
+* Apply data augmentation to training images.
+* Match image preprocessing with the requirements of a pretrained model.
 
 ---
 
 ## Dataset
 
-### Flowers Multiclass Image Classification
+The practical work was performed using the **Flowers Multiclass Image Classification** dataset.
 
 The dataset contains five flower classes:
 
@@ -44,162 +34,65 @@ The dataset contains five flower classes:
 * Sunflowers
 * Tulips
 
-**Source:** [Flowers Multiclass Image Classification — Kaggle](https://www.kaggle.com/datasets/sujaykapadnis/flowers-image-classification)
+**Dataset Source:** [Flowers Multiclass Image Classification — Kaggle](https://www.kaggle.com/datasets/sujaykapadnis/flowers-image-classification)
 
-The dataset is divided into:
+The dataset is organized into:
 
-* Training
-* Validation
-* Test
+* Training set
+* Validation set
+* Test set
 
 ---
 
 ## Dataset Exploration
 
-The dataset contains:
+The dataset was explored to understand its structure, classes, and image distribution.
 
-* **Training:** 3,540 images
-* **Validation:** 80 images
-* **Test:** 50 images
+The training set contains different numbers of images for each flower class, while the validation and test sets are balanced across all classes.
 
-### Training Distribution
-
-| Class      | Images |
-| ---------- | -----: |
-| Daisy      |    607 |
-| Dandelion  |    872 |
-| Roses      |    615 |
-| Sunflowers |    673 |
-| Tulips     |    773 |
-
-The training dataset is not perfectly balanced because the number of images differs between classes.
-
-The validation and test sets are balanced, with 16 validation images and 10 test images per class.
+Original images were also inspected to examine their dimensions, data types, and pixel value ranges.
 
 ---
 
-## OpenCV Image Processing
+## Image Preprocessing with OpenCV
 
-### 1. Reading Images
+The main preprocessing steps included:
 
-Images were loaded using OpenCV:
+### Image Reading
 
-```python
-image = cv2.imread(image_path)
-```
+Images were loaded and inspected using OpenCV.
 
-OpenCV reads images in **BGR** format by default.
+### Image Resizing
 
----
+Images were resized to a fixed size of **224 × 224 pixels** to provide consistent input dimensions.
 
-### 2. Inspecting Image Properties
+### BGR to RGB Conversion
 
-The original image was inspected to understand its dimensions, data type, and pixel range.
+Since OpenCV reads images in BGR format while most visualization and deep learning workflows use RGB, images were converted to the correct color format.
 
-Example:
+### Pixel Normalization
 
-```text
-Image shape: (263, 320, 3)
-Data type: uint8
-Minimum pixel value: 0
-Maximum pixel value: 255
-```
-
-This shows that the image has:
-
-* Height: 263 pixels
-* Width: 320 pixels
-* 3 color channels
-* Pixel values between 0 and 255
+Pixel values were scaled from the original range of **0–255** to **0–1**.
 
 ---
 
-### 3. Image Resizing
+## Reusable Preprocessing Pipeline
 
-Images were resized to a fixed size of **224 × 224 pixels**:
+A reusable preprocessing pipeline was created to combine the main preprocessing steps:
 
-```python
-resized_image = cv2.resize(image, (224, 224))
-```
+**Read Image → Resize → BGR to RGB → Normalize**
 
-The resulting image shape was:
+The final output produced images with:
 
-```text
-(224, 224, 3)
-```
-
-A fixed image size is important because deep learning models require consistent input dimensions.
-
----
-
-### 4. BGR to RGB Conversion
-
-Since OpenCV uses BGR while visualization libraries such as Matplotlib use RGB, the images were converted using:
-
-```python
-image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-```
-
-This prevents incorrect color representation when displaying OpenCV images.
-
----
-
-## Pixel Normalization
-
-The original pixel values range from **0 to 255**.
-
-Standard normalization was applied using:
-
-```python
-normalized_image = image_rgb / 255.0
-```
-
-This converts the pixel range to:
-
-```text
-0 → 1
-```
-
-The normalized image was converted to `float32` in the reusable preprocessing pipeline.
-
----
-
-## Reusable Preprocessing Function
-
-A preprocessing function was created to combine the main OpenCV operations:
-
-```python
-def preprocess_image(image_path, target_size=(224, 224)):
-    image = cv2.imread(image_path)
-    image = cv2.resize(image, target_size)
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    image = image.astype(np.float32) / 255.0
-
-    return image
-```
-
-The resulting image had:
-
-```text
-Shape: (224, 224, 3)
-Data type: float32
-Range: 0.0 to 1.0
-```
+* Shape: **(224, 224, 3)**
+* Data type: **float32**
+* Pixel range: **0–1**
 
 ---
 
 ## Data Augmentation
 
-An augmentation pipeline was created using TensorFlow/Keras:
-
-```python
-augmentation = ImageDataGenerator(
-    rotation_range=20,
-    zoom_range=0.15,
-    horizontal_flip=True,
-    brightness_range=[0.8, 1.2]
-)
-```
+A data augmentation pipeline was created to generate different variations of training images.
 
 The applied transformations included:
 
@@ -208,110 +101,51 @@ The applied transformations included:
 * Horizontal flipping
 * Brightness adjustment
 
-Augmentation generates different variations of training images while preserving their main visual characteristics.
-
-This can help improve model generalization and reduce overfitting.
-
-Augmentation should be applied to training data rather than validation or test data.
+Augmentation helps increase the diversity of the training data and can improve model generalization while reducing overfitting.
 
 ---
 
 ## Transfer Learning Preprocessing
 
-For transfer learning, preprocessing must match the requirements of the selected pretrained model.
+The session also focused on matching preprocessing techniques with the requirements of pretrained models.
 
-For **MobileNetV2**, the model-specific `preprocess_input()` function was used:
+**MobileNetV2** was used as an example to demonstrate model-specific preprocessing.
 
-```python
-from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
+Unlike standard normalization, MobileNetV2 expects pixel values to be transformed to approximately:
 
-image_for_model = processed_image * 255.0
-mobilenet_image = preprocess_input(image_for_model)
-```
+**-1 to 1**
 
-Unlike standard normalization, which produces values between:
-
-```text
-0 → 1
-```
-
-MobileNetV2 preprocessing produces values approximately between:
-
-```text
--1 → 1
-```
-
-The final processed image had:
-
-```text
-Shape: (224, 224, 3)
-Data type: float32
-Minimum: -1.0
-Maximum: 1.0
-```
-
----
-
-## Final Preprocessing Pipeline
-
-A complete MobileNetV2 preprocessing function was created:
-
-```python
-def mobilenetv2_preprocess(image_path, target_size=(224, 224)):
-    image = cv2.imread(image_path)
-    image = cv2.resize(image, target_size)
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    image = image.astype(np.float32)
-    image = preprocess_input(image)
-
-    return image
-```
-
-The final pipeline can be summarized as:
-
-```text
-Raw Image
-    ↓
-Read with OpenCV
-    ↓
-Resize to 224 × 224
-    ↓
-BGR → RGB
-    ↓
-Convert to float32
-    ↓
-MobileNetV2 preprocess_input()
-    ↓
-Final Image
-```
-
-### Final Output
-
-```text
-Shape: (224, 224, 3)
-Data type: float32
-Pixel range: -1.0 to 1.0
-```
+A complete preprocessing pipeline was created to prepare images in the correct format for MobileNetV2.
 
 ---
 
 ## Key Takeaways
 
-* Images need preprocessing before being used by deep learning models.
-* OpenCV reads images in BGR format.
-* Matplotlib expects RGB format.
-* Images can be resized to a fixed input size.
-* Pixel normalization scales values into a smaller range.
+* Raw images need preprocessing before being used in deep learning models.
+* Images should have consistent dimensions before being used as model input.
+* OpenCV uses BGR format, while many other tools use RGB.
+* Normalization helps scale pixel values to an appropriate range.
 * Data augmentation creates additional variations of training images.
 * Pretrained models may require specific preprocessing methods.
-* MobileNetV2 expects its inputs to be processed using `preprocess_input()`.
+* Matching preprocessing with the selected model is essential for successful transfer learning.
+
+---
+
+## Tools Used
+
+* OpenCV
+* TensorFlow/Keras
+* NumPy
+* Matplotlib
+* Google Colab
+* Google Drive
 
 ---
 
 ## Conclusion
 
-This session provided practical experience with the main image preprocessing techniques used in computer vision.
+Day 3 provided practical experience with the main image preprocessing techniques used in computer vision.
 
-The complete pipeline was implemented using **OpenCV and TensorFlow/Keras**, including image reading, resizing, color conversion, normalization, augmentation, and model-specific preprocessing.
+A complete workflow was implemented, covering image exploration, resizing, color conversion, normalization, augmentation, and transfer learning preprocessing.
 
-The final images were successfully prepared in the required format for a pretrained **MobileNetV2** model.
+The final preprocessing pipeline successfully prepared images for use with a pretrained **MobileNetV2** model.
