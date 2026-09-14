@@ -1,68 +1,162 @@
-\# Day 2 — FastAPI Prediction API
+# Sprint 4 — FastAPI Prediction API
 
+## Overview
 
+This sprint focuses on serving the serialized cardiovascular disease prediction model through a FastAPI REST API.
 
-\## Completed Tasks
+The API loads the trained neural network and the saved scaler, validates patient data, applies preprocessing, and returns a cardiovascular disease prediction.
 
+## Objectives
 
+* Load the serialized neural network model.
+* Load the saved preprocessing scaler.
+* Build a FastAPI application.
+* Validate input data using Pydantic.
+* Create a `POST /predict` endpoint.
+* Apply the saved scaler before prediction.
+* Use the optimized classification threshold of `0.42`.
+* Test the API through FastAPI Swagger documentation.
 
-\* Built a FastAPI application for the cardiovascular disease prediction model.
+## Model and Preprocessing
 
-\* Loaded the serialized neural network model (`final\_neural\_network.keras`).
+The API uses the following serialized files:
 
-\* Loaded the saved preprocessing scaler (`standard\_scaler.joblib`).
+* `final_neural_network.keras` — trained neural network model.
+* `standard_scaler.joblib` — fitted StandardScaler.
 
-\* Defined a Pydantic input schema containing the 14 model features.
+The model expects **14 input features** in the same order used during training:
 
-\* Created a `POST /predict` endpoint.
+```text
+gender
+height
+weight
+ap_hi
+ap_lo
+cholesterol
+gluc
+smoke
+alco
+active
+age_years
+bmi
+pulse_pressure
+map
+```
 
-\* Applied the saved scaler before model inference.
+## API Endpoint
 
-\* Used the optimized classification threshold of `0.42`.
+### POST `/predict`
 
-\* Tested the API through FastAPI Swagger documentation (`/docs`).
+The endpoint receives patient information as a JSON request.
 
-\* Tested multiple valid patient inputs successfully.
+Example:
 
-\* Tested invalid input and confirmed that Pydantic rejects it with HTTP `422`.
+```json
+{
+  "gender": 1,
+  "height": 180,
+  "weight": 75,
+  "ap_hi": 130,
+  "ap_lo": 85,
+  "cholesterol": 1,
+  "gluc": 1,
+  "smoke": 0,
+  "alco": 0,
+  "active": 1,
+  "age_years": 35,
+  "bmi": 23.15,
+  "pulse_pressure": 45,
+  "map": 100
+}
+```
 
+Example response:
 
+```json
+{
+  "prediction": 0,
+  "probability": 0.4114757180213928,
+  "threshold": 0.42
+}
+```
 
-\## Prediction Flow
+## Prediction Logic
 
+The API follows this flow:
 
+```text
+Patient Data
+     ↓
+Pydantic Validation
+     ↓
+Feature Ordering
+     ↓
+Saved StandardScaler
+     ↓
+Neural Network
+     ↓
+Prediction Probability
+     ↓
+Threshold = 0.42
+     ↓
+Final Prediction
+```
 
-Request → Pydantic Validation → Saved Scaler → Neural Network → Probability → Threshold → Prediction
+A probability greater than or equal to `0.42` is classified as:
 
+```text
+Prediction = 1
+```
 
+Otherwise:
 
-\## Test Results
+```text
+Prediction = 0
+```
 
+## Testing
 
+The API was tested through the FastAPI interactive documentation:
 
-| Test Case     | HTTP Status | Probability | Threshold | Prediction |
+```text
+/docs
+```
 
-| ------------- | ----------- | ----------- | --------- | ---------- |
+### Valid Test Cases
 
-| Test 1        | 200         | 0.8202      | 0.42      | 1          |
+| Test Case | HTTP Status | Probability | Threshold | Prediction |
+| --------- | ----------- | ----------- | --------- | ---------- |
+| Test 1    | 200         | 0.8202      | 0.42      | 1          |
+| Test 2    | 200         | 0.4115      | 0.42      | 0          |
+| Test 3    | 200         | 0.0470      | 0.42      | 0          |
 
-| Test 2        | 200         | 0.4115      | 0.42      | 0          |
+All valid requests returned HTTP `200 OK`.
 
-| Test 3        | 200         | 0.0470      | 0.42      | 0          |
+### Invalid Input Test
 
-| Invalid Input | 422         | —           | —         | Rejected   |
+An invalid value was provided for `age_years`.
 
+The API returned:
 
+```text
+HTTP 422 Unprocessable Entity
+```
 
-\## Conclusion
+This confirms that Pydantic validation correctly rejects invalid input before prediction.
 
+## Technologies
 
+* Python
+* FastAPI
+* Pydantic
+* TensorFlow / Keras
+* Joblib
+* NumPy
+* Uvicorn
+* Google Colab
+
+## Result
 
 The FastAPI prediction service was successfully implemented and tested.
 
-
-
-The API correctly validates patient inputs, applies the saved preprocessing pipeline, generates predictions using the serialized neural network, and returns the prediction probability and classification threshold as a JSON response.
-
-
-
+The serialized model and preprocessing scaler are correctly loaded, patient inputs are validated, preprocessing is applied, and predictions are returned through the `/predict` endpoint.
