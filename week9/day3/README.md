@@ -1,1 +1,198 @@
-\# Day 3 — Interactive Streamlit Dashboard\## Cardiac Patient Monitoring SystemThis day focuses on building an interactive Streamlit dashboard for the trained cardiac risk prediction model.The dashboard provides a simple interface where users can enter patient information and receive a predicted cardiovascular disease risk probability.\## Objectives\* Build an interactive Streamlit dashboard.\* Load the serialized neural network model and StandardScaler.\* Collect patient information using Streamlit widgets.\* Calculate the required derived features.\* Generate a prediction probability.\* Display the prediction result clearly.\* Add supporting health indicators and visualization.\* Test the dashboard locally.\## FeaturesThe dashboard accepts the following patient information:\* Age\* Height\* Weight\* Systolic Blood Pressure\* Diastolic Blood Pressure\* Gender\* Cholesterol Level\* Glucose Level\* Smoking\* Alcohol Intake\* Physical ActivityThe following derived features are calculated automatically:\* BMI\* Pulse Pressure\* Mean Arterial Pressure (MAP)\## Model InferenceThe dashboard uses the serialized files:\* `final\_neural\_network.keras`\* `standard\_scaler.joblib`The input features are transformed using the saved `StandardScaler` before being passed to the trained neural network.A prediction threshold of `0.5` is used to determine the predicted class.\## Dashboard OutputThe dashboard displays:\* Prediction result\* Estimated prediction probability\* Probability progress bar\* BMI\* Pulse Pressure\* MAP\* Prediction probability chart\## Local RunActivate the virtual environment:```bash.venv\\Scripts\\activate```Run the Streamlit application:```bashstreamlit run app.py```The application will be available at:```texthttp://localhost:8501```\## Project Files```textday3/├── app.py├── day3.ipynb├── README.md├── final\_neural\_network.keras└── standard\_scaler.joblib```\## DisclaimerThis dashboard is intended for demonstration purposes only. The generated prediction is not a medical diagnosis and should not be used as a substitute for professional medical advice.
+# Day 3 — Interactive Streamlit Dashboard
+
+
+
+## Cardiac Patient Monitoring System
+
+
+
+This day focuses on building an interactive Streamlit dashboard for the trained cardiac risk prediction model.
+
+
+
+The dashboard provides a simple interface where users can enter patient information and receive a predicted cardiovascular disease risk probability.
+
+
+
+## Objectives
+
+
+
+* Build an interactive Streamlit dashboard.
+
+* Load the serialized neural network model and StandardScaler.
+
+* Collect patient information using Streamlit widgets.
+
+* Calculate the required derived features.
+
+* Generate a prediction probability.
+
+* Display the prediction result clearly.
+
+* Add supporting health indicators and visualization.
+
+* Test the dashboard locally.
+
+
+
+## Features
+
+
+
+The dashboard accepts the following patient information:
+
+
+
+* Age
+
+* Height
+
+* Weight
+
+* Systolic Blood Pressure
+
+* Diastolic Blood Pressure
+
+* Gender
+
+* Cholesterol Level
+
+* Glucose Level
+
+* Smoking
+
+* Alcohol Intake
+
+* Physical Activity
+
+
+
+The following derived features are calculated automatically:
+
+
+
+* BMI
+
+* Pulse Pressure
+
+* Mean Arterial Pressure (MAP)
+
+
+
+## Model Inference
+
+
+
+The dashboard uses the serialized files:
+
+
+
+* `final\_neural\_network.keras`
+
+* `standard\_scaler.joblib`
+
+
+
+The input features are transformed using the saved `StandardScaler` before being passed to the trained neural network.
+
+
+
+A prediction threshold of `0.5` is used to determine the predicted class.
+
+
+
+## Dashboard Output
+
+
+
+The dashboard displays:
+
+
+
+* Prediction result
+
+* Estimated prediction probability
+
+* Probability progress bar
+
+* BMI
+
+* Pulse Pressure
+
+* MAP
+
+* Prediction probability chart
+
+
+
+## Local Run
+
+
+
+Activate the virtual environment:
+
+
+
+```bash
+
+.venv\\Scripts\\activate
+
+```
+
+
+
+Run the Streamlit application:
+
+
+
+```bash
+
+streamlit run app.py
+
+```
+
+
+
+The application will be available at:
+
+
+
+```text
+
+http://localhost:8501
+
+```
+
+
+
+## Project Files
+
+
+
+```text
+
+day3/
+
+├── app.py
+
+├── day3.ipynb
+
+├── README.md
+
+├── final\_neural\_network.keras
+
+└── standard\_scaler.joblib
+
+```
+
+
+
+## Disclaimer
+
+
+
+This dashboard is intended for demonstration purposes only. The generated prediction is not a medical diagnosis and should not be used as a substitute for professional medical advice.
+
+
+
