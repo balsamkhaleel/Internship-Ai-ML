@@ -2,115 +2,128 @@
 
 ## 📌 Project Overview
 
-The **Cardiac Patient Monitoring System** is a machine learning project that analyzes cardiovascular health data to identify patterns associated with cardiovascular disease.
+The **Cardiac Patient Monitoring System** is an end-to-end machine learning project for analyzing cardiovascular health data and estimating cardiovascular disease risk based on demographic, clinical, and lifestyle information.
 
-The project combines **data cleaning, exploratory data analysis, statistical analysis, supervised learning, hyperparameter tuning, threshold optimization, and unsupervised learning** to gain insights into patient characteristics and build classification models for cardiovascular disease detection.
+The project covers the complete machine learning lifecycle:
 
-The main objective is to develop a reliable machine learning workflow that can classify whether a patient is likely to have cardiovascular disease based on demographic, clinical, and lifestyle features.
+**Data Preparation → EDA → Modeling → Optimization → Evaluation → Explainability → Serialization → Experiment Tracking → Application Development → Deployment**
+
+Multiple traditional machine learning and deep learning approaches were explored throughout the project. The final production workflow uses a **Neural Network** integrated into an interactive **Streamlit** application and publicly deployed using **Render**.
+
+> **Disclaimer:** This project is intended for educational and analytical purposes only. It is not a clinical diagnostic system and should not replace professional medical evaluation.
 
 ---
 
-## 🎯 Objectives
+## 🌐 Live Application
+
+The final Streamlit application is publicly available at:
+
+**https://cardiac-patient-monitoring.onrender.com/**
+
+The application allows users to enter patient health information and receive:
+
+* Cardiovascular risk prediction
+* Estimated prediction probability
+* Calculated health indicators
+* Structured prediction results
+
+---
+
+## 🎯 Project Objectives
+
+The main objectives of the project are to:
 
 * Clean and prepare cardiovascular patient data.
-* Perform exploratory data analysis (EDA).
+* Perform Exploratory Data Analysis (EDA).
 * Analyze relationships between patient characteristics and cardiovascular disease.
-* Build and compare multiple supervised learning models.
-* Apply cross-validation and hyperparameter tuning.
-* Optimize the classification threshold to improve disease detection.
-* Evaluate the final model using multiple classification metrics.
-* Analyze feature importance.
-* Apply unsupervised learning to identify patient groups and hidden patterns.
+* Engineer additional health-related features.
+* Build and compare multiple machine learning models.
+* Develop and tune a Neural Network.
+* Optimize the classification threshold.
+* Evaluate the model using Precision, Recall, F1-score, and Accuracy.
+* Perform error analysis.
+* Explain model behavior using SHAP.
+* Serialize the final model and preprocessing artifacts.
+* Track the final experiment using MLflow.
+* Build an interactive Streamlit dashboard.
+* Deploy the application publicly.
+* Verify reproducibility and deployment consistency.
 
 ---
 
-## 📊 Dataset
+# 📊 Dataset
 
-The project uses a cardiovascular disease dataset containing **70,000 patient records**.
+The project uses the **Cardiovascular Disease Dataset**, originally containing approximately **70,000 patient records**.
 
-### Features
+## Original Features
 
-| Feature     | Description                |
-| ----------- | -------------------------- |
-| id          | Patient identifier         |
-| age         | Age in days                |
-| gender      | Gender encoded as 1 or 2   |
-| height      | Height in centimeters      |
-| weight      | Weight in kilograms        |
-| ap_hi       | Systolic blood pressure    |
-| ap_lo       | Diastolic blood pressure   |
-| cholesterol | Cholesterol level          |
-| gluc        | Glucose level              |
-| smoke       | Smoking status             |
-| alco        | Alcohol consumption status |
-| active      | Physical activity status   |
-| cardio      | Target variable            |
+| Feature       | Description                |
+| ------------- | -------------------------- |
+| `id`          | Patient identifier         |
+| `age`         | Age in days                |
+| `gender`      | Gender encoded as 1 or 2   |
+| `height`      | Height in centimeters      |
+| `weight`      | Weight in kilograms        |
+| `ap_hi`       | Systolic blood pressure    |
+| `ap_lo`       | Diastolic blood pressure   |
+| `cholesterol` | Cholesterol level          |
+| `gluc`        | Glucose level              |
+| `smoke`       | Smoking status             |
+| `alco`        | Alcohol consumption status |
+| `active`      | Physical activity status   |
+| `cardio`      | Target variable            |
 
 ### Target Variable
 
-* 0 → No cardiovascular disease
-* 1 → Cardiovascular disease
+* `0` → No cardiovascular disease
+* `1` → Cardiovascular disease
 
 ---
 
-## 🧹 Data Cleaning
+# 🧹 Data Cleaning & Preparation
 
-Several data-quality checks and cleaning operations were performed before modeling.
+Several data-quality checks and preprocessing operations were performed before modeling.
 
-### Blood Pressure
+## Blood Pressure
 
-Extreme and implausible blood pressure values were identified and removed.
+Extreme and implausible blood pressure observations were identified and removed during data preparation.
 
-The following ranges were used:
+## Age
 
-* Systolic blood pressure: **40–300 mmHg**
-* Diastolic blood pressure: **40–300 mmHg**
-
-### Age
-
-The original age feature was stored in days.
-
-It was converted into years using:
+The original age feature was stored in days and converted into years:
 
 ```python
-age_years = age / 365.25 
+age_years = age / 365.25
 ```
 
-The original age column was then removed.
+## Height & Weight
 
-### Height
+Clearly implausible height and weight observations were removed during the cleaning stage.
 
-Values outside the range of **100–200 cm** were removed as clearly implausible observations.
+## Final Cleaned Dataset
 
-### Weight
-
-Values outside the range of **30–200 kg** were removed.
-
-### Final Dataset
-
-After cleaning:
+After cleaning, the main project dataset contained approximately:
 
 * **68,741 observations**
-* **13 columns**
 * No missing values
 * No duplicate rows
 * No duplicate patient IDs
 
+The cleaned dataset was then used throughout the modeling workflow.
+
 ---
 
-## 🔎 Exploratory Data Analysis
+# 🔎 Exploratory Data Analysis
 
-The EDA stage explored the distribution of patient characteristics and their relationship with cardiovascular disease.
+EDA was performed to understand the dataset and investigate relationships between cardiovascular disease and patient characteristics.
 
 The analysis included:
 
-* Cardiovascular disease distribution
+* Target distribution
 * Age distribution
 * Gender distribution
-* Height
-* Weight
-* Systolic blood pressure
-* Diastolic blood pressure
+* Height and weight
+* Systolic and diastolic blood pressure
 * Cholesterol
 * Glucose
 * Smoking
@@ -118,427 +131,655 @@ The analysis included:
 * Physical activity
 * Correlation analysis
 
-### Key Findings
+## Key Findings
 
-Some of the strongest differences between the cardiovascular disease classes were observed in:
+Important differences between cardiovascular disease classes were observed in several features, particularly:
 
-**Age**
+* Age
+* Weight
+* Systolic blood pressure
+* Diastolic blood pressure
+* Cholesterol
+* Physical activity
 
-Patients with cardiovascular disease had a higher average age.
-
-**Weight**
-
-* No disease: approximately **71.58 kg**
-* Disease: approximately **76.72 kg**
-
-**Systolic Blood Pressure**
-
-* No disease: approximately **119.56 mmHg**
-* Disease: approximately **133.82 mmHg**
-
-**Diastolic Blood Pressure**
-
-* No disease: approximately **78.17 mmHg**
-* Disease: approximately **84.66 mmHg**
-
-**Cholesterol**
-
-The proportion of patients with cardiovascular disease increased substantially as cholesterol level increased.
-
-**Physical Activity**
-
-Inactive patients showed a higher proportion of cardiovascular disease compared with active patients.
+Blood-pressure-related variables showed particularly important relationships with cardiovascular risk.
 
 ---
 
-## 📈 Correlation Analysis
+# 🧪 Traditional Machine Learning Experiments
 
-Correlation analysis was performed on the main numerical features.
+Several supervised classification algorithms were evaluated during the earlier modeling stages:
 
-The strongest positive correlations with the target were:
+1. Logistic Regression
+2. Random Forest
+3. Decision Tree
+4. K-Nearest Neighbors (KNN)
 
-| Feature   | Correlation with  cardio |
-| --------- | -----------------------: |
-| ap_hi     |                    0.425 |
-| ap_lo     |                    0.335 |
-| age_years |                    0.240 |
-| weight    |                    0.180 |
-| height    |                   -0.012 |
-
-The strongest relationship was observed between systolic and diastolic blood pressure, with a correlation of approximately **0.698**.
-
----
-
-## 🤖 Supervised Learning
-
-The project evaluated four classification algorithms:
-
-1. **Logistic Regression**
-2. **Random Forest**
-3. **Decision Tree**
-4. **K-Nearest Neighbors (KNN)**
-
-The dataset was divided using a stratified train/test split:
-
-* **80% Training**
-* **20% Testing**
-
-Stratification was used to preserve the target class distribution.
+A stratified train/test strategy was used to preserve the target distribution.
 
 ---
 
 ## 🔄 Cross-Validation
 
-A **5-fold Stratified Cross-Validation** strategy was used during model evaluation and hyperparameter tuning.
+A **5-fold Stratified Cross-Validation** strategy was used during traditional machine learning evaluation and tuning.
 
 ```python
-StratifiedKFold( 
-    n_splits=5, 
-    shuffle=True, 
-    random_state=42 
-) 
+StratifiedKFold(
+    n_splits=5,
+    shuffle=True,
+    random_state=42
+)
 ```
 
-This provides a more reliable estimate of model performance while maintaining the class distribution across folds.
+This provided a more reliable estimate of model performance while preserving class balance across folds.
 
 ---
 
-## ⚙️ Hyperparameter Tuning
+# ⚙️ Hyperparameter Tuning
 
-GridSearchCV was used to optimize the main supervised models.
+Traditional machine learning models were optimized using techniques such as `GridSearchCV`.
+
+Parameters investigated included:
 
 ### Logistic Regression
 
-Parameters such as:
-
-* C
-* class_weight
-
-were evaluated.
+* `C`
+* `class_weight`
 
 ### Random Forest
 
-Parameters including:
-
-* n_estimators
-* max_depth
-* min_samples_split
-
-were optimized.
+* `n_estimators`
+* `max_depth`
+* `min_samples_split`
 
 ### Decision Tree
 
-Parameters including:
+* `max_depth`
+* `min_samples_split`
+* `min_samples_leaf`
 
-* max_depth
-* min_samples_split
-* min_samples_leaf
-
-were evaluated.
+These experiments established useful traditional machine learning benchmarks before the later deep-learning workflow.
 
 ---
 
-## 🎯 Threshold Optimization
+# 🎯 Earlier Random Forest Experiment
 
-Since cardiovascular disease detection is a classification problem where missing a positive patient can be important, **Recall** was given particular attention.
+Threshold optimization was explored during the traditional machine learning stage because identifying positive cardiovascular-risk cases was an important consideration.
 
-Instead of relying only on the default probability threshold of `0.50`, multiple thresholds were evaluated:
+An earlier Random Forest experiment used a classification threshold of `0.35`.
+
+| Metric    |  Score |
+| --------- | -----: |
+| Accuracy  | 70.66% |
+| Precision | 66.29% |
+| Recall    | 82.87% |
+| F1-score  | 73.65% |
+
+These results represent an **earlier traditional machine learning benchmark** and should not be confused with the final deployed Neural Network configuration.
+
+---
+
+# 🔵 Unsupervised Learning
+
+Unsupervised learning was also used to investigate the natural structure of the patient population without using the target during clustering.
+
+Two approaches were explored:
+
+## K-Means
+
+K-Means clustering was applied after feature standardization.
+
+The number of clusters was investigated using:
+
+* Elbow Method
+* Silhouette Score
+
+One explored configuration used:
 
 ```text
-0.30 
-0.35 
-0.40 
-0.45 
-0.50 
-0.55 
-0.60 
+n_clusters = 7
 ```
 
-A threshold of **0.35** was selected based on the Precision-Recall trade-off.
+Cluster profiles were then analyzed to investigate differences between patient groups.
 
-### Final Random Forest Results
+## DBSCAN
 
-| Metric    |      Score |
-| --------- | ---------: |
-| Accuracy  | **70.66%** |
-| Precision | **66.29%** |
-| Recall    | **82.87%** |
-| F1-Score  | **73.65%** |
+DBSCAN was explored as a density-based clustering method.
 
-The increased Recall allows the model to identify a larger proportion of patients with cardiovascular disease.
+One investigated configuration used:
 
-> **Note:** This project is intended for educational and analytical purposes and is not a clinical diagnostic system.
+```text
+eps = 2.5
+min_samples = 10
+```
+
+This analysis provided complementary insights into patient groups and potential noise observations.
 
 ---
 
-## 📊 Model Evaluation
+# 🧠 Deep Learning Development
 
-The final model was evaluated using:
+The project later introduced a deep learning approach using the **TensorFlow/Keras Sequential API**.
 
-* Accuracy
-* Precision
-* Recall
-* F1-Score
-* Confusion Matrix
-* Classification Report
+The Neural Network workflow included:
 
-A confusion matrix was also generated to examine the distribution of:
+* Feature preprocessing
+* Standardization using `StandardScaler`
+* Neural Network development
+* Hyperparameter tuning
+* Early Stopping
+* Threshold optimization
+* Evaluation using classification metrics
+
+Different values were explored for:
+
+* Learning rate
+* Network architecture
+* Dropout
+* Batch size
+
+**F1-score** was used as an important metric during model development because it balances Precision and Recall.
+
+Earlier Neural Network experiments used configurations such as `(32, 16)` before the final Sprint 4 production configuration was established.
+
+---
+
+# 🏆 Final Deployed Model
+
+The final production workflow uses a **Neural Network**.
+
+The final configuration tracked during Sprint 4 is:
+
+| Hyperparameter           |    Final Value |
+| ------------------------ | -------------: |
+| Model                    | Neural Network |
+| Architecture             |      `64-32-1` |
+| Learning Rate            |       `0.0001` |
+| Dropout                  |          `0.0` |
+| Batch Size               |           `64` |
+| Classification Threshold |         `0.42` |
+| Random Seed              |           `42` |
+
+This configuration represents the model used in the final serialization and deployment workflow.
+
+---
+
+# 📊 Final Model Evaluation
+
+The final evaluation metrics tracked using MLflow are:
+
+| Metric       |       Result |
+| ------------ | -----------: |
+| Precision    |     `0.6931` |
+| Recall       |     `0.7744` |
+| **F1-score** | **`0.7315`** |
+| Accuracy     |     `0.7187` |
+
+## Why F1-score?
+
+The project does not rely on Accuracy alone.
+
+The **F1-score** was treated as an important evaluation metric because it balances:
+
+* Precision — how many predicted positive cases are actually positive.
+* Recall — how many actual positive cases are identified.
+
+Recall was also monitored because false-negative predictions are particularly relevant in a cardiovascular risk-screening context.
+
+---
+
+# 🔍 Error Analysis
+
+Detailed error analysis was performed to understand the model beyond aggregate performance metrics.
+
+The analysis included:
 
 * True Negatives
 * False Positives
 * False Negatives
 * True Positives
+* False Negative Rate
+* False Positive Rate
+
+This helped identify where the model made mistakes and provided additional context for interpreting Precision, Recall, and F1-score.
 
 ---
 
-## 🌲 Feature Importance
+# 🧠 Model Explainability with SHAP
 
-Feature importance was extracted from the final Random Forest model to understand which patient characteristics contributed most to the predictions.
+SHAP was used to investigate how individual features influenced Neural Network predictions.
 
-This provides an additional interpretation of the trained model and helps identify the features that were most useful for cardiovascular disease classification.
+A **SHAP KernelExplainer** was used during the explainability analysis.
+
+Important features investigated included:
+
+* `ap_hi`
+* `age_years`
+* `pulse_pressure`
+* `map`
+
+The SHAP analysis provided additional insight into how patient characteristics contributed to the model output.
+
+Explainability is particularly valuable in health-related machine learning because prediction behavior should be investigated rather than treating the model as a black box.
 
 ---
 
-## 🔵 Unsupervised Learning
+# 📦 Model Serialization
 
-Unsupervised learning was used to explore the natural structure of the patient population without using the cardio target during clustering.
+The final model and preprocessing objects were serialized for deployment.
 
-Two clustering approaches were explored:
-
-### K-Means
-
-K-Means clustering was applied after standardizing the clustering features.
-
-The number of clusters was evaluated using:
-
-* **Elbow Method**
-* **Silhouette Score**
-
-The final configuration used:
-
-```python
-n_clusters = 7 
-```
-
-Cluster profiles were then analyzed using the average characteristics of each group.
-
-### DBSCAN
-
-DBSCAN was also explored as a density-based clustering method.
-
-The parameters were selected based on a k-distance plot:
+Main production artifacts include:
 
 ```text
-eps = 2.5 
-min_samples = 10 
+final_neural_network.keras
+standard_scaler.joblib
+best_threshold.txt
 ```
 
-DBSCAN was used to identify dense patient groups and potential noise observations.
+These artifacts preserve:
+
+* The trained Neural Network
+* The fitted preprocessing scaler
+* The selected classification threshold
+
+The serialized artifacts were loaded again and inference was verified before application deployment.
 
 ---
 
+# 🔁 Reproducibility
 
-## 🧠 Deep Learning
+Reproducibility practices were applied during Sprint 4.
 
-The project also includes a **Deep Learning** approach using the TensorFlow/Keras Sequential API to classify cardiovascular disease.
+## Fixed Random Seed
 
-The neural network was trained using the cleaned cardiovascular dataset after removing the `id` column and applying feature scaling with `StandardScaler`.
-
-### Neural Network Architecture
-
-The initial neural network consisted of:
-
-* Input layer matching the number of selected features.
-* Dense layer with **32 neurons** using ReLU activation.
-* Dense layer with **16 neurons** using ReLU activation.
-* Output layer with **1 neuron** using Sigmoid activation.
-
-The model used:
+The project uses a fixed seed:
 
 ```text
-Optimizer: Adam
-Loss Function: Binary Crossentropy
-Initial Learning Rate: 0.001
-Batch Size: 32
-Epochs: 30
+42
 ```
 
-### Hyperparameter Tuning
+Seeds were configured for:
 
-A systematic **one-variable-at-a-time** approach was used to tune the neural network.
+* Python
+* NumPy
+* TensorFlow
 
-The following hyperparameters were evaluated:
+## Dependency Management
 
-* Learning Rate
-* Network Architecture
-* Dropout Rate
-* Batch Size
+Relevant `requirements.txt` files contain pinned versions of the required libraries.
 
-**Validation F1-Score** was used as the primary metric for comparing the different configurations.
+Key technologies include:
 
-### Early Stopping
+* TensorFlow
+* Scikit-learn
+* Pandas
+* NumPy
+* Joblib
+* MLflow
+* Streamlit
 
-**Early Stopping** was applied during the tuning experiments to prevent unnecessary training and reduce the risk of overfitting.
+## Reproducibility Verification
 
-The best model weights were restored based on the validation loss.
-
-```text
-monitor = val_loss
-patience = 5
-restore_best_weights = True
-```
-
-### Selected Configuration
-
-The best configuration obtained from the tuning experiments was:
-
-| **Hyperparameter** | **Selected Value** |
-| ------------------ | ------------------ |
-| Learning Rate      | **0.0005**         |
-| Architecture       | **(32, 16)**       |
-| Dropout Rate       | **0.0**            |
-| Batch Size         | **32**             |
-| Early Stopping     | **Enabled**        |
-
-The best configurations were selected based primarily on **Validation F1-Score**.
-
-### Deep Learning Evaluation
-
-The final neural network was evaluated using:
-
-* Accuracy
-* Precision
-* Recall
-* F1-Score
-* Confusion Matrix
-* Training and validation curves
-
-The neural network achieved reasonable classification performance, with validation F1-score results around **0.72**.
-
-The experiments showed that adding Dropout or increasing network complexity did not necessarily improve the validation performance. This indicates that deep learning is not always superior to traditional machine learning for tabular datasets, and model performance depends on the characteristics and predictive power of the available features.
+The Sprint 4 serialization notebook was executed from start to finish using the project environment to verify that the workflow could be reproduced successfully.
 
 ---
 
-## 🛠️ Technologies & Libraries
+# 📈 Experiment Tracking with MLflow
 
-### Programming Language
+MLflow was used during Sprint 4 to track the final production experiment.
+
+Experiment:
+
+```text
+Cardiac_Patient_Monitoring_Sprint_4
+```
+
+The tracked parameters include:
+
+```text
+model_type    = Neural Network
+architecture  = 64-32-1
+learning_rate = 0.0001
+dropout       = 0.0
+batch_size    = 64
+threshold     = 0.42
+seed          = 42
+```
+
+Tracked evaluation metrics include:
+
+```text
+test_accuracy  = 0.7187
+test_precision = 0.6931
+test_recall    = 0.7744
+test_f1        = 0.7315
+```
+
+Experiment tracking helps preserve the configuration associated with the final production model.
+
+---
+
+# 🖥️ Streamlit Application
+
+An interactive Streamlit dashboard was developed to provide a user-friendly interface for the final model.
+
+The application accepts patient information including:
+
+* Age
+* Height
+* Weight
+* Systolic blood pressure
+* Diastolic blood pressure
+* Gender
+* Cholesterol level
+* Glucose level
+* Smoking status
+* Alcohol intake
+* Physical activity
+
+The application then performs the required preprocessing and feature calculations before generating the prediction.
+
+The result includes:
+
+* Risk classification
+* Estimated probability
+* Calculated health indicators
+
+---
+
+# 🌐 Public Deployment
+
+The Streamlit application was deployed using **Render**.
+
+### Deployment Configuration
+
+* Platform: Render
+* Framework: Streamlit
+* Python: 3.12.10
+* TensorFlow: 2.20.0
+* Streamlit: 1.64.0
+* Deployment source: GitHub
+
+### Live Application
+
+**https://cardiac-patient-monitoring.onrender.com/**
+
+---
+
+# ✅ Deployment Verification
+
+The application was tested both locally and after deployment.
+
+The same patient information was submitted to both versions.
+
+One verification example produced:
+
+| Output                | Local                   | Deployed                |
+| --------------------- | ----------------------- | ----------------------- |
+| Prediction            | No Cardio Risk Detected | No Cardio Risk Detected |
+| Estimated Probability | 12.31%                  | 12.31%                  |
+| BMI                   | 24.22                   | 24.22                   |
+| Pulse Pressure        | 40.0                    | 40.0                    |
+| MAP                   | 93.3                    | 93.3                    |
+
+The matching results confirmed that the deployed application reproduced the local inference workflow.
+
+---
+
+# 🛠️ Technologies & Tools
+
+## Programming
 
 * Python
 
-### Data Analysis
+## Data Analysis
 
 * Pandas
 * NumPy
 
-### Visualization
+## Visualization
 
 * Matplotlib
 
-### Machine Learning
+## Machine Learning
 
 * Scikit-learn
 
-### Main Techniques
+## Deep Learning
 
-* Data Cleaning
-* Exploratory Data Analysis
-* Correlation Analysis
-* Feature Engineering
-* Train/Test Split
-* Cross-Validation
-* Logistic Regression
-* Decision Tree
-* KNN
-* Random Forest
-* Grid Search
-* Threshold Optimization
-* K-Means Clustering
-* DBSCAN
-* Model Evaluation
+* TensorFlow
+* Keras
+
+## Explainability
+
+* SHAP
+
+## MLOps
+
+* MLflow
+* Joblib
+* Model serialization
+* Pinned dependencies
+* Fixed random seeds
+
+## Application
+
+* Streamlit
+
+## Deployment
+
+* Render
+* GitHub
 
 ---
 
-## 📁 Project Structure
+# 📁 Project Organization
+
+The repository preserves the complete learning and development history across the internship.
+
+The main cardiac project area contains the core modeling notebooks and artifacts:
 
 ```text
-Project/
+project/
 │
 ├── cardio.csv
+├── cardio_cleaned.csv
 │
-├── Data_Preparation/
-│   └── cardio_cleaned
+├── Data_Preparation_01.ipynb
+├── EDA_02.ipynb
+├── Baseline_Model_03.ipynb
+├── Supervised_Learning_04.ipynb
+├── Unsupervised_learning_05.ipynb
+├── Deep_learning_06.ipynb
+├── NN_Tunning_07.ipynb
 │
-├── EDA_02
+├── final_neural_network.keras
+├── standard_scaler.joblib
+├── best_threshold.txt
 │
-├── Baseline_Model_03
-│
-├── Supervised_Learning_04
-│
-├── Unsupervised_learning_05
-│
-├── Deep_Learning_06
-|
 └── README.md
 ```
 
-### 📂 File Organization
-
-| File                       | Description                                                                                                       |
-| -------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `Data_Preparation`         | Data loading, data quality checks, data cleaning, preprocessing, and preparation of the dataset.                  |
-| `cardio_cleaned`           | Cleaned cardiovascular dataset used in the following analysis and modeling stages.                                |
-| `EDA_02`                   | Exploratory Data Analysis, visualization, statistical analysis, and correlation analysis.                         |
-| `Baseline_Model_03`        | Development and evaluation of baseline machine learning models.                                                   |
-| `Supervised_Learning_04`   | Supervised learning, cross-validation, hyperparameter tuning, threshold optimization, and final model evaluation. |
-| `Unsupervised_learning_05` | Unsupervised learning using K-Means and DBSCAN to explore patient groups and hidden patterns.                     |
-| `Deep_Learning_06`         |Neural network development, training, hyperparameter tuning, Early Stopping, and final deep learning evaluation.   |
-
----
-
-
-
-
-
-## 🚀 Workflow
+Sprint 4 deployment work is documented under Week 9:
 
 ```text
-Raw Dataset 
-     ↓ 
-Data Preparation 
-     ↓ 
-Exploratory Data Analysis 
-     ↓ 
-Baseline Model 
-     ↓ 
-Supervised Learning 
-     ↓ 
-Hyperparameter Tuning 
-     ↓ 
-Threshold Optimization 
-     ↓ 
-Final Model Evaluation 
-     ↓ 
-Feature Importance 
-     ↓ 
-Unsupervised Learning 
-     ↓ 
-K-Means + DBSCAN 
-     ↓ 
-Final Insights 
+week9/
+│
+├── day1/
+│   ├── day1.ipynb
+│   ├── README.md
+│   ├── cardio_cleaned.csv
+│   ├── final_neural_network.keras
+│   ├── standard_scaler.joblib
+│   ├── best_threshold.txt
+│   ├── mlflow.db
+│   └── requirements.txt
+│
+├── day2/
+│   ├── day2.ipynb
+│   ├── README.md
+│   ├── final_neural_network.keras
+│   └── standard_scaler.joblib
+│
+├── day3/
+│   ├── day3.ipynb
+│   ├── app.py
+│   ├── README.md
+│   ├── final_neural_network.keras
+│   └── standard_scaler.joblib
+│
+├── day4/
+│   ├── app.py
+│   ├── README.md
+│   ├── requirements.txt
+│   ├── final_neural_network.keras
+│   └── standard_scaler.joblib
+│
+└── day5/
+    └── day5.ipynb
 ```
 
 ---
 
-## 📝 Conclusion
+# 🚀 Complete Project Workflow
 
-The project demonstrates a complete machine learning workflow for cardiovascular disease analysis.
+```text
+Raw Cardiovascular Dataset
+          ↓
+Data Cleaning & Preparation
+          ↓
+Exploratory Data Analysis
+          ↓
+Feature Engineering
+          ↓
+Baseline Models
+          ↓
+Supervised Learning
+          ↓
+Traditional ML Tuning
+          ↓
+Unsupervised Learning
+          ↓
+Neural Network Development
+          ↓
+Neural Network Tuning
+          ↓
+Threshold Optimization
+          ↓
+Model Evaluation
+          ↓
+Error Analysis
+          ↓
+SHAP Explainability
+          ↓
+Final Model Selection
+          ↓
+Model & Scaler Serialization
+          ↓
+Reproducibility Verification
+          ↓
+MLflow Experiment Tracking
+          ↓
+Streamlit Application
+          ↓
+Render Deployment
+          ↓
+Deployment Verification
+```
 
-The supervised learning experiments showed that **Random Forest** provided a useful solution for cardiovascular disease detection. By adjusting the classification threshold from the default value to **0.35**, the model achieved a **Recall of 82.87%**, allowing it to identify a larger proportion of positive cases.
+---
 
-The unsupervised learning experiments provided complementary insights into the underlying structure of the patient population through **K-Means and DBSCAN clustering**.
+# ⚙️ Running the Deployed Application Locally
 
-The project also included a **Deep Learning** approach using the TensorFlow/Keras Sequential API. A neural network was developed and systematically tuned using Learning Rate, Network Architecture, Dropout Rate, and Batch Size. **Validation F1-score** was used as the primary metric for selecting the best configuration, with Early Stopping applied to prevent unnecessary training and restore the best model weights.
+The deployment application is located in:
 
-The selected neural network configuration used a **learning rate of 0.0005**, an **architecture of (32, 16)**, **0.0 dropout**, and a **batch size of 32**. The deep learning experiments achieved validation F1-score results around 0.72 and demonstrated that increasing model complexity or adding dropout did not necessarily improve performance on this tabular dataset.
+```text
+week9/day4/
+```
 
-Overall, the project combines predictive modeling with exploratory and unsupervised analysis to provide a broader understanding of cardiovascular disease patterns within the dataset.
+Move to the deployment directory:
+
+```bash
+cd week9/day4
+```
+
+Create and activate a virtual environment if needed.
+
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the Streamlit application:
+
+```bash
+streamlit run app.py
+```
+
+Streamlit will provide a local URL that can be opened in the browser.
+
+---
+
+# ⚠️ Limitations
+
+The current project has several important limitations:
+
+* The model was developed using a public cardiovascular dataset.
+* The dataset may not represent every population or clinical environment.
+* Predictions depend on the quality and accuracy of the input information.
+* The model produces a statistical risk prediction rather than a medical diagnosis.
+* External clinical validation has not been performed.
+* Model performance may change when applied to data from different populations or collection processes.
+
+Therefore, the application should be treated as an **educational machine learning demonstration**, not a clinical decision-making system.
+
+---
+
+# 🔮 Future Improvements
+
+Potential future improvements include:
+
+* External validation using additional cardiovascular datasets.
+* Additional model optimization.
+* Probability calibration.
+* Automated inference tests.
+* Continuous Integration and Continuous Deployment (CI/CD).
+* Production monitoring.
+* Data-drift and model-drift monitoring.
+* Additional SHAP explanations inside the Streamlit interface.
+* Improved separation between experimentation and production inference code.
+* More extensive application validation.
+
+---
+
+# 📝 Conclusion
+
+The Cardiac Patient Monitoring System demonstrates the development of a machine learning project across the complete lifecycle.
+
+The work began with cardiovascular data cleaning and exploratory analysis, progressed through traditional machine learning, clustering, Neural Network development, hyperparameter tuning, threshold optimization, model evaluation, error analysis, and SHAP explainability.
+
+The final Sprint 4 workflow extended the project beyond experimentation by introducing:
+
+* Model serialization
+* Preprocessing artifact management
+* Reproducibility practices
+* MLflow experiment tracking
+* Streamlit application development
+* Public deployment
+* Deployment verification
+* Repository polish and documentation
+
+The final deployed Neural Network uses an architecture of `64-32-1` with a classification threshold of `0.42` and achieved an **F1-score of 0.7315**, with **Recall of 0.7744** and **Precision of 0.6931** in the tracked final evaluation.
+
+Overall, the project demonstrates not only how to train a machine learning model, but how to evaluate, explain, package, reproduce, integrate, and deploy it as a complete machine learning application.
+
+---
+
+## ❤️ Live Demo
+
+**Cardiac Patient Monitoring System**
+
+https://cardiac-patient-monitoring.onrender.com/
+
+> Educational project only — not intended for medical diagnosis.
