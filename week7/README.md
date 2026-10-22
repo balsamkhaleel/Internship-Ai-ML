@@ -39,9 +39,9 @@ The work also continues the development of the Cardiovascular Disease project fr
 
 * ✅ **Day 3 — RNNs & LSTMs for Sequential Data**
 
-* ⏳ **Day 4 — comming soon**
+* ✅ **Day 4 — Attention & Transformers**
 
-* ⏳ **Day 5 — comming soon**
+* ✅ **Day 5 — Tuning, Evaluation & Sprint Review**
 
 
 
@@ -113,7 +113,8 @@ week7/
 
 
 
-│ ├──
+│ ├── day4.ipynb
+
 
 
 
@@ -129,9 +130,10 @@ week7/
 
 
 
-│ ├──
+│ ├── day5.ipynb
 
 
+│ ├── cardio_cleaned.csv
 
 │  └── README.md
 
