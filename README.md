@@ -224,9 +224,79 @@ Internship/
 │   └── README.md
 |
 ├── week7/
+│   ├── day1/
+│   │   ├── day1.ipynb
+│   │   └── README.md
+│   │
+│   ├── day2/
+│   │   ├── day2.ipynb
+│   │   └── README.md
+│   │
+│   ├── day3/
+│   │   ├── day3.ipynb
+│   │   └── README.md
+│   │
+│   ├── day4/
+│   │   ├── day4.ipynb
+│   │   └── README.md
+│   │
+│   ├── day5/
+│   │   ├── day5.ipynb
+│   │   ├── cardio_cleaned.csv
+│   │   └── README.md
+│   └── README.md
+|
 ├── week8/
-├── week9/
-└── week10/
+│   ├── day1/
+│   │   ├── day1.ipynb
+│   │   └── README.md
+│   │
+│   ├── day2/
+│   │   ├── day2.ipynb
+│   │   └── README.md
+│   │
+│   ├── day3/
+│   │   ├── day3.ipynb
+│   │   └── README.md
+│   │
+│   ├── day4/
+│   │   ├── day4.ipynb
+│   │   └── README.md
+│   │
+│   ├── day5/
+│   │   ├── day5.ipynb
+│   │   └── README.md
+│   └── README.md
+└──week9/
+│   ├── day1/
+│   │   ├── day1.ipynb
+│   │   ├── best_threshold.txt
+│   │   ├─ cardio_cleaned.csv
+│   │   ├─ final_neural_network.keras
+│   │   ├─ mlflow.db
+│   │   ├─ requirements.txt
+│   │   ├─ standard_scaler.joblib
+│   │   └── README.md
+│   │
+│   ├── day2/
+│   │   ├── day2.ipynb
+│   │   ├── final_neural_network.keras
+│   │   ├── standard_scaler.joblib
+│   │   └── README.md
+│   │
+│   ├── day3/
+│   │   ├── day3.ipynb
+│   │   └── README.md
+│   │
+│   ├── day4/
+│   │   ├── day4.ipynb
+│   │   └── README.md
+│   │
+│   ├── day5/
+│   │   ├── day5.ipynb
+│   │   └── README.md
+│   └── README.md
+
 ```
   
    
