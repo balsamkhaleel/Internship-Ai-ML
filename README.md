@@ -32,11 +32,11 @@ This repository documents my learning journey throughout the **AI & Machine Lear
 
 - ✅ **Week 7** —CNNs, RNNs & TRANSFORMERS — SPRINT 2
 
-- ⏳ **Week 8** — Coming Soon
+- ✅ **Week 8** — NLP & COMPUTER VISION — SPRINT 3
 
-- ⏳ **Week 9** — Coming Soon
+- ✅ **Week 9** — MODEL DEPLOYMENT — SPRINT 4
 
-- ⏳ **Week 10** — Coming Soon
+
 
 
 
