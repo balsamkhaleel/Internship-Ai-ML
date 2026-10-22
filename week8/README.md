@@ -14,10 +14,10 @@ The work continues the development of the **Cardiovascular Disease project** fro
 ## 📚 Days
 
 * ✅ **Day 1 — Sprint 3 Planning & NLP Preprocessing**
-* ⏳ **Day 2 — Coming Soon**
-* ⏳ **Day 3 — Coming Soon**
-* ⏳ **Day 4 — Coming Soon**
-* ⏳ **Day 5 — Coming Soon**
+* ✅ **Day 2 — Text Representation: TF-IDF & Embeddings**
+* ✅ **Day 3 — Computer Vision Preprocessing with OpenCV**
+* ✅ **Day 4 —  Model Integration & Error Analysis**
+* ✅ **Day 5 — SHAP Explainability Analysis**
 
 ## 🛠️ Technologies
 
@@ -33,19 +33,19 @@ week8/
 │   └── README.md
 
 ├── day2/
-│   ├──
+│   ├── day2.ipynb
 │   └── README.md
 
 ├── day3/
-│   ├──
+│   ├── day3.ipynb
 │   └── README.md
 
 ├── day4/
-│   ├──
+│   ├── day4.ipynb
 │   └── README.md
 
 ├── day5/
-│   ├──
+│   ├── day5.ipynb
 │   └── README.md
 
 └── README.md
